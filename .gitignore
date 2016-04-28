@@ -1,0 +1,11 @@
+.*.sw*
+.sass-cache
+.DS_Store
+node_modules/
+_site/
+/.idea/
+.jekyll-metadata
+.tmp
+linkchecker.html
+
+* text=auto

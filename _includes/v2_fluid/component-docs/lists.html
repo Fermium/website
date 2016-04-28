@@ -1,0 +1,215 @@
+<h2 id="lists" class="section-header">Lists</h2>
+
+<a target="_blank" class="improve-v2-docs" href="https://github.com/driftyco/ionic-site/edit/master/_includes/v2_fluid/component-docs/lists.html">
+  Improve this Doc
+</a>
+
+Lists are used to display rows of information, such as a contact list, playlist, or menu. Or maybe something crazy we don't even know exists yet!
+
+<ul class="docs-content">
+  <li class="docs-content-header">Contents</li>
+  <li class="docs-content-item"><a href="{{components_link}}#lists">Basic Lists</a></li>
+  <li class="docs-content-item"><a href="{{components_link}}#inset-list">Inset List</a></li>
+  <li class="docs-content-item"><a href="{{components_link}}#list-dividers">List Dividers</a></li>
+  <li class="docs-content-item"><a href="{{components_link}}#list-headers">List Headers</a></li>
+  <li class="docs-content-item"><a href="{{components_link}}#icon-list">Icon List</a></li>
+  <li class="docs-content-item"><a href="{{components_link}}#avatar-list">Avatar List</a></li>
+  <li class="docs-content-item"><a href="{{components_link}}#multiline-list">Multiline List</a></li>
+  <li class="docs-content-item"><a href="{{components_link}}#sliding-list">Sliding List</a></li>
+  <li class="docs-content-item"><a href="{{components_link}}#thumbnail-list">Thumbnail List</a></li>
+</ul>
+
+<h3 class="section-nav" id="list-lines">Basic Usage (Default)</h3>
+<a target="_blank" class="component-doc-demo" href="https://github.com/driftyco/ionic-preview-app/tree/master/app/pages/lists/basic">
+  Demo Source
+</a>
+
+By default, all lists will be styled with divider lines:
+
+```html
+<ion-list>
+  <ion-item *ngFor="#item of items" (click)="itemSelected(item)">
+    {% raw %}{{item.title}}{% endraw %}
+  </ion-item>
+</ion-list>
+```
+
+
+<h3 class="no-para" id="list-no-lines">Basic Usage (No Lines)</h3>
+<a target="_blank" class="component-doc-demo" href="https://github.com/driftyco/ionic-preview-app/tree/master/app/pages/lists/no-lines">
+  Demo Source
+</a>
+
+Adding the `no-lines` attribute will hide the dividers between list items:
+
+```html
+<ion-list no-lines>
+  <ion-item *ngFor="#item of items" (click)="itemSelected(item)">
+    {% raw %}{{item.title}}{% endraw %}
+  </ion-item>
+</ion-list>
+```
+
+<h3 class="section-nav" id="inset-list">Inset List</h3>
+<a target="_blank" class="component-doc-demo" href="https://github.com/driftyco/ionic-preview-app/tree/master/app/pages/lists/inset">
+  Demo Source
+</a>
+
+By default, lists have no outside margin, to add one, add the `inset` property to the list component.
+
+```html
+<ion-list inset>
+  <ion-item *ngFor="#item of items" (click)="itemSelected(item)">
+    {% raw %}{{item.title}}{% endraw %}
+  </ion-item>
+</ion-list>
+```
+
+<h3 class="section-nav" id="list-dividers">List Dividers</h3>
+<a target="_blank" class="component-doc-demo" href="https://github.com/driftyco/ionic-preview-app/tree/master/app/pages/lists/dividers">
+  Demo Source
+</a>
+
+To divide groups of items, use `<ion-item-group>` instead of `<ion-list>`. Use `<ion-item-divider>` components to divide the group in to multiple sections:
+
+```html
+<ion-content>
+    <ion-item-group>
+
+      <ion-item-divider light>A</ion-item-divider>
+      <ion-item>Angola</ion-item>
+      <ion-item>Argentina</ion-item>
+
+      <ion-item-divider light>B</ion-item-divider>
+
+    </ion-item-group>
+</ion-content>
+```
+
+
+<h3 class="section-nav" id="list-headers">List Headers</h3>
+<a target="_blank" class="component-doc-demo" href="https://github.com/driftyco/ionic-preview-app/tree/master/app/pages/lists/headers">
+  Demo Source
+</a>
+
+Each list can include a header at the top of the list:
+
+```html
+<ion-list>
+  <ion-list-header>
+    Action
+  </ion-list-header>
+  <ion-item>Terminator II</ion-item>
+  <ion-item>The Empire Strikes Back</ion-item>
+  <ion-item>Blade Runner</ion-item>
+</ion-list>
+```
+
+<h3 class="section-nav" id="icon-list">Icon List</h3>
+<a target="_blank" class="component-doc-demo" href="https://github.com/driftyco/ionic-preview-app/tree/master/app/pages/lists/icon">
+  Demo Source
+</a>
+
+Adding [icons](#icons) to list items is a great way to hint about the contents of each item. The position of the icon can be set using the `item-left` and `item-right` attributes:
+
+
+```html
+<ion-list>
+  <ion-item>
+    <ion-icon name="leaf" item-left></ion-icon>
+      Herbology
+    <ion-icon name="rose" item-right></ion-icon>
+  </ion-item>
+</ion-list>
+```
+
+
+<h3 class="section-nav" id="avatar-list">Avatar List</h3>
+<a target="_blank" class="component-doc-demo" href="https://github.com/driftyco/ionic-preview-app/tree/master/app/pages/lists/avatar">
+  Demo Source
+</a>
+
+Item avatars showcase an image larger than an icon, but smaller than a thumbnail. To use an avatar, add an `<ion-avatar>` component inside of an item. The position of the avatar can be set using the `item-left` and `item-right` attributes:
+
+```html
+<ion-list>
+  <ion-item>
+    <ion-avatar item-left>
+      <img src="img/avatar-cher.png">
+    </ion-avatar>
+    <h2>Cher</h2>
+    <p>Ugh. As if.</p>
+  </ion-item>
+</ion-list>
+```
+
+<h3 class="section-nav" id="multiline-list">Multiline List</h3>
+<a target="_blank" class="component-doc-demo" href="https://github.com/driftyco/ionic-preview-app/tree/master/app/pages/lists/multiline">
+  Demo Source
+</a>
+
+Multiline lists are identical to regular lists, except they can multiple lines of text. When multiple header or paragraph tags are added to an `<ion-item>`, the item will automatically adjust its height to fit the new lines. Below is an example with three lines of text:
+
+```html
+<ion-list>
+  <ion-item>
+    <ion-avatar item-left>
+      <img src="img/avatar-finn.png">
+    </ion-avatar>
+    <h2>Finn</h2>
+    <h3>Don't Know What To Do!</h3>
+    <p>I've had a pretty messed up day. If we just...</p>
+  </ion-item>
+</ion-list>
+```
+
+<h3 class="section-nav" id="sliding-list">Sliding List</h3>
+<a target="_blank" class="component-doc-demo" href="https://github.com/driftyco/ionic-preview-app/tree/master/app/pages/lists/sliding">
+  Demo Source
+</a>
+
+Sliding items can be swiped to the left to reveal a set of buttons. To use a sliding item, add a `<ion-item-sliding>` component inside of a list. Next, add a `<ion-item-options>` component inside of the sliding item to contain the buttons:
+
+```html
+<ion-list>
+  <ion-item-sliding>
+    <ion-item>
+      <ion-avatar item-left>
+        <img src="img/slimer.png">
+      </ion-avatar>
+      <h2>Slimer</h2>
+    </ion-item>
+    <ion-item-options>
+      <button primary>
+        <ion-icon name="text"></ion-icon>
+        Text
+      </button>
+      <button secondary>
+        <ion-icon name="call"></ion-icon>
+        Call
+      </button>
+    </ion-item-options>
+  </ion-item-sliding>
+</ion-list>
+```
+
+
+<h3 class="section-nav" id="thumbnail-list">Thumbnail List</h3>
+<a target="_blank" class="component-doc-demo" href="https://github.com/driftyco/ionic-preview-app/tree/master/app/pages/lists/thumbnail">
+  Demo Source
+</a>
+
+Item thumbnails showcase an image that takes up the entire height of an item. To use a thumbnail, add an `<ion-thumbnail>` component inside of an item. The position of the thumbnail can be set using the `item-left` and `item-right` attributes:
+
+```html
+<ion-list>
+  <ion-item>
+    <ion-thumbnail item-left>
+      <img src="img/thumbnail-totoro.png">
+    </ion-thumbnail>
+    <h2>My Neighbor Totoro</h2>
+    <p>Hayao Miyazaki • 1988</p>
+    <button clear item-right>View</button>
+  </ion-item>
+</ion-list>
+```

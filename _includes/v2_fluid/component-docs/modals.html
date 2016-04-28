@@ -1,0 +1,58 @@
+<h2 id="modals" class="section-header">Modals</h2>
+
+<a target="_blank" class="improve-v2-docs" href="https://github.com/driftyco/ionic-site/edit/master/_includes/v2_fluid/component-docs/modals.html">
+  Improve this Doc
+</a>
+
+Modals slide in off screen to display a temporary UI, often used for login or signup pages, message composition, and option selection.
+
+<h3 class="section-nav">Basic Usage</h3>
+<a target="_blank" class="component-doc-demo" href="https://github.com/driftyco/ionic-preview-app/tree/master/app/pages/modals/basic">
+  Demo Source
+</a>
+
+
+Next, we need to create the class that will control our modal. Let's import `Modal`, `NavController` and `ViewController`:
+
+```typescript
+import {Modal, NavController, ViewController} from 'ionic-angular';
+```
+
+Next, let's create our modal and define add its template:
+
+```typescript
+@Page({
+  template: `
+  <ion-content padding>
+    <h2>I'm a modal!</h2>
+    <button (click)="close()">Close</button>
+  </ion-content>`
+})
+class MyModal {
+  constructor(viewCtrl: ViewController) {
+    this.viewCtrl = viewCtrl;
+  }
+  
+  close() {
+    this.viewCtrl.dismiss();
+  }
+}
+```
+
+
+Finally, let's add the code that will open our Modal:
+
+```typescript
+import {Modal, NavController} from 'ionic/ionic'
+class MyPage {
+  constructor(nav: NavController){
+    this.nav = nav;
+  }
+  showModal() {
+    let modal = Modal.create(MyModal);
+    this.nav.present(modal)
+  }
+}
+```
+
+The `Modal.create()` function can also receive an object as the second argument that will be passed to the modal. See the [Modal API docs](/docs/v2/api/components/modal/Modal/) for more information.
