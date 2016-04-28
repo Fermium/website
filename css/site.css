@@ -2958,7 +2958,7 @@ input[type="button"].btn-block {
 
 .navbar-brand {
   float: left;
-  padding: 15px 0 0 10px;
+  padding: 5px 0 0 10px;
   opacity: 0.7; }
   .navbar-brand:hover, .navbar-brand:focus {
     opacity: 1;
@@ -5674,9 +5674,7 @@ h1 + h2 + p {
       background: no-repeat center top url("/img/homepage/market-bag-img.png");
       background-size: 70%; }
 
-.home .navbar {
-  background: none;
-  background: #4E8EF7�/; }
+
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   .home .navbar {
@@ -7338,8 +7336,13 @@ a {
   line-height: 11px; }
 
 .horizontal-gradient {
-  background: #296ad4;
-  background: linear-gradient(to right, #296ad4 0%, #4e8ef7 100%); }
+  /*background: #296ad4;
+background: linear-gradient(to right, #296ad4 0%, #4e8ef7 100%);*/
+background: rgb(235,97,48); /* Old browsers */
+background: -moz-linear-gradient(90deg,  rgba(235,97,48,1) 41%, rgba(235,97,48,1) 41%, rgba(228,23,61,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(90deg,  rgba(235,97,48,1) 41%,rgba(235,97,48,1) 41%,rgba(228,23,61,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(90deg,  rgba(235,97,48,1) 41%,rgba(235,97,48,1) 41%,rgba(228,23,61,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+ }
 
 @-webkit-keyframes fadeIn {
   from {
@@ -7439,7 +7442,7 @@ a {
   padding-left: 22px !important;
   border-top: 3px solid transparent;
   color: #fff;
-  opacity: .6;
+  /*opacity: .6;*/
   transition-duration: .25s; }
   @media (max-width: 991px) {
     .navbar-default .navbar-nav > li > a {
@@ -7477,7 +7480,6 @@ a {
   .getting-started-page .getting-started-nav,
   .nav-link:hover,
   .nav-link:focus {
-    border-top: 3px solid #B5CAFF !important;
     color: white !important;
     opacity: 1 !important; }
   .docs-page.getting-started-page .docs-nav {

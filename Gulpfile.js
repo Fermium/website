@@ -65,19 +65,6 @@ gulp.task('styles:v2', function() {
     .pipe($.size({title: 'styles'}));
 });
 
-gulp.task('styles:v1', function(done) {
-  return gulp.src('scss/**/*.scss')
-    .pipe(sass({onError: browserSync.notify}))
-    .pipe($.autoprefixer({browsers: AUTOPREFIXER_BROWSERS}))
-    .pipe(gulp.dest('./css/'))
-    .pipe(gulp.dest('./_site/css/'))
-    .pipe(minifyCss({
-      keepSpecialComments: 0
-    }))
-    .pipe(rename({extname: '.min.css'}))
-    .pipe(gulp.dest('./css/'))
-    .pipe(gulp.dest('./_site/css/'));
-});
 
 // Optimize images
 gulp.task('images', function() {
@@ -112,7 +99,7 @@ gulp.task('js', function() {
 gulp.task('jekyll-build', [], function(done) {
   browserSync.notify(messages.jekyllBuild);
   return cp.spawn('jekyll',
-                  ['build', '-I', '--config', '_config_development.yml'],
+                  ['build', '-I', '--config', '_config.yml'],
                   {stdio: 'inherit'})
            .on('close', done);
 });
@@ -144,7 +131,7 @@ gulp.task('server', ['server:ionicons','server:stylesv1', 'server:stylesv2', 'im
   });
 });
 
-gulp.task('server:ionicons', ['ionicons'], function() {
+/*gulp.task('server:ionicons', ['ionicons'], function() {
   console.log("ionicons built")
   browserSync.reload();
 });
@@ -163,32 +150,8 @@ gulp.task('server:images', ['images'], function() {
 gulp.task('server:js', ['js'], function() {
   browserSync.reload();
 });
+*/
 
-gulp.task('watch', ['server'], function() {
-  gulp.watch('scss/**.scss', ['server:stylesv1']);
-  gulp.watch(['_scss/*.scss', '_scss/docs/*.scss', '_scss/pages/*.scss'],
-             ['server:stylesv2']);
-  gulp.watch(['_img/*', '_img/*/*'], ['server:images']);
-  gulp.watch(['_js/**/*.js', 'submit-issue/*/*.js'], ['server:js']);
-  gulp.watch(['*.html', 'submit-issue/*.html', 'getting-started/*.html',
-    '_layouts/*', '_layouts/*/*', '_posts/*', '_includes/**/*',
-    'docs/**/*.{md,html,js,css}', '!docs/v2/2*', '!docs/v2/nightly',
-    '!docs/1.*', 'dist/preview-app/www/**/*'
-  ], ['server:jekyll']);
-
-});
-
-gulp.task('cli-docs', function() {
-  try {
-    var fs = require('fs');
-    var cliTasks = JSON.stringify(require('../ionic-cli/lib/tasks/cliTasks'));
-    fs.writeFileSync('_data/cliData.json', cliTasks);
-  } catch (e) {
-    console.error('Cannot find module cliTasks, please make sure the ionic-' +
-                  'cli repo is cloned locally. ionic-site and ionic-cli ' +
-                  'should be sibling directories.');
-  }
-});
 
 gulp.task('docs.index', function() {
   var lunr = require('lunr');
@@ -329,7 +292,7 @@ gulp.task('docs.index', function() {
   });
 });
 
-gulp.task('ionicons', function() {
+/*gulp.task('ionicons', function() {
   gulp.src('node_modules/ionicons/dist/css/ionicons.min.css')
     .pipe(gulp.dest('./css/v2-demos/ionicons/'));
 
@@ -347,6 +310,6 @@ gulp.task('ionicons', function() {
     .pipe(rename('generic-icons.json'))
     .pipe(gulp.dest('./docs/v2/resources/ionicons/data/'));
 });
-
-gulp.task('build', ['ionicons', 'cli-docs', 'styles:v1', 'styles:v2', 'jekyll-build', 'images', 'js']);
+*/
+gulp.task('build', ['styles:v2', 'jekyll-build', 'images', 'js']);
 gulp.task('default', ['build']);

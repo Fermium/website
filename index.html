@@ -6,6 +6,7 @@ body_css: "home"
 
 <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 <link rel="stylesheet" type="text/css" href="/css/slick.css"/>
+<link rel="stylesheet" type="text/css" href="/css/custom.css"/>
 <link rel="stylesheet" type="text/css" href="/css/slick-theme.css"/>
 
 <div id="slider" class="primary-row">
@@ -13,6 +14,7 @@ body_css: "home"
     <div class="container">
       <div class="row">
         <div class="col-sm-6 fadeIn">
+          <div id="change-bar"></div>
           <h1>
             Create incredible apps.
           </h1>
@@ -35,78 +37,10 @@ body_css: "home"
       </div>
     </div>
   </div>
-  <div class="slide slide-creator">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-6 fadeIn">
-          <img src="/img/homepage/creator-logo.png" class="logo" />
-          <h2>Rapidly prototype Ionic apps.</h2>
-          <h3>
-            A simple drag-&amp;-drop interface building tool for creating real
-            ionic apps with a click of the mouse.
-          </h3>
-          <p class="btn-row">
-            <a id="repo-download"
-               class="btn btn-primary btn-download desktop-btn"
-               href="
-http://usecreator.com/?utm_source=ionichome&utm_medium=slider&utm_campaign=Creator%20Framework%20CTA"
-               target="_blank">Start prototyping today</a>
-            <a class="btn btn-primary btn-download mobile-btn"
-               href="
-http://usecreator.com/?utm_source=ionichome&utm_medium=slider&utm_campaign=Creator%20Framework%20CTA"
-               target="_blank">Start prototyping today</a>
-          </p>
-        </div>
-        <div class="col-sm-6 feature-img img-loaded">
-          <div class="creator-preview"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="slide slide-windows">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-6 fadeIn">
-          <h2>
-            Ionic
-            <img src="/img/homepage/ionic-loves-windows-heart.png" class="heart" /> Windows
-          </h2>
-          <h3>
-            Official <strong>Windows Universal Platform App</strong> support is
-            now live in <strong>Ionic 2</strong>, complete with a total UI
-            look-and-feel and component set!
-          </h3>
-          <p class="btn-row">
-            <a id="repo-download" class="btn btn-primary btn-download" href="http://blog.ionic.io/announcing-windows-support-in-ionic-2/" target="_blank">Read the blog post</a>
-            <a class="btn btn-primary btn-get-started" href="http://ionicframework.com/docs/v2/components/" target="_blank">Component docs</a>
-          </p>
-        </div>
-        <div class="col-sm-6 feature-img  img-loaded">
-          <div class="lab-preview"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="slide slide-market">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-6 fadeIn">
-          <h1><strong>The Market</strong> is alive</h1>
-          <h3>
-            Discover and share all the best community-made starter apps, plugins, themes and more to jumpstart your Ionic app development.
-          </h3>
-          <p class="btn-row">
-            <a id="repo-download" class="btn btn-primary btn-download desktop-btn" href="http://market.ionic.io/" target="_blank">Explore the Market</a>
-            <a class="btn btn-primary btn-download mobile-btn" href="http://market.ionic.io/" target="_blank">Explore the Market</a>
-          </p>
-        </div>
-        <div class="col-sm-6 feature-img img-loaded"></div>
-      </div>
-    </div>
-  </div>
+
 </div>
 
-<div class="utility-bar">
+<!--<div class="utility-bar">
   <div class="container">
     <div class="row">
       <ul class="social-row ionic col-md-7">
@@ -122,7 +56,7 @@ http://usecreator.com/?utm_source=ionichome&utm_medium=slider&utm_campaign=Creat
       </form>
     </div>
   </div>
-</div>
+</div>-->
 
 <!-- <div class="creator-bar">
   <iframe style='max-width: 100%;' src='https://blab.im/ionic-ionic-2-beta-chat' frameborder='0' height='480' scrolling='none' width='640'></iframe>
@@ -321,9 +255,6 @@ http://usecreator.com/?utm_source=ionichome&utm_medium=slider&utm_campaign=Creat
   </hgroup>
 </div>
 
-<div>
-  {% include testimonials.html %}
-</div>
 
 
 <div class="pre-footer">
