@@ -1,5 +1,5 @@
 ---
-layout: v2_fluid/docs_base
+layout: /docs_base
 category: resources
 id: what-is
 title: Developer Glossary

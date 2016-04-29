@@ -1,5 +1,5 @@
 ---
-layout: v2_fluid/docs_base
+layout: /docs_base
 id: faq
 category: faq
 title: Ionic Frequently Asked Questions

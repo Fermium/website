@@ -1,5 +1,5 @@
 ---
-layout: v2_fluid/docs_base
+layout: /docs_base
 category: home
 id: home
 title: Ionic Documentation

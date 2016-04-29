@@ -1,5 +1,5 @@
 ---
-layout: v2_fluid/docs_base
+layout: /docs_base
 category: components
 id: components
 title: Ionic Component Documentation
@@ -13,28 +13,28 @@ next_page_link: /docs/v2/api
 
 Ionic apps are made of high-level building blocks called components. Components allow you to quickly construct an interface for your app. Ionic comes with a number of components, including modals, popups, and cards. Although components are primarily HTML and CSS, some components also include JavaScript functionality. Check out the examples below to see what each component looks like and to learn how to use each one. Once you're familiar with the basics, head over to the [API docs](../api) for ideas on how to customize each component.
 
-{% include v2_fluid/component-docs/action-sheets.html %}
-{% include v2_fluid/component-docs/alert.html %}
-{% include v2_fluid/component-docs/badges.html %}
-{% include v2_fluid/component-docs/buttons.html %}
-{% include v2_fluid/component-docs/cards.html %}
-{% include v2_fluid/component-docs/checkbox.html %}
-{% include v2_fluid/component-docs/gestures.html %}
-{% include v2_fluid/component-docs/grid.html %}
-{% include v2_fluid/component-docs/icons.html %}
-{% include v2_fluid/component-docs/inputs.html %}
-{% include v2_fluid/component-docs/lists.html %}
-{% include v2_fluid/component-docs/loading.html %}
-{% include v2_fluid/component-docs/menus.html %}
-{% include v2_fluid/component-docs/modals.html %}
-{% include v2_fluid/component-docs/navigation.html %}
-{% include v2_fluid/component-docs/radio.html %}
-<!-- {% include v2_fluid/component-docs/range.html %} -->
-{% include v2_fluid/component-docs/searchbar.html %}
-{% include v2_fluid/component-docs/segment.html %}
-{% include v2_fluid/component-docs/select.html %}
-{% include v2_fluid/component-docs/slides.html %}
-{% include v2_fluid/component-docs/tabs.html %}
-{% include v2_fluid/component-docs/toast.html %}
-{% include v2_fluid/component-docs/toggle.html %}
-{% include v2_fluid/component-docs/toolbar.html %}
+{% include /component-docs/action-sheets.html %}
+{% include /component-docs/alert.html %}
+{% include /component-docs/badges.html %}
+{% include /component-docs/buttons.html %}
+{% include /component-docs/cards.html %}
+{% include /component-docs/checkbox.html %}
+{% include /component-docs/gestures.html %}
+{% include /component-docs/grid.html %}
+{% include /component-docs/icons.html %}
+{% include /component-docs/inputs.html %}
+{% include /component-docs/lists.html %}
+{% include /component-docs/loading.html %}
+{% include /component-docs/menus.html %}
+{% include /component-docs/modals.html %}
+{% include /component-docs/navigation.html %}
+{% include /component-docs/radio.html %}
+<!-- {% include /component-docs/range.html %} -->
+{% include /component-docs/searchbar.html %}
+{% include /component-docs/segment.html %}
+{% include /component-docs/select.html %}
+{% include /component-docs/slides.html %}
+{% include /component-docs/tabs.html %}
+{% include /component-docs/toast.html %}
+{% include /component-docs/toggle.html %}
+{% include /component-docs/toolbar.html %}
