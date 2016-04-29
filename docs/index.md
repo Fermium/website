@@ -16,27 +16,27 @@ hide_header_search: true
   </form>
   <div class="sections">
     <a class="section getting-started"
-       href="/docs/v2/getting-started">
+       href="/docs/getting-started">
       <h3>Get Started</h3>
       <p>Everything you need to know to get started with Ionic.</p>
     </a>
     <a class="section ui"
-       href="/docs/v2/components">
+       href="/docs/components">
       <h3>UI Components</h3>
       <p>A comprehensive preview of our mobile UI components - everything you’ll need.</p>
     </a>
     <a class="section api"
-       href="/docs/v2/api">
+       href="/docs/api">
       <h3>API</h3>
       <p>Explore our API for info on component methods, properties, and events.</p>
     </a>
     <a class="section theming"
-       href="/docs/v2/theming/">
+       href="/docs/theming/">
       <h3>Theming</h3>
       <p>Learn how to easily customize and modify your app’s design to fit your brand.</p>
     </a>
     <a class="section ionicons-link"
-       href="/docs/v2/ionicons/">
+       href="/docs/ionicons/">
       <h3>Ionicons</h3>
       <p>Over 900 custom-designed font/SVG icons. MIT licensed & ready to use with Ionic.</p>
     </a>

@@ -1,7 +1,7 @@
 ---
 layout: "docs_base"
 version: "nightly"
-versionHref: "/docs/v2"
+versionHref: "/docs"
 path: ""
 category: api
 id: "slides"
@@ -10,7 +10,7 @@ header_sub_title: "Ionic API Documentation"
 doc: "Slides"
 docType: "class"
 show_preview_device: true
-preview_device_url: "/docs/v2/demos/slides/"
+preview_device_url: "/docs/demos/slides/"
 angular_controller: APIDemoCtrl 
 ---
 
@@ -659,7 +659,7 @@ the `Swiper` instance directly.
 
 <h2><a class="anchor" name="related" href="#related"></a>Related</h2>
 
-<a href='/docs/v2/components#slides'>Slides Component Docs</a>
+<a href='/docs/components#slides'>Slides Component Docs</a>
 
 Swiper.js:
 The most modern mobile touch slider and framework with hardware accelerated transitions

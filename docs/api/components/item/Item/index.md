@@ -1,7 +1,7 @@
 ---
 layout: "docs_base"
 version: "nightly"
-versionHref: "/docs/v2"
+versionHref: "/docs"
 path: ""
 category: api
 id: "item"
@@ -10,7 +10,7 @@ header_sub_title: "Ionic API Documentation"
 doc: "Item"
 docType: "class"
 show_preview_device: true
-preview_device_url: "/docs/v2/demos/item/"
+preview_device_url: "/docs/demos/item/"
 angular_controller: APIDemoCtrl 
 ---
 
@@ -82,7 +82,7 @@ add the <code>detail-push</code> attribute (eg: <code>&lt;ion-item detail-push&g
 
 <h2><a class="anchor" name="related" href="#related"></a>Related</h2>
 
-<a href='/docs/v2/components#lists'>List Component Docs</a>,
+<a href='/docs/components#lists'>List Component Docs</a>,
 <a href='../../list/List'>List API Docs</a><!-- end content block -->
 
 

@@ -6,14 +6,14 @@ subid: tutorial
 title: Project Structure - Tutorial
 header_sub_title: Getting Started with Ionic
 prev_page_title: Learn the basics
-prev_page_link: /docs/v2/getting-started/tutorial/
+prev_page_link: /docs/getting-started/tutorial/
 next_page_title: Adding Pages
-next_page_link: /docs/v2/getting-started/tutorial/adding-pages
+next_page_link: /docs/getting-started/tutorial/adding-pages
 ---
 
 # Project Structure
 
-<a class="improve-v2-docs" href='https://github.com/driftyco/ionic-site/edit/master/docs/v2/getting-started/tutorial/project-structure/index.md'>
+<a class="improve-v2-docs" href='https://github.com/driftyco/ionic-site/edit/master/docs/getting-started/tutorial/project-structure/index.md'>
   Improve this doc
 </a>
 
@@ -42,7 +42,7 @@ And the following scripts near the bottom:
 
 <h3 class="file-title">./app/app.js</h3>
 
-Inside of the `app` directory we find our pre-compiled code. This is where most of the work for an Ionic 2 app will take place. When we run `ionic serve`, our code inside of `app/` is [transpiled](docs/v2/resources/what-is/#transpiler) into the correct Javascript version that the browser understands (currently, [ES5](/docs/v2/resources/what-is/#es5)). That means we can work at a higher level using TypeScript and [ES6+](docs/v2/resources/what-is/#es2015-es6), but compile down to the older form of Javascript the browser needs.
+Inside of the `app` directory we find our pre-compiled code. This is where most of the work for an Ionic 2 app will take place. When we run `ionic serve`, our code inside of `app/` is [transpiled](docs/v2/resources/what-is/#transpiler) into the correct Javascript version that the browser understands (currently, [ES5](/docs/resources/what-is/#es5)). That means we can work at a higher level using TypeScript and [ES6+](docs/v2/resources/what-is/#es2015-es6), but compile down to the older form of Javascript the browser needs.
 
 `app/app.js` is the entry point for our app.
 
@@ -87,6 +87,6 @@ Here's the main template for the app in `app/app.html`:
 <ion-nav id="nav" [root]="rootPage" #content swipe-back-enabled="false"></ion-nav>
 ```
 
-In this template, we set up an [`ion-menu`](/docs/v2/components/#menus) to function as a side menu, and then an [`ion-nav`](/docs/v2/api/components/nav/Nav/) component to act as the main content area. The [`ion-menu`](/docs/v2/components/#menus)'s `[content]` property is bound to the local variable `content` from our [`ion-nav`](/docs/v2/api/components/nav/Nav/), so it knows where it should animate around.
+In this template, we set up an [`ion-menu`](/docs/components/#menus) to function as a side menu, and then an [`ion-nav`](/docs/api/components/nav/Nav/) component to act as the main content area. The [`ion-menu`](/docs/components/#menus)'s `[content]` property is bound to the local variable `content` from our [`ion-nav`](/docs/api/components/nav/Nav/), so it knows where it should animate around.
 
 Next let's see how to create more pages and perform basic navigation.

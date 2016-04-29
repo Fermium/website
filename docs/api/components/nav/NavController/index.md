@@ -1,7 +1,7 @@
 ---
 layout: "docs_base"
 version: "nightly"
-versionHref: "/docs/v2"
+versionHref: "/docs"
 path: ""
 category: api
 id: "navcontroller"
@@ -1639,7 +1639,7 @@ Returns the root `NavController`.
 
 <h2><a class="anchor" name="related" href="#related"></a>Related</h2>
 
-<a href='/docs/v2/components#navigation'>Navigation Component Docs</a><!-- end content block -->
+<a href='/docs/components#navigation'>Navigation Component Docs</a><!-- end content block -->
 
 
 <!-- end body block -->

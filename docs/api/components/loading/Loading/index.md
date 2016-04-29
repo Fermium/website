@@ -1,7 +1,7 @@
 ---
 layout: "docs_base"
 version: "nightly"
-versionHref: "/docs/v2"
+versionHref: "/docs"
 path: ""
 category: api
 id: "loading"
@@ -10,7 +10,7 @@ header_sub_title: "Ionic API Documentation"
 doc: "Loading"
 docType: "class"
 show_preview_device: true
-preview_device_url: "/docs/v2/demos/loading/"
+preview_device_url: "/docs/demos/loading/"
 angular_controller: APIDemoCtrl 
 ---
 
@@ -193,7 +193,7 @@ Create a loading indicator with the following options
 
 <h2><a class="anchor" name="related" href="#related"></a>Related</h2>
 
-<a href='/docs/v2/api/components/spinner/Spinner'>Spinner API Docs</a><!-- end content block -->
+<a href='/docs/api/components/spinner/Spinner'>Spinner API Docs</a><!-- end content block -->
 
 
 <!-- end body block -->

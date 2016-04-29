@@ -1,7 +1,7 @@
 ---
 layout: "docs_base"
 version: "nightly"
-versionHref: "/docs/v2"
+versionHref: "/docs"
 path: ""
 category: api
 id: "page"
