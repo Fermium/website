@@ -1,5 +1,5 @@
 ---
-layout: /docs_base
+layout: docs_base
 category: components
 id: components
 title: Ionic Component Documentation
