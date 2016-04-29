@@ -1,7 +1,7 @@
 ---
 layout: "docs_base"
 version: "nightly"
-versionHref: "/docs/v2"
+versionHref: "/docs"
 path: ""
 category: api
 id: "navparams"
@@ -10,7 +10,7 @@ header_sub_title: "Ionic API Documentation"
 doc: "NavParams"
 docType: "class"
 show_preview_device: true
-preview_device_url: "/docs/v2/demos/nav-params/"
+preview_device_url: "/docs/demos/nav-params/"
 angular_controller: APIDemoCtrl 
 ---
 
@@ -154,7 +154,7 @@ export class MyClass{
 
 <h2><a class="anchor" name="related" href="#related"></a>Related</h2>
 
-<a href='/docs/v2/components#navigation'>Navigation Component Docs</a>,
+<a href='/docs/components#navigation'>Navigation Component Docs</a>,
 <a href='../NavController/'>NavController API Docs</a>,
 <a href='../Nav/'>Nav API Docs</a>,
 <a href='../NavPush/'>NavPush API Docs</a><!-- end content block -->

@@ -8,7 +8,7 @@ header_sub_title: Getting Started with Ionic
 
 
 <h1 class="title">Navigating to Pages</h1>
-<a class="improve-v2-docs" href='https://github.com/driftyco/ionic-site/edit/ionic2/docs/v2/getting-started/navigating/index.md'>
+<a class="improve-v2-docs" href='https://github.com/driftyco/ionic-site/edit/ionic2/docs/getting-started/navigating/index.md'>
 Improve this doc
 </a>
 

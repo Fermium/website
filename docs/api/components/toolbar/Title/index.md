@@ -1,7 +1,7 @@
 ---
 layout: "docs_base"
 version: "nightly"
-versionHref: "/docs/v2"
+versionHref: "/docs"
 path: ""
 category: api
 id: "title"
@@ -10,7 +10,7 @@ header_sub_title: "Ionic API Documentation"
 doc: "Title"
 docType: "class"
 show_preview_device: true
-preview_device_url: "/docs/v2/demos/title/"
+preview_device_url: "/docs/demos/title/"
 angular_controller: APIDemoCtrl 
 ---
 

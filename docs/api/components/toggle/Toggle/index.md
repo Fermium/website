@@ -1,7 +1,7 @@
 ---
 layout: "docs_base"
 version: "nightly"
-versionHref: "/docs/v2"
+versionHref: "/docs"
 path: ""
 category: api
 id: "toggle"
@@ -10,7 +10,7 @@ header_sub_title: "Ionic API Documentation"
 doc: "Toggle"
 docType: "class"
 show_preview_device: true
-preview_device_url: "/docs/v2/demos/toggle/"
+preview_device_url: "/docs/demos/toggle/"
 angular_controller: APIDemoCtrl 
 ---
 
@@ -193,7 +193,7 @@ whether the toggle is disabled or not
 
 <h2><a class="anchor" name="related" href="#related"></a>Related</h2>
 
-<a href='/docs/v2/components#toggle'>Toggle Component Docs</a><!-- end content block -->
+<a href='/docs/components#toggle'>Toggle Component Docs</a><!-- end content block -->
 
 
 <!-- end body block -->

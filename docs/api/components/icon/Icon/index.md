@@ -1,7 +1,7 @@
 ---
-layout: "v2_fluid/docs_base"
+layout: "docs_base"
 version: "nightly"
-versionHref: "/docs/v2"
+versionHref: "/docs"
 path: ""
 category: api
 id: "icon"
@@ -10,7 +10,7 @@ header_sub_title: "Ionic API Documentation"
 doc: "Icon"
 docType: "class"
 show_preview_device: true
-preview_device_url: "/docs/v2/demos/icon/"
+preview_device_url: "/docs/demos/icon/"
 angular_controller: APIDemoCtrl 
 ---
 
@@ -128,4 +128,3 @@ markup once while Ionic applies the appropriate icon based on the mode.</p>
 
 
 <!-- end body block -->
-

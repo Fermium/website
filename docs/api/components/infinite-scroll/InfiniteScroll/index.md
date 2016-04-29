@@ -1,7 +1,7 @@
 ---
 layout: "docs_base"
 version: "nightly"
-versionHref: "/docs/v2"
+versionHref: "/docs"
 path: ""
 category: api
 id: "infinitescroll"
@@ -10,7 +10,7 @@ header_sub_title: "Ionic API Documentation"
 doc: "InfiniteScroll"
 docType: "class"
 show_preview_device: true
-preview_device_url: "/docs/v2/demos/infinite-scroll/"
+preview_device_url: "/docs/demos/infinite-scroll/"
 angular_controller: APIDemoCtrl 
 ---
 

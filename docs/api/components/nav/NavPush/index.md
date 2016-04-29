@@ -1,7 +1,7 @@
 ---
 layout: "docs_base"
 version: "nightly"
-versionHref: "/docs/v2"
+versionHref: "/docs"
 path: ""
 category: api
 id: "navpush"
@@ -10,7 +10,7 @@ header_sub_title: "Ionic API Documentation"
 doc: "NavPush"
 docType: "class"
 show_preview_device: true
-preview_device_url: "/docs/v2/demos/navigation/"
+preview_device_url: "/docs/demos/navigation/"
 angular_controller: APIDemoCtrl 
 ---
 
@@ -138,7 +138,7 @@ NavPush:</p>
 
 <h2><a class="anchor" name="related" href="#related"></a>Related</h2>
 
-<a href='/docs/v2/components#navigation'>Navigation Component Docs</a>,
+<a href='/docs/components#navigation'>Navigation Component Docs</a>,
 <a href='../NavPop'>NavPop API Docs</a><!-- end content block -->
 
 

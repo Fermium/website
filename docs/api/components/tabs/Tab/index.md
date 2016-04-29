@@ -1,7 +1,7 @@
 ---
 layout: "docs_base"
 version: "nightly"
-versionHref: "/docs/v2"
+versionHref: "/docs"
 path: ""
 category: api
 id: "tab"
@@ -10,7 +10,7 @@ header_sub_title: "Ionic API Documentation"
 doc: "Tab"
 docType: "class"
 show_preview_device: true
-preview_device_url: "/docs/v2/demos/tabs/"
+preview_device_url: "/docs/demos/tabs/"
 angular_controller: APIDemoCtrl 
 ---
 
@@ -227,7 +227,7 @@ tabbar or not. Defaults to <code>true</code>.</p>
 
 <h2><a class="anchor" name="related" href="#related"></a>Related</h2>
 
-<a href='/docs/v2/components#tabs'>Tabs Component Docs</a>,
+<a href='/docs/components#tabs'>Tabs Component Docs</a>,
 <a href='../../tabs/Tabs'>Tabs API Docs</a>,
 <a href='../../nav/Nav'>Nav API Docs</a>,
 <a href='../../nav/NavController'>NavController API Docs</a><!-- end content block -->

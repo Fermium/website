@@ -1,7 +1,7 @@
 ---
 layout: "docs_base"
 version: "nightly"
-versionHref: "/docs/v2"
+versionHref: "/docs"
 path: ""
 category: api
 id: "button"
@@ -10,7 +10,7 @@ header_sub_title: "Ionic API Documentation"
 doc: "Button"
 docType: "class"
 show_preview_device: true
-preview_device_url: "/docs/v2/demos/button/"
+preview_device_url: "/docs/demos/button/"
 angular_controller: APIDemoCtrl 
 ---
 
@@ -380,7 +380,7 @@ Dynamically set which predefined color this button should use (e.g. primary, sec
 
 <h2><a class="anchor" name="related" href="#related"></a>Related</h2>
 
-<a href='/docs/v2/components#buttons'>Button Component Docs</a><!-- end content block -->
+<a href='/docs/components#buttons'>Button Component Docs</a><!-- end content block -->
 
 
 <!-- end body block -->

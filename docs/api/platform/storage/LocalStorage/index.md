@@ -1,7 +1,7 @@
 ---
 layout: "docs_base"
 version: "nightly"
-versionHref: "/docs/v2"
+versionHref: "/docs"
 path: ""
 category: api
 id: "localstorage"
@@ -10,7 +10,7 @@ header_sub_title: "Ionic API Documentation"
 doc: "LocalStorage"
 docType: "class"
 show_preview_device: true
-preview_device_url: "/docs/v2/demos/local-storage/"
+preview_device_url: "/docs/demos/local-storage/"
 angular_controller: APIDemoCtrl 
 ---
 
@@ -263,7 +263,7 @@ Remove a key from LocalStorage
 
 <h2><a class="anchor" name="related" href="#related"></a>Related</h2>
 
-<a href='/docs/v2/platform/storage/'>Storage Platform Docs</a><!-- end content block -->
+<a href='/docs/platform/storage/'>Storage Platform Docs</a><!-- end content block -->
 
 
 <!-- end body block -->

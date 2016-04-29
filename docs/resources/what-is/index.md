@@ -8,7 +8,7 @@ header_sub_title: Ionic Resources
 
 # Ionic Developer Glossary
 
-<a class="improve-v2-docs" href='https://github.com/driftyco/ionic-site/edit/master/docs/v2/resources/what-is/index.md'>
+<a class="improve-v2-docs" href='https://github.com/driftyco/ionic-site/edit/master/docs/resources/what-is/index.md'>
   Improve this doc
 </a>
 
@@ -84,7 +84,7 @@ header_sub_title: Ionic Resources
 
   <section id="genymotion">
     <h3><a href="#genymotion">Genymotion</a></h3>
-    <p>Genymotion is a third-party Android emulator. It is extremely fast, and is useful for quickly testing your app on Android. Check out our <a href="/docs/v2/resources/developer-tips/#using-genymotion-android">resource section</a> on Genymotion for more info.</p>
+    <p>Genymotion is a third-party Android emulator. It is extremely fast, and is useful for quickly testing your app on Android. Check out our <a href="/docs/resources/developer-tips/#using-genymotion-android">resource section</a> on Genymotion for more info.</p>
   </section>
 
   <section id="git">

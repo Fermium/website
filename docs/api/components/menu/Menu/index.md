@@ -1,7 +1,7 @@
 ---
 layout: "docs_base"
 version: "nightly"
-versionHref: "/docs/v2"
+versionHref: "/docs"
 path: ""
 category: api
 id: "menu"
@@ -10,7 +10,7 @@ header_sub_title: "Ionic API Documentation"
 doc: "Menu"
 docType: "class"
 show_preview_device: true
-preview_device_url: "/docs/v2/demos/menu/"
+preview_device_url: "/docs/demos/menu/"
 angular_controller: APIDemoCtrl 
 ---
 
@@ -575,8 +575,8 @@ property. If a menu is not found then it'll return `null`.
 
 <h2><a class="anchor" name="related" href="#related"></a>Related</h2>
 
-<a href='/docs/v2/components#menus'>Menu Component Docs</a>,
-<a href='/docs/v2/components#navigation'>Navigation Component Docs</a>,
+<a href='/docs/components#menus'>Menu Component Docs</a>,
+<a href='/docs/components#navigation'>Navigation Component Docs</a>,
 <a href='../../nav/Nav'>Nav API Docs</a><!-- end content block -->
 
 

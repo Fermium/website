@@ -5,14 +5,14 @@ id: installation
 title: Installing Ionic
 header_sub_title: Getting Started with Ionic
 prev_page_title: Welcome to Ionic
-prev_page_link: /docs/v2/getting-started/
+prev_page_link: /docs/getting-started/
 next_page_title: Learn the basics
-next_page_link: /docs/v2/getting-started/tutorial
+next_page_link: /docs/getting-started/tutorial
 ---
 
 # Installing Ionic
 
-<a class="improve-v2-docs" href='https://github.com/driftyco/ionic-site/edit/ionic2/docs/v2/getting-started/installation/index.md'>Improve this doc</a>
+<a class="improve-v2-docs" href='https://github.com/driftyco/ionic-site/edit/ionic2/docs/getting-started/installation/index.md'>Improve this doc</a>
 
 Like Ionic 1, Ionic 2 apps can be quickly created from the Ionic CLI or GUI tool or built and tested right in the browser.
 
@@ -23,7 +23,7 @@ $ npm install -g ionic@beta
 ```
 
 > Make sure you have NodeJS installed. Download the installer [here](https://nodejs.org/en/). It's best to get the 4x version of node for stability.
-> Unfamiliar with NPM? Learn more about it and what packages we use [here](/docs/v2/resources/using-npm/)
+> Unfamiliar with NPM? Learn more about it and what packages we use [here](/docs/resources/using-npm/)
 
 Worried about your V1 Ionic projects? Don't worry! The beta release has all the functionality to work with both V1 projects and V2 projects.
 

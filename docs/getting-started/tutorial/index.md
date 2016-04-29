@@ -6,14 +6,14 @@ subid: tutorial
 title: Tutorial
 header_sub_title: Getting Started with Ionic
 prev_page_title: Installing Ionic
-prev_page_link: /docs/v2/getting-started/installation/
+prev_page_link: /docs/getting-started/installation/
 next_page_title: Project Structure
-next_page_link: /docs/v2/getting-started/tutorial/project-structure/
+next_page_link: /docs/getting-started/tutorial/project-structure/
 ---
 
 # Ionic 2 Tutorial
 
-<a class="improve-v2-docs" href='https://github.com/driftyco/ionic-site/edit/master/docs/v2/getting-started/tutorial/index.md'>
+<a class="improve-v2-docs" href='https://github.com/driftyco/ionic-site/edit/master/docs/getting-started/tutorial/index.md'>
   Improve this doc
 </a>
 
