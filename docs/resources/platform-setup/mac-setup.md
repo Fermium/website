@@ -1,5 +1,5 @@
 ---
-layout: v2_fluid/docs_base
+layout: /docs_base
 category: resources
 id: mac_setup
 title: Ionic 2 Resources | OSX Platform Setup

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    {% include v2_fluid/header_tags.html %}
+    {% include /header_tags.html %}
 
     <title>{{page.title}}{% if page.header_sub_title %} - {{ page.header_sub_title}}{% endif %} -  Ionic Framework</title>
 
@@ -11,7 +11,7 @@
         data-spy="scroll"
         data-target="#components-index"
         ng-app="IonicDocs">
-    {% include v2_fluid/io_header.html %}
+    {% include /io_header.html %}
     <div class="docs-container"
          {% if page.angular_controller %}
            ng-controller="{{ page.angular_controller }}"
@@ -25,9 +25,9 @@
                  ng-model="searchTerm">
         </form>
         {% if page.category == 'api' %}
-          {% include v2_fluid/docs_side_nav_api.html %}
+          {% include /docs_side_nav_api.html %}
         {% else %}
-          {% include v2_fluid/docs_side_nav_main.html %}
+          {% include /docs_side_nav_main.html %}
         {% endif %}
       </nav>
       {% if page.show_preview_device %}
@@ -95,7 +95,7 @@
       {% endif %}
     </div>
     {% endif %}
-    {% include v2_fluid/footer_tags.html %}
+    {% include /footer_tags.html %}
     <div id="search-results">
       <div id="results-api">
         <h3>API</h3>
@@ -110,6 +110,6 @@
         <ul></ul>
       </div>
     </div>
-    {% include v2_fluid/footer_tags.html %}
+    {% include /footer_tags.html %}
   </body>
 </html>
