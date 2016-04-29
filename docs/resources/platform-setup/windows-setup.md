@@ -1,5 +1,5 @@
 ---
-layout: /docs_base
+layout: docs_base
 category: resources
 id: windows_setup
 title: Ionic 2 Resources | Windows Platform Setup

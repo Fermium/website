@@ -1,5 +1,5 @@
 ---
-layout: /docs_base
+layout: docs_base
 category: ionicons
 id: ionicons
 title: Ionicons

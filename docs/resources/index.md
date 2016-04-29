@@ -1,5 +1,5 @@
 ---
-layout: /docs_base
+layout: docs_base
 category: resources
 id: resources-intro
 title: Ionic Resources

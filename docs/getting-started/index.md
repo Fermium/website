@@ -1,5 +1,5 @@
 ---
-layout: /docs_base
+layout: docs_base
 category: getting-started
 id: welcome
 title: Welcome to Ionic
