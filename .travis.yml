@@ -1,3 +1,4 @@
+#based on https://kjaermaxi.me/travis/
 language: ruby
 rvm:
 - 2.1
