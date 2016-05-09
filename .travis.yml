@@ -20,7 +20,7 @@ script:
 - jekyll clean && jekyll build
 - bash _scripts/deploy.sh
 after_success:
-  -echo "nothing"
+  - echo "nothing"
 branches:
   only:
   - master
