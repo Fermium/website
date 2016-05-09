@@ -2,10 +2,6 @@
 set -e
 DEPLOY_DIR_BASE="/var/www/html/"
 
-# Define an array of servers to which the code will be deployed.
-#SERVERS="abc.example.com, xyz.example.com"
-SERVERS="srv1.web.fermiumlabs.com"
-
 # Push codebase to the servers via rsync.
 for SERVER in $SERVERS
 do
