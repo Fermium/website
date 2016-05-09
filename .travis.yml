@@ -21,7 +21,7 @@ script:
 - jekyll clean && jekyll build
 - bash _scripts/deploy.sh
 after_success:
-  - echo "nothing"
+  - slack_message.sh repositories deployed on server: $SERVERS from commit $TRAVIS_COMMIT of $TRAVIS_REPO_SLUG@$TRAVIS_BRANCH 
 branches:
   only:
   - master
