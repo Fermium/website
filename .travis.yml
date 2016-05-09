@@ -13,6 +13,7 @@ before_install:
 - chmod 600 deploy-key
 - eval `ssh-agent -s`
 - ssh-add deploy-key
+- sudo cp _scripts/slack_message.sh /usr/local/bin/ && chmod +x /usr/local/bin/slack_message.sh
 install:
 - sudo apt-get -qq -y install nginx
 - gem install jekyll html-proofer
