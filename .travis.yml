@@ -11,8 +11,7 @@ before_install:
 - ssh-add deploy-key
 install:
 - sudo apt-get -qq -y install nginx
-- gem install capistrano
-- gem install jekyll
+- sudo gem install jekyll
 script:
 - jekyll clean && jekyll build
 - rm -r /var/www/html/*
