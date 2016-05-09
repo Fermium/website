@@ -14,6 +14,7 @@ do
         git add .
         git commit -m "Deploy"
         git push --force deploy master
-        ../_scripts/slack_message.sh repositories deployed on server $SERVER
+        cd ..
+        bash ./slack_message.sh repositories deployed on server $SERVER
 done
-../_scripts/slack_message.sh repositories deployed on server: $SERVERS
+../_scripts/slack_message.sh repositories deployed on server: $SERVERS from commit $TRAVIS_COMMIT of $TRAVIS_REPO_SLUG - $TRAVIS_BRANCH 
