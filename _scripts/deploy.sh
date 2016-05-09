@@ -1,17 +1,21 @@
 #!/bin/bash
 set -e
-if [ $TRAVIS_BRANCH == 'master' ] ; then
-    # Initialize a new git repo in _site, and push it to our server.
-    cd _site
-    git init
-        
-    git remote add deploy "deployer@$HOSTNAME_SRV1:/var/www/html/fermiumlabs_com/"
-    git config user.name "Travis CI"
-    git config user.email "webmaster@fermiumlabs.com"
-    
-    git add .
-    git commit -m "Deploy"
-    git push --force deploy master
-else
-    echo "Not deploying, since this branch isn't master."
-fi
+DEPLOY_DIR_BASE="/var/www/html/"
+
+# Define an array of servers to which the code will be deployed.
+#SERVERS="abc.example.com, xyz.example.com"
+SERVERS="srv1.web.fermiumlabs.com"
+
+# Push codebase to the servers via rsync.
+for SERVER in $SERVERS
+do
+        # Initialize a new git repo in _site, and push it to our server.
+        cd _site
+        git init
+        git remote add deploy "deployer@$SERVER:$DEPLOY_DIR_BASE$TRAVIS_REPO_SLUG$TRAVIS_BRANCH"
+        git config user.name "Travis CI"
+        git config user.email "webmaster@fermiumlabs.com"
+        git add .
+        git commit -m "Deploy"
+        git push --force deploy master
+done
