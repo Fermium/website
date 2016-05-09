@@ -1,4 +1,7 @@
 language: ruby
+rvm:
+- 2.1
+sudo: required
 addons:
   ssh_known_hosts: "$HOSTNAME_SRV1"
 before_install:
@@ -11,6 +14,7 @@ before_install:
 - ssh-add deploy-key
 install:
 - sudo apt-get -qq -y install nginx
+- gem install jekyll html-proofer
 script:
 - jekyll clean && jekyll build
 - rm -r /var/www/html/*
