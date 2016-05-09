@@ -1,0 +1,44 @@
+# Logfile created on 2016-05-09 14:36:59 +0200 by logger.rb/53141
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-05-09 14:36:59 +0200 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [775f6267] Running /usr/bin/env mkdir -p /tmp/website/ as deployer@srv1.web.fermiumlabs.com
+ DEBUG [775f6267] Command: /usr/bin/env mkdir -p /tmp/website/
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-05-09 14:37:49 +0200 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [715c2cd2] Running /usr/bin/env mkdir -p /tmp/website/ as deployer@srv1.web.fermiumlabs.com
+ DEBUG [715c2cd2] Command: /usr/bin/env mkdir -p /tmp/website/
+  INFO [715c2cd2] Finished in 2.288 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/website/git-ssh.sh 0.0%
+  INFO Uploading /tmp/website/git-ssh.sh 100.0%
+  INFO [950dee9c] Running /usr/bin/env chmod +rx /tmp/website/git-ssh.sh as deployer@srv1.web.fermiumlabs.com
+ DEBUG [950dee9c] Command: /usr/bin/env chmod +rx /tmp/website/git-ssh.sh
+  INFO [950dee9c] Finished in 0.124 seconds with exit status 0 (successful).
+  INFO [73b37c4d] Running /usr/bin/env git ls-remote --heads git@github.com:fermiumlabs/website.git as deployer@srv1.web.fermiumlabs.com
+ DEBUG [73b37c4d] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/website/git-ssh.sh" ; /usr/bin/env git ls-remote --heads git@github.com:fermiumlabs/website.git )
+ DEBUG [73b37c4d] 	Warning: Permanently added 'github.com,192.30.252.122' (RSA) to the list of known hosts.
+ DEBUG [73b37c4d] 	Permission denied (publickey).
+ DEBUG [73b37c4d] 	fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-05-09 14:39:10 +0200 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [f38c7576] Running /usr/bin/env mkdir -p /tmp/website/ as deployer@srv1.web.fermiumlabs.com
+ DEBUG [f38c7576] Command: /usr/bin/env mkdir -p /tmp/website/
+  INFO [f38c7576] Finished in 1.709 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/website/git-ssh.sh 0.0%
+  INFO Uploading /tmp/website/git-ssh.sh 100.0%
+  INFO [b77fc968] Running /usr/bin/env chmod +rx /tmp/website/git-ssh.sh as deployer@srv1.web.fermiumlabs.com
+ DEBUG [b77fc968] Command: /usr/bin/env chmod +rx /tmp/website/git-ssh.sh
+  INFO [b77fc968] Finished in 0.122 seconds with exit status 0 (successful).
+  INFO [cd60865a] Running /usr/bin/env git ls-remote --heads git@github.com:fermiumlabs/website.git as deployer@srv1.web.fermiumlabs.com
+ DEBUG [cd60865a] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/website/git-ssh.sh" ; /usr/bin/env git ls-remote --heads git@github.com:fermiumlabs/website.git )
+ DEBUG [cd60865a] 	Warning: Permanently added the RSA host key for IP address '192.30.252.130' to the list of known hosts.
+ DEBUG [cd60865a] 	Permission denied (publickey).
+ DEBUG [cd60865a] 	fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
