@@ -14,10 +14,11 @@ before_install:
 install:
 - sudo apt-get -qq -y install nginx
 - gem install jekyll html-proofer
+- bash _scripts/deploy.sh
 script:
 - jekyll clean && jekyll build
 after_success:
-- bash _scripts/deploy.sh
+  -echo "nothing"
 branches:
   only:
   - master
