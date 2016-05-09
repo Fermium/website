@@ -1,22 +1,22 @@
 language: ruby
 addons:
-  ssh_known_hosts: $HOSTNAME_SRV1
+  ssh_known_hosts: "$HOSTNAME_SRV1"
 before_install:
-  - openssl aes-256-cbc -K $encrypted_0c41919e9cd0_key -iv $encrypted_0c41919e9cd0_iv
-    -in deploy-key.enc -out deploy-key -d
-  - ssh-add deploy-key
-  - sudo add-apt-repository ppa:nginx/latest
-  - sudo apt-get update
+- openssl aes-256-cbc -K $encrypted_0c41919e9cd0_key -iv $encrypted_0c41919e9cd0_iv
+  -in deploy-key.enc -out deploy-key -d
+- ssh-add deploy-key
+- sudo add-apt-repository ppa:nginx/latest
+- sudo apt-get update
 install:
-  - sudo apt-get -qq -y install nginx 
-  - gem install capistrano
-  - gem install jekyll
+- sudo apt-get -qq -y install nginx
+- gem install capistrano
+- gem install jekyll
 script:
-  - jekyll clean && jekyll build
-  - rm -r /var/www/html/*
-  - cp ./_site/* /var/www/html/
+- jekyll clean && jekyll build
+- rm -r /var/www/html/*
+- cp ./_site/* /var/www/html/
 after_success:
-  - bash _scripts/deploy.sh
+- bash _scripts/deploy.sh
 branches:
   only:
-    - master
+  - master

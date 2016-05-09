@@ -5,7 +5,7 @@ if [ $TRAVIS_BRANCH == 'master' ] ; then
     cd _site
     git init
         
-    git remote add deploy "deployer@srv1.web.fermiumlabs.com:/var/www/html/fermiumlabs_com"
+    git remote add deploy "deployer@$HOSTNAME_SRV1:/var/www/html/fermiumlabs_com"
     git config user.name "Travis CI"
     git config user.email "webmaster@fermiumlabs.com"
     
