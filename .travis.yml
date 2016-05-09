@@ -16,7 +16,7 @@ script:
   - rm -r /var/www/html/*
   - cp ./_site/* /var/www/html/
 after_success:
-  - echo "nothing after success"
+  - bash _scripts/deploy.sh
 branches:
   only:
     - master
