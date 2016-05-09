@@ -12,7 +12,7 @@ do
         # Initialize a new git repo in _site, and push it to our server.
         cd _site
         git init
-        git remote add deploy "deployer@$SERVER:$DEPLOY_DIR_BASE$TRAVIS_REPO_SLUG$TRAVIS_BRANCH"
+        git remote add deploy "deployer@$SERVER:$DEPLOY_DIR_BASE$TRAVIS_REPO_SLUG/$TRAVIS_BRANCH"
         git config user.name "Travis CI"
         git config user.email "webmaster@fermiumlabs.com"
         git add .
