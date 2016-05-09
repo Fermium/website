@@ -17,8 +17,6 @@ install:
 - gem install jekyll html-proofer
 script:
 - jekyll clean && jekyll build
-- rm -r /var/www/html/*
-- cp ./_site/* /var/www/html/
 after_success:
 - bash _scripts/deploy.sh
 branches:
