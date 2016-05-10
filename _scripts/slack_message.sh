@@ -36,8 +36,7 @@ fi
 read -d '' payLoad << EOF
 {
         "channel": "#${channelName}",
-        "username": "$(hostname)",
-        "icon_emoji": ":sunglasses:",
+        "username": "Deployer",
         "attachments": [
             {
                 "fallback": "${msgTitle}",
