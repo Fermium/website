@@ -8,5 +8,5 @@ server {
 	ssl_certificate         /var/www/certificates/cloudflare_fermiumlabs_com.pem;
 	ssl_certificate_key     /var/www/certificates/cloudflare_fermiumlabs_com-key.pem;
 	 
-  return 302 http://fermiumlabs.com; #temporary redirect 302
+  return 302 https://fermiumlabs.com; #temporary redirect 302
   }
