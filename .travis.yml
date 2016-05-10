@@ -20,7 +20,7 @@ script:
 - jekyll clean && jekyll build
 - bash _scripts/deploy.sh
 after_success:
-  - slack_message.sh -t "Website deployed" -b "on server $SERVERS from commit $TRAVIS_COMMIT of $TRAVIS_REPO_SLUG@$TRAVIS_BRANCH " -c "repositories" -u "$SLACK_WEBHOOK_URL"
+- echo nothing to do
 branches:
   only:
   - master
