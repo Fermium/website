@@ -3,7 +3,7 @@ set -e
 DEPLOY_DIR_BASE="/var/www/html/"
 
 # Push codebase to the servers via rsync.
-for SERVER in $SERVERS
+for SERVER in "${SERVERS[@]}"
 do
         # Initialize a new git repo in _site, and push it to our server.
         echo "deploying on $SERVER:$DEPLOY_DIR_BASE$TRAVIS_REPO_SLUG/$TRAVIS_BRANCH"
