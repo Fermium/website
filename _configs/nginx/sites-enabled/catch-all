@@ -1,0 +1,12 @@
+#redirect all not-known domains to fermiumlabs.com (including IPs)
+server {
+	listen 80 default_server;
+	listen [::]:80 default_server;
+	listen 443 ssl default_server;
+	listen [::]:443 ssl default_server;
+
+	ssl_certificate         /var/www/certificates/cloudflare_fermiumlabs_com.pem;
+	ssl_certificate_key     /var/www/certificates/cloudflare_fermiumlabs_com-key.pem;
+	 
+  return 302 http://fermiumlabs.com; #temporary redirect 302
+  }
