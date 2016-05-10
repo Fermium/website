@@ -23,7 +23,8 @@ server {
 	listen 80;
 	listen [::]:80;
 	server_name fermiumlabs.com ~^srv\d+\.web.fermiumlabs\.com$;
-  return 301 https://$server_name$request_uri;
+	
+  return 301 https://$host$request_uri;
   }
 	
 #redirect WWW to non-WWW
@@ -37,7 +38,6 @@ server {
 	ssl_certificate_key     /var/www/certificates/cloudflare_fermiumlabs_com-key.pem;
 
   server_name  www.fermiumlabs.com;
-  #rewrite ^(.*) $scheme://fermiumlabs.com$1 permanent; #keep http or https
-  #rewrite ^(.*) https://fermiumlabs.com$1 permanent;  #rewrite to https
-	return 302 https://fermiumlabs.com$request_uri;
+	
+	return 301 https://fermiumlabs.com$request_uri;
 }
