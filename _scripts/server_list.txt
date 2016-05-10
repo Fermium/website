@@ -1,1 +1,9 @@
+#Server list. You can separate them with spaces or put them in different lines. do not use other separators
+#Blank lines and lines starting with # are ignored
+
+
+#Frankfurt
 srv1.web.fermiumlabs.com
+
+#San francisco
+#srv2 .web.fermiumlabs.com
