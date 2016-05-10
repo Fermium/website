@@ -23,5 +23,8 @@ do
         cd ..
         #Copy nginx configuration to config directory, overwriting 
         scp -r _configs/* $DEPLOY_USER@$SERVER:$CONFIG_DIR_BASE
+        #safely reload nginx 
+        ssh $DEPLOY_USER@$SERVER 'sudo nginx -s reload' 
         slack_message.sh -t "Website deployed" -b "Successfully deployed server $SERVER in dir $DEPLOY_DIR_BASE$TRAVIS_REPO_SLUG/$TRAVIS_BRANCH from commit $TRAVIS_COMMIT. Check out http://$SERVER/deploy-info.txt" -c "repositories" -u "$SLACK_WEBHOOK_URL"
+        
 done
