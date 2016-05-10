@@ -41,9 +41,7 @@ read -d '' payLoad << EOF
             {
                 "fallback": "${msgTitle}",
                 "color": "good",
-                "title": "${msgTitle}",
                 "fields": [{
-                    "title": "message",
                     "value": "${msgBody}",
                     "short": false
                 }]
