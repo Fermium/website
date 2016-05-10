@@ -1,6 +1,5 @@
 #!/bin/bash
 set -e
-DEPLOY_DIR_BASE="/var/www/html/"
 
 # Push codebase to the servers via rsync.
 for SERVER in $SERVERS
