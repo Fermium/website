@@ -38,5 +38,6 @@ server {
 
   server_name  www.fermiumlabs.com;
   #rewrite ^(.*) $scheme://fermiumlabs.com$1 permanent; #keep http or https
-  rewrite ^(.*) https://fermiumlabs.com$1 permanent;  #rewrite to https
+  #rewrite ^(.*) https://fermiumlabs.com$1 permanent;  #rewrite to https
+	return 302 https://fermiumlabs.com$request_uri;
 }
