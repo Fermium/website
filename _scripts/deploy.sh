@@ -1,5 +1,7 @@
 #!/bin/bash
 set -e
+
+
 DEPLOY_DIR_BASE="/var/www/html"
 CONFIG_DIR_BASE="/var/www/config"
 DEPLOY_USER="deployer"
