@@ -17,9 +17,8 @@ install:
 - gem install jekyll html-proofer
 script:
 - jekyll clean && jekyll build
-- bash _scripts/deploy.sh
 after_success:
-- echo nothing to do
+- test $TRAVIS_PULL_REQUEST == "false" && bash _scripts/deploy.sh
 branches:
   only:
   - master
