@@ -16,6 +16,8 @@ install:
 - gem install jekyll html-proofer
 script:
 - jekyll clean && jekyll build
+- htmlproofer ./_site --assume-extension --check-html --disable-external
+- htmlproofer ./_site --external_only
 after_success:
 - test $TRAVIS_PULL_REQUEST == "false" && bash _scripts/deploy.sh
 branches:
