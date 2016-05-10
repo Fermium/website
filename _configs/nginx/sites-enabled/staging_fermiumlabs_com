@@ -1,7 +1,13 @@
 #Staging fermiumlabs com
 server {
-	listen 80 ;
+	listen 80;
 	listen [::]:80;
+	listen 443 ssl;
+	listen [::]:443 ssl ;
+
+	#ssl        on;
+	ssl_certificate         /var/www/certificates/cloudflare_fermiumlabs_com.pem;
+	ssl_certificate_key     /var/www/certificates/cloudflare_fermiumlabs_com-key.pem;
 
 	# SSL configuration
 	#

@@ -1,14 +1,19 @@
-#based on https://kjaermaxi.me/travis/
 language: ruby
 rvm:
 - 2.1
 sudo: required
 before_install:
+- openssl aes-256-cbc -K $encrypted_ece91c64eeef_key -iv $encrypted_ece91c64eeef_iv
+  -in cloudflare_fermiumlabs_com-key.pem.enc -out cloudflare_fermiumlabs_com-key.pem
+  -d
+- openssl aes-256-cbc -K $encrypted_ece91c64eeef_key -iv $encrypted_ece91c64eeef_iv
+  -in cloudflare_fermiumlabs_com.pem.enc -out cloudflare_fermiumlabs_com.pem -d
+- openssl aes-256-cbc -K $encrypted_0c41919e9cd0_key -iv $encrypted_0c41919e9cd0_iv
+  -in deploy-key.enc -out deploy-key -d
 - bash _scripts/ssh_autenticity.sh
 - sudo add-apt-repository -y ppa:nginx/stable
 - sudo apt-get update
-- openssl aes-256-cbc -K $encrypted_0c41919e9cd0_key -iv $encrypted_0c41919e9cd0_iv
-  -in deploy-key.enc -out deploy-key -d
+-
 - eval `ssh-agent -s`
 - chmod 600 deploy-key && ssh-add deploy-key && rm deploy-key.enc && rm deploy-key
 - sudo cp _scripts/slack_message.sh /usr/local/bin/ && sudo chmod +x /usr/local/bin/slack_message.sh
