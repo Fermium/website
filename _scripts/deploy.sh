@@ -14,5 +14,5 @@ do
         git add .
         git commit -m "Deploy"
         git push --force deploy master
-        #slack_message.sh repositories deployed on server $SERVER
+        slack_message.sh -t "Website deployed" -b "Server: $SERVER in dir: $DEPLOY_DIR_BASE$TRAVIS_REPO_SLUG/$TRAVIS_BRANCH " -c "repositories" -u "$SLACK_WEBHOOK_URL"
 done
