@@ -3,7 +3,7 @@ rvm:
 - 2.1
 sudo: required
 before_install:
-- - openssl aes-256-cbc -K $encrypted_0c41919e9cd0_key -iv $encrypted_0c41919e9cd0_iv
+- openssl aes-256-cbc -K $encrypted_0c41919e9cd0_key -iv $encrypted_0c41919e9cd0_iv
   -in deploy-key.enc -out deploy-key -d
 - chmod 600 deploy-key && ssh-add deploy-key && rm deploy-key.enc && rm deploy-key
 - bash _scripts/ssh_autenticity.sh
