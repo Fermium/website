@@ -11,7 +11,7 @@ do
         echo "deploying on $SERVER:$DEPLOY_DIR_BASE$TRAVIS_REPO_SLUG/$TRAVIS_BRANCH"
         cd _site
         #write info about deployment
-        printf "This deploy was made on: \nServer\t$SERVER \nDirectory\t$DEPLOY_DIR \nCommit\t$TRAVIS_COMMIT \nBuild\t$TRAVIS_BUILD_NUMBER " > deploy-info.txt
+        printf "This deploy was made on: \nServer\t$SERVER \nDate\t$(date) \nDirectory\t$DEPLOY_DIR \nCommit\t$TRAVIS_COMMIT \nBuild\t$TRAVIS_BUILD_NUMBER " > deploy-info.txt
         git init
         git remote add deploy "$DEPLOY_USER@$SERVER:$DEPLOY_DIR"
         git config user.name "Travis CI"
