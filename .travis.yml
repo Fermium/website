@@ -9,9 +9,8 @@ before_install:
 - sudo apt-get update
 - openssl aes-256-cbc -K $encrypted_0c41919e9cd0_key -iv $encrypted_0c41919e9cd0_iv
   -in deploy-key.enc -out deploy-key -d
-- chmod 600 deploy-key
 - eval `ssh-agent -s`
-- ssh-add deploy-key
+- chmod 600 deploy-key && ssh-add deploy-key && rm deploy-key.enc && rm deploy-key
 - sudo cp _scripts/slack_message.sh /usr/local/bin/ && sudo chmod +x /usr/local/bin/slack_message.sh
 install:
 - sudo apt-get -qq -y install nginx
