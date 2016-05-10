@@ -1,6 +1,7 @@
 #!/bin/bash
 set -e
 DEPLOY_DIR_BASE="/var/www/html"
+CONFIG_DIR_BASE="/var/www/config"
 DEPLOY_USER="deployer"
 DEPLOY_DIR="$DEPLOY_DIR_BASE/$TRAVIS_REPO_SLUG/$TRAVIS_BRANCH"
 
@@ -21,4 +22,6 @@ do
         git push --force deploy master
         slack_message.sh -t "Website deployed" -b "Successfully deployed server $SERVER in dir $DEPLOY_DIR_BASE$TRAVIS_REPO_SLUG/$TRAVIS_BRANCH from commit $TRAVIS_COMMIT" -c "repositories" -u "$SLACK_WEBHOOK_URL"
         cd ..
+        #Copy nginx configuration to config directory 
+        scp -r _configs/* $DEPLOY_USER@$SERVER:$CONFIG_DIR_BASE
 done
