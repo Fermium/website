@@ -18,6 +18,7 @@ server {
 
 }
 
+
 #redirect fermiumlabs.com http requests to https
 server {
 	listen 80;
