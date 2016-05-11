@@ -4,12 +4,15 @@ set -e
 CONFIG_DIR_BASE="/var/www/config"
 DEPLOY_USER="deployer"
 
+echo "config deploy script"
+
 #If nginx config was updated in the last (and actual) commit
 if [ "$(git log -n 1 --pretty=format:%h -- _configs/nginx/)" = "$(git log --pretty=format:'%h' -n 1)" ]; then
         # Push codebase to the servers via rsync.
+        echo "last config commit: $(git log -n 1 --pretty=format:%h -- _configs/nginx/) last commit: $(git log --pretty=format:'%h' -n 1)"
         for SERVER in $(egrep -v '(^#|^\s*$|^\s*\t*#)' _scripts/server_list.txt)
         do
-                
+                echo "Deploying config on server $SERVER in directory $CONFIG_DIR_BASE"
                 #write info about deployment
                 printf "#This configuration was deployed on: \n#Server\t\t$SERVER \n#Date\t\t$(date) \n#Commit\t\t$TRAVIS_COMMIT \n#Build\t\t$TRAVIS_BUILD_NUMBER " > _configs/deploy-info.txt
                 
