@@ -18,7 +18,7 @@ do
         printf "This deploy was made on: \nServer\t\t$SERVER \nDate\t\t$(date) \nDirectory\t$DEPLOY_DIR \nCommit\t\t$TRAVIS_COMMIT \nBuild\t\t$TRAVIS_BUILD_NUMBER " > deploy-info.txt
         
         git init
-        git remote add deploy "$DEPLOY_USER@$SERVER:$DEPLOY_DIR"
+        git remote add $SERVER "$DEPLOY_USER@$SERVER:$DEPLOY_DIR"
         git config user.name "Travis CI"
         git config user.email "webmaster@fermiumlabs.com"
         git add .
