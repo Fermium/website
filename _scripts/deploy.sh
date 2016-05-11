@@ -23,7 +23,7 @@ do
         git config user.email "webmaster@fermiumlabs.com"
         git add .
         git commit -m "Deploying commit $TRAVIS_COMMIT of repository $TRAVIS_REPO_SLUG/$TRAVIS_BRANCH"
-        git push --force deploy master
+        git push --force $SERVER master
         cd ..
         
         printf "Successfully deployed website on server $SERVER in dir $DEPLOY_DIR_BASE$TRAVIS_REPO_SLUG/$TRAVIS_BRANCH from commit $TRAVIS_COMMIT. Check out http://$SERVER/deploy-info.txt\n\n" >> slack_message.txt
