@@ -21,7 +21,7 @@ script:
 after_success:
 - test $TRAVIS_PULL_REQUEST == "false" && bash _scripts/deploy.sh
 - test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master" && bash _scripts/deploy_config.sh
-- slack_message.sh -t "Deployed" -b "$(echo slack_message.txt)" -c "repositories" -u "$SLACK_WEBHOOK_URL"
+- slack_message.sh -t "Deployed" -b "$(cat slack_message.txt)" -c "repositories" -u "$SLACK_WEBHOOK_URL"
 branches:
   only:
   - master
