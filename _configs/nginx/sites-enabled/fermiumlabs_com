@@ -6,7 +6,11 @@ server {
   ssl_certificate         /var/www/certificates/cloudflare_fermiumlabs_com.pem;
   ssl_certificate_key     /var/www/certificates/cloudflare_fermiumlabs_com-key.pem;
 	
-	server_name fermiumlabs.com ~^srv\d+\.web.fermiumlabs\.com$;
+	#Verify that the request came from cloudflare
+	ssl_client_certificate /var/www/certificates/origin-pull-ca.pem;
+  ssl_verify_client on;
+	
+	server_name fermiumlabs.com;
 	root /var/www/html/fermiumlabs/website/master/public_html/;
 	index index.html;
 
@@ -21,7 +25,11 @@ server {
 server {
 	listen 80;
 	listen [::]:80;
-	server_name fermiumlabs.com ~^srv\d+\.web.fermiumlabs\.com$;
+	server_name fermiumlabs.com;
+	
+	#Verify that the request came from cloudflare
+	ssl_client_certificate /var/www/certificates/origin-pull-ca.pem;
+	ssl_verify_client on;
 	
   return 301 https://$host$request_uri;
   }
@@ -32,9 +40,14 @@ server {
 	listen [::]:80;
 	listen 443 ssl;
 	listen [::]:443 ssl ;
+	
 
 	ssl_certificate         /var/www/certificates/cloudflare_fermiumlabs_com.pem;
 	ssl_certificate_key     /var/www/certificates/cloudflare_fermiumlabs_com-key.pem;
+	
+	#Verify that the request came from cloudflare
+	ssl_client_certificate /var/www/certificates/origin-pull-ca.pem;
+	ssl_verify_client on;
 
   server_name  www.fermiumlabs.com;
 	
