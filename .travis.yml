@@ -20,6 +20,7 @@ script:
 - htmlproofer ./_site --external_only
 after_success:
 - test $TRAVIS_PULL_REQUEST == "false" && bash _scripts/deploy.sh
+- test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master" && bash _scripts/deploy_config.sh
 branches:
   only:
   - master
