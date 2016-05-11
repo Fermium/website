@@ -6,4 +6,4 @@
 srv1.web.fermiumlabs.com
 
 #San francisco
-#srv2 .web.fermiumlabs.com
+srv2.web.fermiumlabs.com
