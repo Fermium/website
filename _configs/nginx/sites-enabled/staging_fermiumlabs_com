@@ -1,12 +1,10 @@
 #Staging fermiumlabs com
 server {
-	listen 80;
-	listen [::]:80;
-	#listen 443 ssl;
-	#listen [::]:443 ssl ;
+	listen 443 ssl;
+	listen [::]:443 ssl ;
 	
-	#ssl_certificate         /var/www/certificates/cloudflare_fermiumlabs_com.pem;
-	#ssl_certificate_key     /var/www/certificates/cloudflare_fermiumlabs_com-key.pem;
+	ssl_certificate         /var/www/certificates/cloudflare_fermiumlabs_com.pem;
+	ssl_certificate_key     /var/www/certificates/cloudflare_fermiumlabs_com-key.pem;
 	
 	server_name staging.fermiumlabs.com ~^staging.srv\d+\.web.fermiumlabs\.com$;
 	root /var/www/html/fermiumlabs/website/develop/public_html/;
@@ -24,3 +22,12 @@ server {
 
 
 }
+
+#redirect staging http requests to https
+server {
+	listen 80;
+	listen [::]:80;
+	server_name staging.fermiumlabs.com ~^staging.srv\d+\.web.fermiumlabs\.com$;
+	
+  return 301 https://$host$request_uri;
+  }
