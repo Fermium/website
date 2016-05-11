@@ -5,6 +5,8 @@ DEPLOY_DIR_BASE="/var/www/html"
 DEPLOY_USER="deployer"
 DEPLOY_DIR="$DEPLOY_DIR_BASE/$TRAVIS_REPO_SLUG/$TRAVIS_BRANCH"
 
+echo "Website deploy script"
+
 # Push codebase to the servers via rsync.
 for SERVER in $(egrep -v '(^#|^\s*$|^\s*\t*#)' _scripts/server_list.txt)
 do

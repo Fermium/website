@@ -4,7 +4,7 @@ set -e
 CONFIG_DIR_BASE="/var/www/config"
 DEPLOY_USER="deployer"
 
-echo "config deploy script"
+echo "Config deploy script"
 
 #If nginx config was updated in the last (and actual) commit
 if [ "$(git log -n 1 --pretty=format:%h -- _configs/nginx/)" = "$(git log --pretty=format:'%h' -n 1)" ]; then
