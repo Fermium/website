@@ -4,6 +4,16 @@ title: About
 permalink: /about/
 ---
 
-**MUAHAHAHAH** I WRITTEN A THING! 
+#Qualcosa
 
-123
+Ciao, **grassetto**, *corsivo*...
+
+* Ciao
+* ciao 2
+
+1. Ciao
+2. ciao 2
+3. 
+
+
+
