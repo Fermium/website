@@ -13,9 +13,8 @@ before_install:
 - bash _scripts/ssh_autenticity.sh
 - sudo cp _scripts/slack_message.sh /usr/local/bin/ && sudo chmod +x /usr/local/bin/slack_message.sh
 script:
-- jekyll clean && jekyll build
-- htmlproofer ./_site --assume-extension --check-html --disable-external
-- htmlproofer ./_site --external_only
+- bundle exec jekyll clean && bundle exec jekyll build
+- bash _tests/html/htmlproofer.sh
 after_success:
 - test $TRAVIS_PULL_REQUEST == "false" && bash _scripts/deploy.sh
 - test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master" && bash _scripts/deploy_config.sh
