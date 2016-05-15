@@ -19,3 +19,7 @@ github_username:  jekyll
 
 # Build settings
 markdown: kramdown
+
+#Fermiumlabs mods
+gems:
+  - jekyll-sitemap
