@@ -7,7 +7,7 @@ DEPLOY_USER="deployer"
 #DO NOT REMOVE THIS ECHO
 echo "Website deploy script"
 
-
+cd $TRAVIS_BUILD_DIR/Website/
 #for every directory
 for WEBSITE in $(find . -maxdepth 1 -type d) 
 do
