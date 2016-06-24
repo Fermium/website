@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
-
+#This script add the server to known host
 for SERVER in $(egrep -v '(^#|^\s*$|^\s*\t*#)' _scripts/server_list.txt)
 do
   echo $SERVER
