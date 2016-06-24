@@ -7,22 +7,27 @@ before_install:
   -in deploy-key.enc -out deploy-key -d
 - eval `ssh-agent -s`
 - chmod 600 deploy-key && ssh-add deploy-key && rm deploy-key.enc && rm deploy-key
-- sudo add-apt-repository -y ppa:nginx/development
-- sudo apt-get -qq -y install nginx
+- sudo add-apt-repository -y ppa:nginx/development 
+- sudo apt-get -qq -y install nginx 
 - sudo apt-get update
-- bash _scripts/ssh_autenticity.sh
-- sudo cp _scripts/slack_message.sh /usr/local/bin/ && sudo chmod +x /usr/local/bin/slack_message.sh
+- bash _scripts/ssh_autenticity.sh #add servers to known hosts
+- sudo cp _scripts/slack_message.sh /usr/local/bin/ && sudo chmod +x /usr/local/bin/slack_message.sh #install slack notifier script
+
 script:
 - bundle exec jekyll clean && bundle exec jekyll build
 - bash _scripts/tests/html/htmlproofer.sh
+
 after_success:
+#deploy if is not a pull request. If it's the master branch, also deploy config
 - test $TRAVIS_PULL_REQUEST == "false" && bash _scripts/deploy.sh
 - test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master" && bash _scripts/deploy_config.sh
 - slack_message.sh -t "Deployed" -b "$(cat slack_message.txt)" -c "repositories" -u "$SLACK_WEBHOOK_URL"
+
 branches:
   only:
   - master
   - develop
+
 notifications:
   slack:
     on_success: always
@@ -33,4 +38,4 @@ notifications:
   
 env:
   global:
-  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true #make html-proofer build faster
