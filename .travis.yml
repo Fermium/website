@@ -14,9 +14,6 @@ before_install:
 - sudo apt-get update
 - sudo apt-get -qq -y install nginx 
 
-install:
-- sh -c "cd Websites/website && bundle install --jobs=3 --retry=3 --deployment"
-
 script:
 - sh -c "cd Websites/website && bundle exec jekyll build" #build first site withouth dir change
 - bash _scripts/tests/html/htmlproofer.sh
