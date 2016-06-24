@@ -7,20 +7,20 @@ DEPLOY_USER="deployer"
 #DO NOT REMOVE THIS ECHO
 echo "Website deploy script"
 
-cd $TRAVIS_BUILD_DIR/Website/
+cd $TRAVIS_BUILD_DIR/Websites/
 #for every directory
 for WEBSITE in $(find . -maxdepth 1 -type d) 
 do
         DEPLOY_DIR="$DEPLOY_DIR_BASE/$WEBSITE/$TRAVIS_BRANCH"
         
-        cd $TRAVIS_BUILD_DIR/Website/$WEBSITE
+        cd $TRAVIS_BUILD_DIR/Websites/$WEBSITE
         
         #For every server
         for SERVER in $(egrep -v '(^#|^\s*$|^\s*\t*#)' _scripts/server_list.txt)
         do
                 
                 # Initialize a new git repo in _site, and push it to our server.
-                echo "deploying on $SERVER:$DEPLOY_DIR_BASE$TRAVIS_REPO_SLUG/$TRAVIS_BRANCH"
+                echo "deploying on $SERVER:$DEPLOY_DIR"
                 cd _site
                 #Print deployment report
                 printf "This deploy was made on: \nServer\t\t$SERVER \nDate\t\t$(date) \nDirectory\t$DEPLOY_DIR \nCommit\t\t$TRAVIS_COMMIT \nBuild\t\t$TRAVIS_BUILD_NUMBER " > deploy-info.txt
