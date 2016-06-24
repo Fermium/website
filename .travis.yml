@@ -23,6 +23,7 @@ after_success:
 - test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master" && bash _scripts/deploy_config.sh
 - slack_message.sh -t "Deployed" -b "$(cat slack_message.txt)" -c "repositories" -u "$SLACK_WEBHOOK_URL"
 
+#Only the master and develop branches destinations git configured in the server
 branches:
   only:
   - master
