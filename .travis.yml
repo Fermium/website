@@ -14,7 +14,7 @@ before_install:
 - sudo cp _scripts/slack_message.sh /usr/local/bin/ && sudo chmod +x /usr/local/bin/slack_message.sh #install slack notifier script
 
 script:
-- bundle exec jekyll --source ./Websites/website --destination ./Websites/website/_site build
+- sh -c "cd Websites/website && bundle exec jekyll build" #build first site withouth dir change
 - bash _scripts/tests/html/htmlproofer.sh
 
 after_success:
