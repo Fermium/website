@@ -2,3 +2,6 @@ _site
 .sass-cache
 .jekyll-metadata
 node_modules
+## Environment normalization:
+.bundle/
+vendor/
