@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-DEPLOY_DIR_BASE="/var/www/html"
+DEPLOY_DIR_BASE="/var/www/html/fermiumlabs"
 DEPLOY_USER="deployer"
 
 #DO NOT REMOVE THIS ECHO
