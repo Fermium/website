@@ -37,7 +37,7 @@ do
                 git commit -m "Deploying commit $TRAVIS_COMMIT of repository $TRAVIS_REPO_SLUG/$TRAVIS_BRANCH"
                 git push --force $SERVER master
                 
-                printf "Successfully deployed $WEBSITE on server $SERVER in dir $DEPLOY_DIR from commit $TRAVIS_COMMIT. Check out http://$(cat address.txt)/deploy-info.txt\n\n" >> slack_message.txt
+                printf "Successfully deployed $WEBSITE on server $SERVER in dir $DEPLOY_DIR from commit $TRAVIS_COMMIT. Check out http://$(cat address.txt)/deploy-info.txt\n\n" >> $TRAVIS_BUILD_DIR/slack_message.txt
                 
         done
         cd 

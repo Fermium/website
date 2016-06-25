@@ -1,6 +1,6 @@
 language: ruby
 rvm:
-- 2.1
+- 2.2
 sudo: required
 
 before_install:
@@ -19,10 +19,19 @@ script:
 - bash _scripts/tests/html/htmlproofer.sh
 
 after_success:
-#deploy if is not a pull request. If it's the master branch, also deploy config
-- test $TRAVIS_PULL_REQUEST == "false" && bash _scripts/deploy.sh
+#If it's the master branch, also deploy config
 - test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master" && bash _scripts/deploy_config.sh
 - slack_message.sh -t "Deployed" -b "$(cat slack_message.txt)" -c "repositories" -u "$SLACK_WEBHOOK_URL"
+
+addons:
+  sauce_connect:
+    username: "fermiumlabs"
+    access_key:
+      secure: "TJtgwF0unsFgh9WoSCQD7e2206VSPxfKb11k9r9irEWIC0PV0/NzFeHBDpf5rVTpqzFP4gaKl/iXdh9U89Q4DQ4zwJDrM4JgIRmTX4e0MQUkK9EQJVTc7WpHiKP1n/HOFORy0O/oab79/AOtsVFfB9jQZeMQ6Aks5goYq8ZnytESYNi6rjVHTXViZNxOPkPxZqQ1qWi/s/6lW9x2av0XdIgnmfUemJ9LmADE8uBcUOplU56Rn0kwSSF2AObSdQZ1iAY0uBlRdqHImjLTHuTqvrN7ShS2M0MYj7MZEEwH6RJUv4DhAulxZbeufkZ4MWvnO/75cmuVIGJEwANOJ2+tB/ZoHYGx9Xe0xqb6O0p8gIGjeDz61KiQvr8VBEppr0oCYzEBfaYYcVzMbH9YBE9vQBy+ZA8AhYwjIEy6nKVStn5Q2nFbg+Ux1Uag65QbNNzssoAoeO/Gn2bhDLeNEgu6/id3qeJOCPdCb+wnk6tpm/DnWys3fS9a5CPdE2jmeedSt0ewmT9/NcmyyrdmjLtgfmBVkGTgO7JRIr0ewH+2TX6RaldrCENjb5ZHExUGkdO1trR2ZDStUcqf52Luf1/Vh2+tc6URc9bXADyA/OFOBM0rqjTI0hutFV9crFSW5aHyMkpqxmFJMKBiETjW4iolBBTEIvD/3QkiLpELKaDVrto="
+
+deploy:
+  provider: script
+  script: _scripts/deploy.sh
 
 #Only the master and develop branches destinations git configured in the server
 branches:
