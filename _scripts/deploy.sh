@@ -14,7 +14,9 @@ cd $TRAVIS_BUILD_DIR/Websites/ #dir that contains the websites
 for WEBSITE in $(find . -maxdepth 1 -type d) 
 do
         DEPLOY_DIR="$DEPLOY_DIR_BASE/$WEBSITE/$TRAVIS_BRANCH"
-        cd $TRAVIS_BUILD_DIR/Websites/$WEBSITE
+        WEBSITE_DIR="$TRAVIS_BUILD_DIR/Websites/$WEBSITE"
+        
+        cd $WEBSITE_DIR
         echo "#### deplying website in folder $(pwd)"
 
         #For every server
@@ -23,7 +25,7 @@ do
                 
                 # Initialize a new git repo in _site, and push it to our server.
                 echo "deploying $WEBSITE on $SERVER:$DEPLOY_DIR"
-                cd _site
+                cd $WEBSITE_DIR/_site
                 #Print deployment report
                 printf "This deploy was made on: \nServer\t\t$SERVER \nDate\t\t$(date) \nDirectory\t$DEPLOY_DIR \nCommit\t\t$TRAVIS_COMMIT \nBuild\t\t$TRAVIS_BUILD_NUMBER " > deploy-info.txt
                 
