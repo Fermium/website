@@ -32,6 +32,7 @@ addons:
 deploy:
   provider: script
   script: _scripts/deploy.sh
+  skip_cleanup: true
 
 #Only the master and develop branches destinations git configured in the server
 branches:
