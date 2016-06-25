@@ -11,7 +11,7 @@ echo "Website deploy script"
 cd $TRAVIS_BUILD_DIR/Websites/ #dir that contains the websites
 
 #for every directory
-for WEBSITE in $(find . -maxdepth 1 -type d) 
+for WEBSITE in $(find . -maxdepth 1 -type d | tr -d "./") 
 do
         DEPLOY_DIR="$DEPLOY_DIR_BASE/$WEBSITE/$TRAVIS_BRANCH"
         WEBSITE_DIR="$TRAVIS_BUILD_DIR/Websites/$WEBSITE"
