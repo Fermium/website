@@ -6,9 +6,7 @@ The website is automatically built, tested and deployed from Travis-CI to a list
 
 ### Git Endpoint
 
-The Git endpoint were the sites are deployed can be set up following this [article](http://nicolasgallagher.com/simple-git-deployment-strategy-for-static-sites/).
-
-Check the folder structure for more informations.
+The Git endpoint were the sites are deployed can be set up manually following this [article](http://nicolasgallagher.com/simple-git-deployment-strategy-for-static-sites/).
 
 ### CDN 
 
