@@ -48,7 +48,7 @@ do
                 git remote add $SERVER "$DEPLOY_USER@$SERVER:$DEPLOY_DIR"
                 git config user.name "Travis CI"
                 git config user.email "deployer@fermiumlabs.com"
-                git add -A
+                git add --all
                 git commit -m "Deploying commit $TRAVIS_COMMIT of repository $TRAVIS_REPO_SLUG/$TRAVIS_BRANCH"
                 git push --force $SERVER master
                 
