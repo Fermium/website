@@ -24,7 +24,7 @@ do
         echo "#### deploying website $WEBSITE_ADDR in folder $(pwd)"
         
         #For every server, ignore #comments
-        for SERVER in "$(egrep -v '(^#|^\s*$|^\s*\t*#)' $TRAVIS_BUILD_DIR/_scripts/server_list.txt)"
+        for SERVER in $(egrep -v '(^#|^\s*$|^\s*\t*#)' $TRAVIS_BUILD_DIR/_scripts/server_list.txt)
         do
                 
                 echo "#### deploying $WEBSITE_ADDR on $SERVER:$DEPLOY_DIR"
