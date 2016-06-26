@@ -19,7 +19,7 @@ do
         
         cd $WEBSITE_DIR
         #replacing "_" with "." in directory name to obtain web address 
-        WEBSITE_ADDR="$(echo ""$WEBSITE_DIR" | sed 's@.*/@@' | tr -s '_' '.')"
+        WEBSITE_ADDR="$(echo "$WEBSITE_DIR" | sed 's@.*/@@' | tr -s '_' '.')"
 
         echo "#### deploying website $WEBSITE_ADDR in folder $(pwd)"
         
