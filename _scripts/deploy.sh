@@ -41,13 +41,7 @@ do
                 
                 
                 #Print deployment report
-                printf "This deploy was made on: \n\n\
-                Server \t\t $SERVER \n\
-                Website \t\t $WEBSITE_ADDR \n\
-                Date \t\t $(date) \n\
-                Directory \t $DEPLOY_DIR \n\
-                Commit \t\t $TRAVIS_COMMIT \n\
-                Build \t\t $TRAVIS_BUILD_NUMBER " > deploy-info.txt
+                printf "This deploy was made on: \n\nServer \t\t $SERVER \nWebsite \t\t $WEBSITE_ADDR \nDate \t\t $(date) \nDirectory \t $DEPLOY_DIR \nCommit \t\t $TRAVIS_COMMIT \nBuild \t\t $TRAVIS_BUILD_NUMBER " > deploy-info.txt
                 
                 #push the repository
                 git init
