@@ -35,34 +35,34 @@ For *staging* set up a page rule to bypass most Cloudflare bells and whistles:
 
 
 ### Server folder structure
-
-  var/www:
-  ├── certificates
-  │   ├── cloudflare_fermiumlabs_com-key.pem
-  │   ├── cloudflare_fermiumlabs_com.pem
-  │   └── origin-pull-ca.pem
-  ├── config
-  │   ├── deploy-info.txt
-  │   └── nginx
-  │       └── sites-enabled
-  │           ├── catch-all
-  │           ├── fermiumlabs_com
-  │           └── staging_fermiumlabs_com
-  ├── git
-  │   └── fermiumlabs_com
-  │       ├── develop
-  │       │   └── hooks
-  │       │       └── post-receive
-  │       └── master
-  │           └── hooks
-  │               └── post-receive
-  └── html
+```
+var/www:
+├── certificates
+│   ├── cloudflare_fermiumlabs_com-key.pem
+│   ├── cloudflare_fermiumlabs_com.pem
+│   └── origin-pull-ca.pem
+├── config
+│   ├── deploy-info.txt
+│   └── nginx
+│       └── sites-enabled
+│           ├── catch-all
+│           ├── fermiumlabs_com
+│           └── staging_fermiumlabs_com
+├── git
+│   └── fermiumlabs_com
+│       ├── develop
+│       │   └── hooks
+│       │       └── post-receive
+│       └── master
+│           └── hooks
+│               └── post-receive
+└── html
       └── fermiumlabs_com
-          ├── develop
+          ├── develop
           │   └── index.html
-          └── master
+          └── master
               └── index.html
-              
+```
 ### Repository folder structure
 
 * *_configs:* Nginx configuration
