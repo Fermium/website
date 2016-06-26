@@ -4,13 +4,35 @@ This repository contains the main website [fermiumlabs.com](https://fermiumlabs.
 
 The website is automatically built, tested and deployed from Travis-CI to a list of servers.
 
+You're free to use our scripts for your website, but not our content.
+
 ### Git Endpoint
 
 The Git endpoint were the sites are deployed can be set up manually following this [article](http://nicolasgallagher.com/simple-git-deployment-strategy-for-static-sites/).
 
 ### CDN 
 
-We use [Cloudflare](cloudflare.com) as a CDN, with end-to-end encryption of both request (via a  client certificate) and replyes (https).
+We use [Cloudflare](cloudflare.com) as a CDN, with end-to-end encryption of both request (Authenticated Origin Pulls) and replies (SSL). Visitors data is thus encrypted both way to our servers.
+
+Cloudflare must be set up with full (strict) SSL and appropriated origin certificates.
+
+To replicate our configuration, you need to setup Cloudflare (and enable http proxy):
+
+* @ record
+* www
+* staging.
+
+For *staging* set up a page rule to bypass most Cloudflare bells and whistles: 
+
+* Server Side Excludes **OFF**
+* SSL **Strict**
+* Smart Errors **OFF**
+* Always Online **OFF**
+* Cache Level **Bypass**
+* Email Obfuscation **OFF**
+* Disable Apps
+* Disable Performance
+
 
 ### Server folder structure
 
@@ -49,5 +71,9 @@ We use [Cloudflare](cloudflare.com) as a CDN, with end-to-end encryption of both
   * *_site:* The output directory for Jekyll.
   * *site:* The directory if the site is not built by Travis-CI. If this directory is present *_site* will be ignored.
               
-###Thanks
+### Thanks
 This site was derived from [ionic-site](https://github.com/driftyco/ionic-site).
+
+### TODOs
+
+* Better licensing
