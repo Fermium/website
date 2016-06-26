@@ -11,7 +11,7 @@ echo "#### Website deploy script"
 cd $TRAVIS_BUILD_DIR/Websites/ #dir that contains the websites in this repo
 
 #for every directory, max depth 1, clean the output
-for WEBSITE in "$(find . -maxdepth 1 -type d | tr -d "./")"
+for WEBSITE in $(find . -maxdepth 1 -type d | tr -d "./") 
 do
         DEPLOY_DIR="$DEPLOY_DIR_BASE/$WEBSITE/$TRAVIS_BRANCH"
         WEBSITE_DIR="$TRAVIS_BUILD_DIR/Websites/$WEBSITE"
@@ -31,11 +31,11 @@ do
                 
                 #the site directory takes over _site if present.
                 if [ -d "$WEBSITE_DIR/site" ]; then
-                        WEBSITE_DIR="$WEBSITE_DIR/site"
+                        WEBSITE_DIR=$WEBSITE_DIR/site
                         echo "#### directory site present, ignoring _site"
                 else
                         echo "#### directory site not present, using _site"
-                        WEBSITE_DIR="$WEBSITE_DIR/_site"
+                        WEBSITE_DIR=$WEBSITE_DIR/_site
                 fi 
                 cd $WEBSITE_DIR
                 
