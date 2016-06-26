@@ -23,12 +23,13 @@ if [ "$(git log -n 1 --pretty=format:%h -- _configs/nginx/)" = "$(git log --pret
                 #safely reload nginx
                 ssh -t $DEPLOY_USER@$SERVER 'sudo nginx -s reload' 
                 
-                #Add to message that will be notified to the slack team
+                # concat a slack message report for our team
                 printf "Successfully deployed config on server $SERVER from commit $TRAVIS_COMMIT. \n\n" >> slack_message.txt
         done
 else
         echo "No update to configs, configs not deployed"
-        #Add to message that will be notified to the slack team
+        
+        # concat a slack message report for our team
         printf "No configuration deployment required. \n\n" >> slack_message.txt
 
 fi

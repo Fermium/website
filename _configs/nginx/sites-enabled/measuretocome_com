@@ -1,17 +1,17 @@
-# fermiumlabs.com ssl
+# measuretocome.com ssl
 server {
 	listen 443 ssl http2;
 	listen [::]:443 ssl http2;
 
-  ssl_certificate         /var/www/certificates/cloudflare_fermiumlabs_com.pem;
-  ssl_certificate_key     /var/www/certificates/cloudflare_fermiumlabs_com-key.pem;
+  ssl_certificate         /var/www/certificates/cloudflare_measuretocome_com.pem;
+  ssl_certificate_key     /var/www/certificates/cloudflare_measuretocome_com-key.pem;
 	
 	#Verify that the request came from cloudflare
 	ssl_client_certificate /var/www/certificates/origin-pull-ca.pem;
   ssl_verify_client on;
 	
-	server_name fermiumlabs.com;
-	root /var/www/html/fermiumlabs_com/master;
+	server_name measuretocome.com;
+	root /var/www/html/measuretocome_com/master;
 	index index.html;
 
 	location / {
@@ -21,11 +21,11 @@ server {
 	}
 }
 
-#redirect fermiumlabs.com http requests to https
+#redirect measuretocome.com http requests to https
 server {
 	listen 80;
 	listen [::]:80;
-	server_name fermiumlabs.com;
+	server_name measuretocome.com;
 	
 	#Verify that the request came from cloudflare
 	ssl_client_certificate /var/www/certificates/origin-pull-ca.pem;
@@ -34,7 +34,7 @@ server {
   return 301 https://$host$request_uri;
   }
 	
-#redirect www.fermiumlabs.com to fermiumlabs.com
+#redirect www.measuretocome.com to measuretocome.com
 server {
 	listen 80;
 	listen [::]:80;
@@ -42,14 +42,14 @@ server {
 	listen [::]:443 ssl;
 	
 
-	ssl_certificate         /var/www/certificates/cloudflare_fermiumlabs_com.pem;
-	ssl_certificate_key     /var/www/certificates/cloudflare_fermiumlabs_com-key.pem;
+	ssl_certificate         /var/www/certificates/cloudflare_measuretocome_com.pem;
+	ssl_certificate_key     /var/www/certificates/cloudflare_measuretocome_com-key.pem;
 	
 	#Verify that the request came from cloudflare
 	ssl_client_certificate /var/www/certificates/origin-pull-ca.pem;
 	ssl_verify_client on;
 
-  server_name  www.fermiumlabs.com;
+  server_name  www.measuretocome.com;
 	
-	return 301 https://fermiumlabs.com$request_uri;
+	return 301 https://measuretocome.com$request_uri;
 }
