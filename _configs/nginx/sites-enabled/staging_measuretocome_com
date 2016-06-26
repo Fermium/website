@@ -11,10 +11,11 @@ server {
 	ssl_verify_client on;
 	
 	server_name staging.measuretocome.com ~^staging.srv\d+\.web.measuretocome\.com$;
-	root /var/www/html/measuretocome_com/develop;
-	index index.html;
 
 	location / {
+	  index index.html;
+	  root /var/www/html/measuretocome_com/develop;
+		
 		# First attempt to serve request as file, then
 		# as directory, then fall back to displaying a 404.
 		try_files $uri $uri/ =404;

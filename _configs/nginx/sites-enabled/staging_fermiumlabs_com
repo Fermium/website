@@ -11,10 +11,13 @@ server {
 	ssl_verify_client on;
 	
 	server_name staging.fermiumlabs.com ~^staging.srv\d+\.web.fermiumlabs\.com$;
-	root /var/www/html/fermiumlabs_com/develop;
-	index index.html;
+	
 
 	location / {
+		
+		root /var/www/html/fermiumlabs_com/develop;
+		index index.html;
+	
 		# First attempt to serve request as file, then
 		# as directory, then fall back to displaying a 404.
 		try_files $uri $uri/ =404;
