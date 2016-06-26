@@ -6,6 +6,22 @@ The website is automatically built, tested and deployed from Travis-CI to a list
 
 You're free to use our scripts for your website, but not our content.
 
+### Automated testing
+
+Each website is automatically tested with HTML proofer before deployment. If only one fails, the whole build will fail.
+
+The tests are:
+
+1. HTMLproof validates the HTML
+2. HTMLproof validates external urls
+
+You can add the *data-proofer-ignore* tag to elements you want to ignore:
+
+```html
+<a href="http://notareallink" data-proofer-ignore>Not checked.</a>
+```
+
+
 ### Git Endpoint
 
 The Git endpoint were the sites are deployed can be set up manually following this [article](http://nicolasgallagher.com/simple-git-deployment-strategy-for-static-sites/).
