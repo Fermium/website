@@ -5,7 +5,7 @@ DEPLOY_DIR_BASE="/var/www/git"
 DEPLOY_USER="deployer"
 
 #DO NOT REMOVE THIS ECHO
-echo "Website deploy script"
+echo "#### Website deploy script"
 
 
 cd $TRAVIS_BUILD_DIR/Websites/ #dir that contains the websites in this repo
@@ -23,14 +23,14 @@ do
         for SERVER in $(egrep -v '(^#|^\s*$|^\s*\t*#)' $TRAVIS_BUILD_DIR/_scripts/server_list.txt)
         do
                 
-                echo "deploying $WEBSITE on $SERVER:$DEPLOY_DIR"
+                echo "#### deploying $WEBSITE on $SERVER:$DEPLOY_DIR"
                 
                 #the site directory takes over _site if present.
                 if [ -d "$WEBSITE_DIR/site" ]; then
                         WEBSITE_DIR=$WEBSITE_DIR/site
-                        echo "directory site present, ignoring _site"
+                        echo "#### directory site present, ignoring _site"
                 else
-                        echo "directory site not present, using _site"
+                        echo "#### directory site not present, using _site"
                         WEBSITE_DIR=$WEBSITE_DIR/_site
                 fi 
                 cd $WEBSITE_DIR
