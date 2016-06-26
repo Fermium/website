@@ -46,7 +46,7 @@ do
                 git config user.email "deployer@fermiumlabs.com"
                 git add .
                 git commit -m "Deploying commit $TRAVIS_COMMIT of repository $TRAVIS_REPO_SLUG/$TRAVIS_BRANCH"
-                git push --force $SERVER +master
+                git push --force $SERVER master
                 
                 # concat a slack message report for our team
                 printf "Successfully deployed $WEBSITE on server $SERVER in dir $DEPLOY_DIR from commit $TRAVIS_COMMIT. Check out http://$(cat address.txt)/deploy-info.txt\n\n" >> $TRAVIS_BUILD_DIR/slack_message.txt
