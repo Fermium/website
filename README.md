@@ -49,7 +49,7 @@ We use [Cloudflare](cloudflare.com) as a CDN, with end-to-end encryption of both
 * *_scripts:* All scripts to build, deploy and tests as well as the list of servers to deploy to
 * *Websites:* The websites, each in a separate directory like example_com 
   * *_site:* The output directory for Jekyll.
-  * *site:* The directory if the site is not built by Travis-CI
+  * *site:* The directory if the site is not built by Travis-CI. If this directory is present *_site* will be ignored.
               
 ###Thanks
 This site was derived from [ionic-site](https://github.com/driftyco/ionic-site).
