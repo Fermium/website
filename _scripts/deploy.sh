@@ -25,14 +25,16 @@ do
                 
                 echo "deploying $WEBSITE on $SERVER:$DEPLOY_DIR"
                 
+                #the site directory takes over _site if present.
                 if [ -d "$WEBSITE_DIR/site" ]; then
-                        # Control will enter here if $DIRECTORY exists.
-                        cd $WEBSITE_DIR/site
+                        WEBSITE_DIR=$WEBSITE_DIR/site
                         echo "directory site present, ignoring _site"
                 else
                         echo "directory site not present, using _site"
-                        cd $WEBSITE_DIR/_site
+                        WEBSITE_DIR=$WEBSITE_DIR/_site
                 fi 
+                cd $WEBSITE_DIR
+                
                 
                 #Print deployment report
                 printf "This deploy was made on: \nServer\t\t$SERVER \nDate\t\t$(date) \nDirectory\t$DEPLOY_DIR \nCommit\t\t$TRAVIS_COMMIT \nBuild\t\t$TRAVIS_BUILD_NUMBER " > deploy-info.txt
