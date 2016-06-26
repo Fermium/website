@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-echo "HTMLproofer test script"
+echo "#### HTMLproofer test script"
 
 cd $TRAVIS_BUILD_DIR/Websites/ #dir that contains the websites in this repo
 #for every directory, max depth 1, clean the output
@@ -16,9 +16,9 @@ do
         if [ -d "$WEBSITE_DIR/site" ]; then
                 # Control will enter here if $DIRECTORY exists.
                 WEBSITE_DIR=$WEBSITE_DIR/site
-                echo "directory site present, ignoring _site"
+                echo "#### directory site present, ignoring _site"
         else
-                echo "directory site not present, using _site"
+                echo "#### directory site not present, using _site"
                 WEBSITE_DIR=$WEBSITE_DIR/_site
         fi 
         

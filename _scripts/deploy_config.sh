@@ -5,15 +5,15 @@ CONFIG_DIR_BASE="/var/www/config"
 DEPLOY_USER="deployer"
 
 #DO NOT REMOVE THIS ECHO
-echo "Config deploy script"
+echo "#### Config deploy script"
 
 #If nginx config was updated in the last (and actual) commit
 if [ "$(git log -n 1 --pretty=format:%h -- _configs/nginx/)" = "$(git log --pretty=format:'%h' -n 1)" ]; then
         # Push codebase to the servers via rsync.
-        echo "last config commit: $(git log -n 1 --pretty=format:%h -- _configs/nginx/) last commit: $(git log --pretty=format:'%h' -n 1)"
+        echo "#### last config commit: $(git log -n 1 --pretty=format:%h -- _configs/nginx/) last commit: $(git log --pretty=format:'%h' -n 1)"
         for SERVER in $(egrep -v '(^#|^\s*$|^\s*\t*#)' _scripts/server_list.txt)
         do
-                echo "Deploying config on server $SERVER in directory $CONFIG_DIR_BASE"
+                echo "#### Deploying config on server $SERVER in directory $CONFIG_DIR_BASE"
                 #write info about deployment
                 printf "#This configuration was deployed on: \n#Server\t\t$SERVER \n#Date\t\t$(date) \n#Commit\t\t$TRAVIS_COMMIT \n#Build\t\t$TRAVIS_BUILD_NUMBER \n\n" > _configs/deploy-info.txt
                 
@@ -27,7 +27,7 @@ if [ "$(git log -n 1 --pretty=format:%h -- _configs/nginx/)" = "$(git log --pret
                 printf "Successfully deployed config on server $SERVER from commit $TRAVIS_COMMIT. \n\n" >> slack_message.txt
         done
 else
-        echo "No update to configs, configs not deployed"
+        echo "#### No update to configs, configs not deployed"
         
         # concat a slack message report for our team
         printf "No configuration deployment required. \n\n" >> slack_message.txt
