@@ -55,6 +55,5 @@ do
                 # concat a slack message report for our team
                 printf "Successfully deployed $WEBSITE on server $SERVER in dir $DEPLOY_DIR from commit $TRAVIS_COMMIT. Check out http://$WEBSITE_ADDR/deploy-info.txt\n\n" >> $TRAVIS_BUILD_DIR/slack_message.txt
                 
-        done
-        cd 
+        done 
 done
