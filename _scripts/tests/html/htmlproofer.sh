@@ -22,6 +22,9 @@ do
                 WEBSITE_DIR=$WEBSITE_DIR/_site
         fi 
         
+        #check html and stuff
         bundle exec htmlproofer $WEBSITE_DIR --assume-extension --check-html --disable-external
-        bundle exec htmlproofer $WEBSITE_DIR --external_only        
+        
+        #check external urls, but always exit with a non-error exit code
+        bundle exec htmlproofer $WEBSITE_DIR --external_only  || true
 done
