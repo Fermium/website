@@ -17,7 +17,7 @@ do
         WEBSITE_DIR="$TRAVIS_BUILD_DIR/Websites/$WEBSITE"
         
         cd $WEBSITE_DIR
-        echo "#### deplying website in folder $(pwd)"
+        echo "#### deploying website in folder $(pwd)"
 
         #For every server, ignore #comments
         for SERVER in $(egrep -v '(^#|^\s*$|^\s*\t*#)' $TRAVIS_BUILD_DIR/_scripts/server_list.txt)
@@ -25,11 +25,12 @@ do
                 
                 echo "deploying $WEBSITE on $SERVER:$DEPLOY_DIR"
                 
-                #the site directory takes over _site if present.
                 if [ -d "$WEBSITE_DIR/site" ]; then
                         # Control will enter here if $DIRECTORY exists.
                         cd $WEBSITE_DIR/site
+                        echo "directory site present, ignoring _site"
                 else
+                        echo "directory site not present, using _site"
                         cd $WEBSITE_DIR/_site
                 fi 
                 
