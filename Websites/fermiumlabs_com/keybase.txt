@@ -1,0 +1,51 @@
+https://keybase.io/fermiumlabs
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://fermiumlabs.com
+  * I am fermiumlabs (https://keybase.io/fermiumlabs) on keybase.
+  * I have a public key ASAfpilSkMZO2xYqy9K5cproo_7psrggtsQaf8WUxuCvTwo
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "01201fa6295290c64edb162acbd2b9729ae8a3fee9b2b820b6c41a7fc594c6e0af4f0a",
+            "host": "keybase.io",
+            "kid": "01201fa6295290c64edb162acbd2b9729ae8a3fee9b2b820b6c41a7fc594c6e0af4f0a",
+            "uid": "94abea6534e4d58cbbbfd8a2477db519",
+            "username": "fermiumlabs"
+        },
+        "service": {
+            "hostname": "fermiumlabs.com",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "client": {
+        "name": "keybase.io go client",
+        "version": "1.0.14"
+    },
+    "ctime": 1459027214,
+    "expire_in": 504576000,
+    "merkle_root": {
+        "ctime": 1459027188,
+        "hash": "d67ca8e04675730e82c40b2d664060f9edf481d5568b566e0a80cb4b93c01ae76e65c1967e62d744b43f4af13a9cc721865c4d354d9f78f28f7ccb884185e734",
+        "seqno": 422509
+    },
+    "prev": "f46636d657df66eba6310dfa232ef1269f501021519b458c8fbc0bf360e5b484",
+    "seqno": 7,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+g6Rib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgH6YpUpDGTtsWKsvSuXKa6KP+6bK4ILbEGn/FlMbgr08Kp3BheWxvYWTFAvp7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwMWZhNjI5NTI5MGM2NGVkYjE2MmFjYmQyYjk3MjlhZThhM2ZlZTliMmI4MjBiNmM0MWE3ZmM1OTRjNmUwYWY0ZjBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwMWZhNjI5NTI5MGM2NGVkYjE2MmFjYmQyYjk3MjlhZThhM2ZlZTliMmI4MjBiNmM0MWE3ZmM1OTRjNmUwYWY0ZjBhIiwidWlkIjoiOTRhYmVhNjUzNGU0ZDU4Y2JiYmZkOGEyNDc3ZGI1MTkiLCJ1c2VybmFtZSI6ImZlcm1pdW1sYWJzIn0sInNlcnZpY2UiOnsiaG9zdG5hbWUiOiJmZXJtaXVtbGFicy5jb20iLCJwcm90b2NvbCI6Imh0dHBzOiJ9LCJ0eXBlIjoid2ViX3NlcnZpY2VfYmluZGluZyIsInZlcnNpb24iOjF9LCJjbGllbnQiOnsibmFtZSI6ImtleWJhc2UuaW8gZ28gY2xpZW50IiwidmVyc2lvbiI6IjEuMC4xNCJ9LCJjdGltZSI6MTQ1OTAyNzIxNCwiZXhwaXJlX2luIjo1MDQ1NzYwMDAsIm1lcmtsZV9yb290Ijp7ImN0aW1lIjoxNDU5MDI3MTg4LCJoYXNoIjoiZDY3Y2E4ZTA0Njc1NzMwZTgyYzQwYjJkNjY0MDYwZjllZGY0ODFkNTU2OGI1NjZlMGE4MGNiNGI5M2MwMWFlNzZlNjVjMTk2N2U2MmQ3NDRiNDNmNGFmMTNhOWNjNzIxODY1YzRkMzU0ZDlmNzhmMjhmN2NjYjg4NDE4NWU3MzQiLCJzZXFubyI6NDIyNTA5fSwicHJldiI6ImY0NjYzNmQ2NTdkZjY2ZWJhNjMxMGRmYTIzMmVmMTI2OWY1MDEwMjE1MTliNDU4YzhmYmMwYmYzNjBlNWI0ODQiLCJzZXFubyI6NywidGFnIjoic2lnbmF0dXJlIn2jc2lnxEBmfuhVsW4uBAXy8c0Q+62eZh2sAb4hvALWvfvUxkDwmMXMMarSmzsYeP4bRaUBgxGvISyB5KTaGsr2edUufakAqHNpZ190eXBlIKN0YWfNAgKndmVyc2lvbgE=
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/fermiumlabs
