@@ -2,6 +2,5 @@
 layout: default
 ---
 
-#MASTER, PRODUCTION SERVER
-
+#DEVELOP
 123
