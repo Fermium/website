@@ -1,23 +1,75 @@
 ---
 layout: default
+title:  Fermium LABS
 ---
 
-<div class="home">
+		<div class="nav-container">
+		</div>
 
-  <h1 class="page-heading">Posts</h1>
+		<div class="main-container">
+		<section class="image-slider slider-all-controls controls-inside parallax pt0 pb0 height-70">
+		        <ul class="slides">
+				{% for project in site.data.projects %}
+		            <li class="overlay image-bg">
+		                <div class="background-image-holder">
+		                    <img alt="image" class="background-image" src="img/home-2-8.jpg">
+		                </div>
+		                <div class="container v-align-transform">
+		                    <div class="row text-center">
+                          <div class="col-sm-4 ">
+                            <div id="{{project.slide}}" class="morris-chart prettyprint linenums">
+                                <script>
+                                new Morris.Donut({
+                                  element: '{{project.slide}}',
+                                  backgroundColor: 'transparent',
+                                  data: {{project.donut|jsonify}}
+                                })
+                                </script>
+                            </div>
+                          </div>
+		                        <div class="col-sm-8 ">
+		                            <h2 class="mb-xs-16 project-link hvr-underline-from-center"><a href="{{project.project-page}}">{{ project.name }}</a></h2>
+		                            <p class="lead mb40">
+		                                {% for tags in project.tags %}
 
-  <ul class="post-list">
-    {% for project in site.posts %}
-      <li>
-        <span class="post-meta">{{ project.date | date: "%b %-d, %Y" }}</span>
+		                                <small>{{tags}}</small>
+                                  {% endfor %}
+		                            </p>
+                                <div class="row policies text-left">
+                                  <h4 class="text-center">Policies</h4>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ project.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+                                  {% for policy in project.policies %}
+                                  {% assign loopindex= forloop.index | modulo: 2 %}
+                                  <div class="col-sm-4 "></div>
+                                  {% if loopindex==1 %}
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+                                  <div class="col-sm-4 ">
+                                    {{policy.name}}: {{policy.value}}
+                                  </div>
+                                  {% else %}
+                                  <div class="col-sm-4">
+                                    {{policy.name}}: {{policy.value}}
+                                  </div>
+                                  {% endif %}
+                                  <div class="col-sm-4 "></div>
+                                  {% endfor %}
 
-</div>
+                                </div>
+                                <div id="twitter_update_list">
+                                </div>
+		                        </div>
+		                    </div>
+
+		                </div>
+
+		            </li>
+					{% endfor %}
+		        </ul>
+		    </section></div>
+
+
+	<script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/flexslider.min.js"></script>
+        <script src="js/parallax.js"></script>
+        <script src="js/scripts.js"></script>

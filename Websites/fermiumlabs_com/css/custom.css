@@ -1,4 +1,10 @@
 /****** PLACE YOUR CUSTOM STYLES HERE ******/
+/**
+1. Navigator
+2. Chart
+3. Other stuff
+**/
+/** 1. Navigator **/
 nav.fixed.reveal-nav{
 	position:fixed;
 	visibility:visible;
@@ -9,7 +15,67 @@ nav.outOfSight{
 	transform: translate3d(0, 0px, 0);
   -webkit-transform: translate3d(0, 0px, 0);
   -moz-transform: translate3d(0, 0px, 0);
-  /*transition: all 0.3s ease;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;*/
+}
+.offscreen-container {
+  position: fixed;
+  transform: translate3d(400%, 0, 0);
+  -webkit-transform: translate3d(400%, 0, 0);
+  -moz-transform: translate3d(400%, 0, 0);
+  width: 25%;
+  top: 0;
+  height: 100%;
+  min-height: 100vh;
+  z-index: 20;
+  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  overflow: hidden;
+}
+.offscreen-container.reveal-nav {
+  transform: translate3d(299.8%, 0, 0);
+  -webkit-transform: translate3d(299.8%, 0, 0);
+  -moz-transform: translate3d(299.8%, 0, 0);
+}
+.main-container.reveal-nav {
+  transform: translate3d(-25%, 0, 0);
+  -webkit-transform: translate3d(-25%, 0, 0);
+  -moz-transform: translate3d(-25%, 0, 0);
+}
+.offscreen-left .offscreen-container {
+  transform: translate3d(-400%, 0, 0);
+  -webkit-transform: translate3d(-400%, 0, 0);
+  -moz-transform: translate3d(-400%, 0, 0);
+}
+.offscreen-left .offscreen-container.reveal-nav {
+  transform: translate3d(-400%, 0, 0);
+  -webkit-transform: translate3d(-400%, 0, 0);
+  -moz-transform: translate3d(-400%, 0, 0);
+}
+
+.offscreen-left .main-container.reveal-nav,
+.offscreen-left nav.reveal-nav {
+  transform: translate3d(-400%, 0, 0) !important;
+  -webkit-transform: translate3d(-400%, 0, 0) !important;
+  -moz-transform: translate3d(-400%, 0, 0) !important;
+}
+
+/**2. Chart**/
+.morris-chart text {
+  fill: white;
+}
+.morris-chart path[fill='none'] {
+  stroke-width: 3;
+}
+
+/**3. Other stuff**/
+.policies{
+	color: white;
+}
+.project-link a{
+	font-weight: normal;
+
+}
+.project-link a:hover{
+	font-weight: normal;
+
 }
