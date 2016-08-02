@@ -3,6 +3,7 @@
 1. Navigator
 2. Chart
 3. Other stuff
+4. Animations
 **/
 /** 1. Navigator **/
 nav.fixed.reveal-nav{
@@ -10,7 +11,6 @@ nav.fixed.reveal-nav{
 	visibility:visible;
 	opacity:1;
 }
-
 nav.outOfSight{
 	transform: translate3d(0, 0px, 0);
   -webkit-transform: translate3d(0, 0px, 0);
@@ -41,16 +41,7 @@ nav.outOfSight{
   -webkit-transform: translate3d(-25%, 0, 0);
   -moz-transform: translate3d(-25%, 0, 0);
 }
-.offscreen-left .offscreen-container {
-  transform: translate3d(-400%, 0, 0);
-  -webkit-transform: translate3d(-400%, 0, 0);
-  -moz-transform: translate3d(-400%, 0, 0);
-}
-.offscreen-left .offscreen-container.reveal-nav {
-  transform: translate3d(-400%, 0, 0);
-  -webkit-transform: translate3d(-400%, 0, 0);
-  -moz-transform: translate3d(-400%, 0, 0);
-}
+
 
 .offscreen-left .main-container.reveal-nav,
 .offscreen-left nav.reveal-nav {
@@ -78,4 +69,25 @@ nav.outOfSight{
 .project-link a:hover{
 	font-weight: normal;
 
+}
+/** 4.Animations **/
+.animate-in {
+    -webkit-animation: fadeIn .5s ease-in;
+    animation: fadeIn .5s ease-in;
+}
+
+.animate-out {
+    -webkit-transition: opacity .5s;
+    transition: opacity .5s;
+    opacity: 0;
+}
+
+@-webkit-keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
