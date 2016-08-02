@@ -3,7 +3,7 @@
 
   {% include head.html %}
 
-  <body>
+  <body class="animate-in">
 
     {% include header.html %}
 
@@ -14,7 +14,11 @@
     </div>
 
     {% include footer.html %}
-
+    <script>
+    window.addEventListener("beforeunload", function () {
+      document.body.classList.add("animate-out");
+    });
+    </script>
   </body>
 
 </html>
