@@ -2,17 +2,22 @@
   <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script>
+      /*var i=0;*/
   function get_request() {
-    $.get("http://public-check-in.office.fermiumlabs.com/look/d_in_ufficio", function(){
+    /*console.log(i%2?"set".concat(i):"clear".concat(i));
+    $.post(("http://public-check-in.office.fermiumlabs.com/".concat(i%2?"set":"clear")).concat("/d_in_ufficio"),{tokenID:"k2wJkDNZX4wacH8k"});*//*Manually changing state for test, works*/
+    $.get("http://public-check-in.office.fermiumlabs.com/look/d_in_ufficio", function(response){
        if (response['status']){
-          $('#d').html("Si")
+          $('#d').html("Davide: Si")
         }
       else{
-          $('#d').html("No")
+          $('#d').html("Davide: No")
         }
-        setTimeout( get_request, 4000 ); // <-- when you ge a response, call it
+      console.log(response['status'])
+        setTimeout( get_request, 120000 ); // <-- when you ge a response, call it
                                          //        again after a 4 second delay
     });
+    /*i++;*/
   }
 
 get_request(); 
@@ -20,10 +25,8 @@ get_request();
   </head>
   <body>
     <div id="d">
-      
     </div>
     <div id="s">
-      
     </div>
   </body>
 </html>
