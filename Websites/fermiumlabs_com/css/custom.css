@@ -131,8 +131,8 @@ nav.outOfSight{
 	}
 
 .flip-container, .front, .back {
-	width: 320px;
-	height: 480px;
+	/*width: 320px;*/
+	height: 200px;
 }
 
 /* flip speed goes here */
@@ -184,5 +184,18 @@ transform: translate3d(0,0,0);
 line-height: 60px;
 min-height: 60px;
 border-top: 0px;
+}
+}
+@-moz-document url-prefix(){
+.module.widget-handle {
+
+margin-top:-55px;
+}
+}
+@media screen\9{
+	
+.module.widget-handle {
+
+margin-top:-55px;
 }
 }
