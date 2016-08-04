@@ -3,16 +3,13 @@ layout: default
 title:  Fermium LABS
 ---
 
-		<div class="nav-container">
-		</div>
-
 		<div class="main-container">
 		<section class="cover fullscreen image-slider slider-all-controls controls-inside parallax">
 		        <ul class="slides">
 				{% for project in site.data.projects %}
 		            <li class="overlay image-bg">
 		                <div class="background-image-holder">
-		                    <img alt="image" class="background-image" src="img/home-2-8.jpg">
+		                    <img alt="image" class="background-image blur" src="{{project.image}}">
 		                </div>
 		                <div class="container v-align-transform">
 		                    <div class="row text-center">
@@ -35,23 +32,24 @@ title:  Fermium LABS
 		                                <small>{{tags}}</small>
                                   {% endfor %}
 		                            </p>
-                                <div class="row policies text-left">
+                                <div class="row policies text-left row-centered">
                                   <h4 class="text-center">Policies</h4>
 
                                   {% for policy in project.policies %}
                                   {% assign loopindex= forloop.index | modulo: 2 %}
-                                  <div class="col-sm-4 "></div>
                                   {% if loopindex==1 %}
-
-                                  <div class="col-sm-4 ">
+																	<div class="row policy-line">
+																		
+																	
+                                  <div class="col-sm-4">
                                     {{policy.name}}: {{policy.value}}
                                   </div>
                                   {% else %}
                                   <div class="col-sm-4">
                                     {{policy.name}}: {{policy.value}}
                                   </div>
+																	</div>
                                   {% endif %}
-                                  <div class="col-sm-4 "></div>
                                   {% endfor %}
 
                                 </div>

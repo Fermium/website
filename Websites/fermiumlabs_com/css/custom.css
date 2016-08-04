@@ -224,3 +224,21 @@ background: -moz-linear-gradient(4.95% 114.83% 35.74deg,rgba(227,24,61,1) 0%,rgb
 .bg-fl h5:hover{
 	color: rgba(255,255,255,1);
 }
+
+a{
+	color: rgba(255,255,255,0.6);
+}
+a:hover{
+	color: rgba(255,255,255,1);
+}
+
+.social-list li{
+	font-size:1.3em;
+}
+
+.overlay{
+	background: rgba(0,0,0,0.7);
+}
+.policy-line{
+	margin-left:25%;
+}

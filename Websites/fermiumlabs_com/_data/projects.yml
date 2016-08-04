@@ -1,7 +1,7 @@
 - name:  Project 1
   project-page: "#"
   tw-tag: "#trump"
-  image: ""
+  image: "img/projects/project1.JPG"
   slide: 1
   date:  23-04-2016
   tags:  ["tag1","tag2","tag3"]
@@ -24,11 +24,10 @@
     - name:  "Open Docs"
       value: "Open Docs"
 
-
 - name:  Project 2
   project-page: "#"
   tw-tag: "#trump"
-  image: ""
+  image: "img/projects/project1.JPG"
   slide: 2
   date:  23-04-2016
   tags:  ["tag4","tag5","tag6"]
