@@ -14,13 +14,8 @@
     </div>
 
     {% include footer.html %}
-    <script>
-    window.addEventListener("beforeunload", function () {
-      document.body.classList.add("animate-out");
-    });
-    </script>
-    <div id="nothing" style="visibility:hidden">
-    </div>
+    {% include scripts.html %}
+    
   </body>
 
 </html>

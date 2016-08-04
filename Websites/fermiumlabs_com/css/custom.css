@@ -146,12 +146,16 @@ nav.outOfSight{
 /* hide back of pane during swap */
 .front, .back {
 	backface-visibility: hidden;
-
+	-webkit-backface-visibility: hidden;
 	position: absolute;
 	top: 0;
 	left: 0;
 }
+.front *, .back *{
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
 
+}
 /* front pane, placed above back */
 .front {
 	z-index: 2;

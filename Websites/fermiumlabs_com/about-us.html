@@ -65,48 +65,74 @@ title:  Fermium LABS - About Us
 		    </section><section>
 		        <div class="container">
               <div class="row row-centered">
+								{% for person in site.data.we %}
                 <div class="col-sm-6 col-md-2 col-centered flip-container" ontouchstart="this.classList.toggle('hover');">
 		                    <div class="text-center flipper">
                           <div class="front">
-		                        <img alt="Pic" src="img/team-1.jpg">
+		                        <img alt="Pic" src="{{person.picture}}">
 														<div class="title mb16">
 		                            
-		                            <span>Creative Director</span>
+		                            <span>{{person.title}}</span>
 		                        </div>
                           </div>
                           <div class="back">
 		                        <div class="title mb16">
-		                            <h5 class="uppercase mb0">Sally Marsh</h5>
-		                            <span>Creative Director</span>
+		                            <h5 class="uppercase mb0">{{person.name}}</h5>
+		                            <span>{{person.title}}</span>
 		                        </div>
 		                        <p class="mb0">
-		                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.
-		                        </p>
-                          </div>
-		                    </div>
-		                </div><div class="col-sm-6 col-md-2 col-centered flip-container" ontouchstart="this.classList.toggle('hover');">
-		                    <div class="text-center flipper">
-                          <div class="front">
-		                        <img alt="Pic" src="img/team-1.jpg">
-														<div class="title mb16">
-		                            
-		                            <span>Creative Director</span>
-		                        </div>
-                          </div>
-                          <div class="back">
-		                        <div class="title mb16">
-		                            <h5 class="uppercase mb0">Sally Marsh</h5>
-		                            <span>Creative Director</span>
-		                        </div>
-		                        <p class="mb0">
-		                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.
+		                            {{person.description}}
 		                        </p>
                           </div>
 		                    </div>
 		                </div>
+								{% endfor %}
+								<!--<div class="col-sm-6 col-md-2 col-centered flip-container" ontouchstart="this.classList.toggle('hover');">
+		                    <div class="text-center flipper">
+                          <div class="front">
+		                        <img alt="Pic" src="img/team-1.jpg">
+														<div class="title mb16">
+		                            
+		                            <span>Creative Director</span>
+		                        </div>
+                          </div>
+                          <div class="back">
+		                        <div class="title mb16">
+		                            <h5 class="uppercase mb0">Sally Marsh</h5>
+		                            <span>Creative Director</span>
+		                        </div>
+		                        <p class="mb0">
+		                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.
+		                        </p>
+                          </div>
+		                    </div>
+		                </div>-->
               </div>
               <hr>
-		            <div class="row">
+							<div class="row row-centered">
+								{% for person in site.data.collaborators %}
+                <div class="col-sm-6 col-md-2 col-centered flip-container" ontouchstart="this.classList.toggle('hover');">
+		                    <div class="text-center flipper">
+                          <div class="front">
+		                        <img alt="Pic" src="{{person.picture}}">
+														<div class="title mb16">
+		                            
+		                            <span>{{person.title}}</span>
+		                        </div>
+                          </div>
+                          <div class="back">
+		                        <div class="title mb16">
+		                            <h5 class="uppercase mb0">{{person.name}}</h5>
+		                            <span>{{person.title}}</span>
+		                        </div>
+		                        <p class="mb0">
+		                            {{person.description}}
+		                        </p>
+                          </div>
+		                    </div>
+		                </div>
+								{% endfor %}
+		            <!--<div class="row">
 		                
 		                <div class="col-sm-6 col-md-2">
 		                    <div class="image-tile outer-title text-center">
@@ -178,6 +204,7 @@ title:  Fermium LABS - About Us
 		                
 		            </div>
 		            
-		        </div>
+		        </div>-->
 		        
-		    </section>			
+		    </section>		
+</div>
