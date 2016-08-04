@@ -175,6 +175,7 @@ nav.outOfSight{
 
 @media all and (max-width: 767px){
 .offscreen-container{
+	position:fixed;
 width: 100%;
 }
 .offscreen-container.reveal-nav{
