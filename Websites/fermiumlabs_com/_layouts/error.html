@@ -8,15 +8,14 @@
     <div class="page-content">
       <div class="wrapper ">
         <div class="error-div text-center vcenter">
-          <h1 id="main-error-message"></h1>
-          <h2 id="secondary-error-message"></h2>
-          <h3 id="home-return">Click <a href="./index.html" class="link">here</a> to return to our home page</h3>
-          <h4 >Or just stay here and enjoy the goat, we will not judge you</h4>
+          <h1 id="main-error-message">{{page.title}}</h1>
+          <h2 id="secondary-error-message"><a href="/">Head back <i class="fa fa-home" aria-hidden="true"></a></p></i></h2>
       </div>
         {{ content }}
-        
       </div>
     </div>    
+    {% include zendesk-widget.html %}
+    {% include scripts.html %}
   </body>
 
 </html>
