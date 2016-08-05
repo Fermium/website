@@ -12,7 +12,7 @@
  */
 
 .hvr-grow {
-  display: inline-block;
+  display: block;
   vertical-align: middle;
   -webkit-transform: translateZ(0);
   transform: translateZ(0);

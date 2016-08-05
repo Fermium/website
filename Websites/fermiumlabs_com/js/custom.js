@@ -8,8 +8,5 @@ if(isMobile){
       $(".offscreen-container").removeClass('reveal-nav');
     }
   });
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> temp
+ 
