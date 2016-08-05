@@ -280,5 +280,5 @@ video#bgvid {
     vertical-align: middle;
     float: none;
 }
-
-video { display: block; } 
+video { display: block; }
+@media all and (max-width: 767px){   .logo{ position: absolute; left: 0; } } 
