@@ -260,19 +260,25 @@ a:hover{
   z-index: 2;
 }
 
-
 video#bgvid { 
- 
-position: fixed; right: 0; bottom: 0;
- 
-min-width: 100%; min-height: 100%;
- 
-width: auto; height: auto; z-index: -100; 
- 
-background-size: cover; 
- 
-z-index: 0;
- 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background-size: cover; 
+}
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
 }
 
 video { display: block; } 
