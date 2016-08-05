@@ -23,9 +23,8 @@ server {
 		try_files $uri $uri/ =404;
 		
 		#Allow access only from our IPs
-		allow   178.62.121.89; #vpn
-		allow   79.59.181.186; #office
-		deny    all;
+		#allow   123.123.123.123; 
+		#deny    all;
 	}
 
 
