@@ -1,18 +1,12 @@
 ---
 layout: error
-title:  404
+title:  "404 - Page not found" 
 ---
 <style>
-	#secondary-error-message:before{
-		content:"Don't cry, take this screaming goat";
-	}
-	#main-error-message:before{
-		content:"404 - Page not found";
-	}
 	.error-div{
 		z-index: 3;
 		width:100%;
-		margin-top:15%;
+		margin: 0 auto;
 		position:absolute;
 	}
 	.error-div *{
@@ -21,11 +15,10 @@ title:  404
 		color:rgba(255,255,255,1);
 	}
 </style>
+
 <div class="overlay">
-	
-
-<video autoplay loop id="bgvid">
- 				<!-- MP4 must be first for iPad! -->
-        <source src="./video/goat.mp4" type="video/mp4" /><!-- Safari / iOS video    -->
-	</video></div>
-
+	<div style="position: fixed; z-index: -99; width: 100%; height: 100%">
+	  <iframe frameborder="0" height="100%" width="100%" 
+	    src="https://youtube.com/embed/Q9xHb-JDDco?autoplay=1&controls=0&showinfo=0&autohide=1&loop=1&playlist=Q9xHb-JDDco">
+	  </iframe>
+	</div></div>
