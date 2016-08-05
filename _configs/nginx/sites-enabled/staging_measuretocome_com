@@ -16,6 +16,8 @@ server {
 	  index index.html;
 	  root /var/www/html/measuretocome_com/develop;
 		
+		add_header  X-Robots-Tag "noindex, nofollow, nosnippet, noarchive";
+		
 		# First attempt to serve request as file, then
 		# as directory, then fall back to displaying a 404.
 		try_files $uri $uri/ =404;
