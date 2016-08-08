@@ -280,5 +280,53 @@ video#bgvid {
     vertical-align: middle;
     float: none;
 }
-video { display: block; }
-@media all and (max-width: 767px){   .logo{ position: absolute; left: 0; } } 
+video { 
+	display: block; 
+}
+@media all and (max-width: 767px){   
+	.logo{ 
+		position: absolute; left: 0; 
+	} 
+} 
+
+.page-title-3,
+.page-title-5 {
+  height: 200px;
+}
+.nav-is-overlay .page-title-5.image-bg:first-child,
+.nav-is-overlay.page-title-5.bg-dark:first-child {
+  height: 200px;
+  padding-top: 55px;
+}
+
+
+.circle {
+	border-radius:50%;
+}
+.not-in-office{
+	background: red;
+}
+.in-office{
+	background: green;
+}
+
+.office{
+	margin-bottom:0;
+}
+.img-circle {
+	width:100px;
+	height:100px;
+    border-radius: 50%;
+	display:inline-block;
+	position:absolute;
+}
+
+.overlay-status{
+		width:100px;
+	height:100px;
+    border-radius: 50%;
+	display:inline-block;
+	opacity:0.2;
+	float:none;
+	display:block;
+}
