@@ -330,3 +330,11 @@ video {
 	float:none;
 	display:block;
 }
+@media all and (max-width: 768px){
+.flex{
+	display:flex;
+}
+.col{
+	flex: 1;
+}
+}
