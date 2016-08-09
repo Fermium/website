@@ -1191,7 +1191,7 @@ window.initializeMaps = function(){
                         map, marker, markerImage,
                         mapOptions = {
                             draggable: isDraggable,
-                            scrollwheel: false,
+                            scrollwheel: true,
                             zoom: zoomLevel,
                             disableDefaultUI: true,
                             styles: mapStyle
@@ -1211,13 +1211,12 @@ window.initializeMaps = function(){
                                 address.forEach(function(address){
                                     var markerGeoCoder;
 
-                                    markerImage = {url: window.mr_variant == undefined ? 'img/mapmarker.png' : '../img/mapmarker.png', size: new google.maps.Size(50,50), scaledSize: new google.maps.Size(50,50)};
+                                    /*markerImage = {url: window.mr_variant == undefined ? 'img/logos/map-pin.png' : '../img/logos/map-pin.png', size: new google.maps.Size(50,50), scaledSize: new google.maps.Size(50,50)};*/
                                     if(/(\-?\d+(\.\d+)?),\s*(\-?\d+(\.\d+)?)/.test(address) ){
                                         var latlong = address.split(','),
                                         marker = new google.maps.Marker({
                                                         position: { lat: 1*latlong[0], lng: 1*latlong[1] },
                                                         map: map,
-                                                        icon: markerImage,
                                                         title: markerTitle,
                                                         optimised: false
                                                     });
@@ -1228,7 +1227,6 @@ window.initializeMaps = function(){
                                             if (status == google.maps.GeocoderStatus.OK) {
                                                 marker = new google.maps.Marker({
                                                     map: map,
-                                                    icon: markerImage,
                                                     title: markerTitle,
                                                     position: results[0].geometry.location,
                                                     optimised: false
@@ -1249,7 +1247,6 @@ window.initializeMaps = function(){
                         marker              = new google.maps.Marker({
                                                     position: { lat: latitude, lng: longitude },
                                                     map: map,
-                                                    icon: markerImage,
                                                     title: markerTitle
                                                 });
 

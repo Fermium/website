@@ -8,4 +8,15 @@ if(isMobile){
       $(".offscreen-container").removeClass('reveal-nav');
     }
   });
+  $('.front').removeClass('front');
+  $('.back').removeClass('back');  
+  $('.flipper').removeClass('flipper');  
+  $('.flip-container').removeClass('flip-container'); 
+  
 }
+
+
+$(".former").submit(function(){
+  event.preventDefault();
+  $(this).submit();
+});
