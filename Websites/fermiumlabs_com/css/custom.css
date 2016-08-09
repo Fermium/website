@@ -61,6 +61,12 @@ nav.outOfSight{
   stroke-width: 3;
 }
 
+@media all and (max-width: 767px){
+.morris-chart svg {
+  width:100%;
+	height:auto;
+}
+}
 /**3. Other stuff**/
 .policies{
 	color: white;
@@ -336,5 +342,17 @@ video {
 }
 .col{
 	flex: 1;
+}
+}
+
+@media all and (width: 768px){
+.offscreen-container{
+	position:fixed;
+width: 50%;
+}
+.offscreen-container.reveal-nav {
+  transform: translate3d(100%, 0, 0);
+  -webkit-transform: translate3d(100%, 0, 0);
+  -moz-transform: translate3d(100%, 0, 0);
 }
 }
