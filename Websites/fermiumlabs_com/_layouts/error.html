@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html>
-
+<head>
+  
+  
   {% include head.html %}
 
+  </head>
   <body class="animate-in">
 
     <div class="page-content">
       <div class="wrapper ">
         <div class="error-div text-center vcenter">
           <h1 id="main-error-message">{{page.title}}</h1>
-          <h2 id="secondary-error-message"><a href="/">Head back <i class="fa fa-home" aria-hidden="true"></a></p></i></h2>
+          <h2 id="secondary-error-message"><a href="./index.html">Head back <i class="fa fa-home" aria-hidden="true"></a></p></i></h2>
       </div>
         {{ content }}
       </div>
@@ -19,3 +22,4 @@
   </body>
 
 </html>
+
