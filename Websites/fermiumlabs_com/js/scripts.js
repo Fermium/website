@@ -1150,9 +1150,9 @@ function updateFloatingFilters() {
                 bottom: 'auto'
             });
             if (mr_navScrolled) {
-                /*section.filters.css({
+                section.filters.css({
                     transform: 'translate3d(-50%,48px,0)'
-                });*/
+                });
             }
             if (mr_scrollTop > (section.elemBottom - 70)) {
                 section.filters.css({
