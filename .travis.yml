@@ -13,6 +13,7 @@ before_install:
 - sudo add-apt-repository -y ppa:nginx/development 
 - sudo apt-get update
 - sudo apt-get -qq -y install nginx 
+- sudo npm install npm -g
 
 install:
 - bundle install
