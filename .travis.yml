@@ -15,6 +15,7 @@ before_install:
 - sudo apt-get -qq -y install nginx 
 
 install:
+- bundle install
 - sh -c "cd Websites/fermiumlabs_com && npm install"
 
 script:
