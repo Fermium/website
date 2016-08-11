@@ -3,9 +3,6 @@ var browserSync = require('browser-sync');
 var sass        = require('gulp-sass');
 var prefix      = require('gulp-autoprefixer');
 var cp          = require('child_process');
-var less        = require('gulp-less');
-var path        = require('path');
-
 
 var jekyll   = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
 var messages = {
@@ -31,7 +28,7 @@ gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
 /**
  * Wait for jekyll-build, then launch the Server
  */
-gulp.task('browser-sync', ['sass', 'less', 'jekyll-build'], function() {
+gulp.task('browser-sync', ['sass', 'jekyll-build'], function() {
     browserSync({
         server: {
             baseDir: '_site'
@@ -54,22 +51,12 @@ gulp.task('sass', function () {
         .pipe(gulp.dest('Assets/css'));
 });
 
-gulp.task('less', function () {
-  return gulp.src('Assets/less/**/*.less')
-    .pipe(less({
-      paths: [ path.join(__dirname, 'less', 'includes') ]
-    }))
-    .pipe(gulp.dest('Assets/css'))
-    .pipe(browserSync.reload({stream:true}));
-});
-
 /**
  * Watch scss files for changes & recompile
  * Watch html/md files, run jekyll & reload BrowserSync
  */
 gulp.task('watch', function () {
-    gulp.watch('Assets/scss/**/*.scss', ['sass']);
-    gulp.watch('Assets/less/**/*.less', ['less']);
+    gulp.watch('_scss/*.scss', ['sass']);
     gulp.watch(['*.html', '_layouts/*.html', '_posts/*'], ['jekyll-rebuild']);
 });
 
