@@ -394,3 +394,6 @@ width: 50%;
     color:#eb274a;
     opacity:1;
 }
+.hide-cookie-modal{
+	visibility:hidden;
+}
