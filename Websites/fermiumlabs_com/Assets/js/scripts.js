@@ -1211,7 +1211,7 @@ window.initializeMaps = function(){
                                 address.forEach(function(address){
                                     var markerGeoCoder;
 
-                                    /*markerImage = {url: window.mr_variant == undefined ? 'img/logos/map-pin.png' : '../img/logos/map-pin.png', size: new google.maps.Size(50,50), scaledSize: new google.maps.Size(50,50)};*/
+                                    /*markerImage = {url: window.mr_variant == undefined ? 'img/logos/map-pin.png' : '/Assets/img/logos/map-pin.png', size: new google.maps.Size(50,50), scaledSize: new google.maps.Size(50,50)};*/
                                     if(/(\-?\d+(\.\d+)?),\s*(\-?\d+(\.\d+)?)/.test(address) ){
                                         var latlong = address.split(','),
                                         marker = new google.maps.Marker({
