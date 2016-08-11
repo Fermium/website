@@ -23,7 +23,7 @@ do
         fi 
         
         #check html and stuff
-        bundle exec htmlproofer $WEBSITE_DIR --assume-extension --check-html --disable-external || true
+        bundle exec htmlproofer $WEBSITE_DIR --allow-hash-href --assume-extension --check-html --disable-external || true
         
         #check external urls, but always exit with a non-error exit code
         bundle exec htmlproofer $WEBSITE_DIR --external_only  || true
