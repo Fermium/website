@@ -5,6 +5,7 @@ var prefix      = require('gulp-autoprefixer');
 var cp          = require('child_process');
 var less        = require('gulp-less');
 var path        = require('path');
+var Promise     = require('es6-promise').Promise;
 
 
 var jekyll   = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
