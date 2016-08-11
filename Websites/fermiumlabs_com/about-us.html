@@ -71,7 +71,7 @@ title:  Fermium LABS - About Us
 		                    <div class="text-center flipper mobile-view">
                           <div class="front">
 		                        <img alt="Pic" src="{{person.picture}}">
-														<div class="title mb16">
+														<div class=" mb16 hidden-xs hidden-sm">
 		                            
 		                            <span>{{person.title}}</span>
 		                        </div>
@@ -90,13 +90,14 @@ title:  Fermium LABS - About Us
 								{% endfor %}
               </div>
               <hr>
-							<div class="row row-centered">
+							<div id="collaborators" class="row row-centered">
 								{% for person in site.data.collaborators %}
-                <div class="col col-sm-6 col-md-2 col-centered flip-container" ontouchstart="this.classList.toggle('hover');">
+								
+                <div class="collaborator col col-sm-6 col-md-2 col-centered flip-container" ontouchstart="this.classList.toggle('hover');">
 		                    <div class="text-center flipper mobile-view">
                           <div class="front">
 		                        <img alt="Pic" src="{{person.picture}}">
-														<div class="title mb16 front-title">
+														<div class="mb16 hidden-xs hidden-sm">
 		                            
 		                            <span>{{person.title}}</span>
 		                        </div>
@@ -112,6 +113,7 @@ title:  Fermium LABS - About Us
                           </div>
 		                    </div>
 		                </div>
+									
 								{% endfor %}
 		           
 							
