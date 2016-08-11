@@ -24,5 +24,6 @@ exclude: ["_app",
           "Gemfile.lock",
           "gulpfile.js",
           "node_modules",
-          "package.json"] # Don't forget that Jekyll automatically 
+          "package.json",
+          "*.scss"] # Don't forget that Jekyll automatically 
                           # excludes files with a dot prefix
