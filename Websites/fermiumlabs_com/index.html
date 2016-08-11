@@ -14,14 +14,15 @@ title:  Fermium LABS
 		                <div class="container v-align-transform">
 		                    <div class="row text-center ">
                           <div class="col-sm-4">
-                            <div id="{{project.slide}}" class="morris-chart prettyprint linenums hidden-xs hidden-sm">
-                                <script>
-                                new Morris.Donut({
-                                  element: '{{project.slide}}',
-                                  backgroundColor: 'transparent',
-                                  data: {{project.donut|jsonify}}
-                                })
-                                </script>
+                            <div id="{{project.slide}}" class="morris-chart prettyprint linenums">
+                     						<script>
+																	new Morris.Donut({
+																		element: '{{project.slide}}',
+																		backgroundColor: 'transparent',
+																		resize: true,
+																		data: {{project.donut|jsonify}},
+																	})
+																</script>
                             </div>
                           </div>
 		                        <div class="col-sm-8 ">
@@ -59,9 +60,12 @@ title:  Fermium LABS
 		                    </div>
 
 		                </div>
+									
 
 		            </li>
+	
 					{% endfor %}
 		        </ul>
 		    </section></div>
+
 
