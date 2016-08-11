@@ -1,3 +1,8 @@
+---
+layout: page
+title:  Cookie Policy
+menu: white
+---
 # Cookie Policy for Fermium LABS srl
 
 ### What Are Cookies
