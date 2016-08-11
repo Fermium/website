@@ -605,7 +605,7 @@ footer.bg-dark h5,
 nav.bg-dark h6,
 footer.bg-dark h6,
 .bg-primary h6 {
-  color: #ffffff;
+  color: #fff;
 }
 .bg-dark p,
 nav.bg-dark p,
@@ -647,7 +647,7 @@ footer.bg-dark li,
   height: 100%;
   top: 0;
   left: 0;
-  background: #ffffff;
+  background: #fff;
   opacity: 0.1;
   z-index: 2;
 }
@@ -657,12 +657,12 @@ footer.bg-dark li,
 .image-bg h4,
 .image-bg h5,
 .image-bg h6 {
-  color: #ffffff;
+  color: #fff;
 }
 .image-bg p,
 .image-bg span,
 .image-bg li {
-  color: #ffffff;
+  color: #fff;
 }
 .image-bg .container,
 .image-bg div[class*='col-'] {
@@ -1496,6 +1496,14 @@ nav.fixed.scrolled {
   visibility: visible;
   opacity: 1;
 }
+.has-offscreen-nav nav.fixed {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+}
+​ nav.transparent {
+  background: none;
+}
 nav.transparent .menu > li > a,
 nav.transparent .module.widget-handle i,
 nav.transparent .nav-utility {
@@ -1520,14 +1528,6 @@ nav.transparent .logo-dark {
 }
 nav.transparent .logo-light {
   display: inline;
-}
-nav.transparent {
-  background: none;
-}
-.has-offscreen-nav > nav.fixed {
-  opacity: 1;
-  transform: none;
-  visibility: visible;
 }
 @media all and (max-width: 990px) {
   nav.transparent .nav-open {
@@ -2700,12 +2700,12 @@ button[type="submit"] .form-loading {
 .feature-color h4,
 .feature-color h5,
 .feature-color h6 {
-  color: #ffffff;
+  color: #fff;
 }
 .feature-color p,
 .feature-color span,
 .feature-color li {
-  color: #ffffff;
+  color: #fff;
 }
 .feature-color i {
   color: #fff;
@@ -2762,12 +2762,12 @@ button[type="submit"] .form-loading {
 .image-bg .feature h4,
 .image-bg .feature h5,
 .image-bg .feature h6 {
-  color: #ffffff;
+  color: #fff;
 }
 .image-bg .feature p,
 .image-bg .feature span,
 .image-bg .feature li {
-  color: #ffffff;
+  color: #fff;
 }
 .image-bg .feature.bordered {
   border-color: rgba(255, 255, 255, 0.4);
@@ -3120,12 +3120,12 @@ img {
 .inner-title .title h4,
 .inner-title .title h5,
 .inner-title .title h6 {
-  color: #ffffff;
+  color: #fff;
 }
 .inner-title .title p,
 .inner-title .title span,
 .inner-title .title li {
-  color: #ffffff;
+  color: #fff;
 }
 .inner-title.title-center .title {
   bottom: auto;
@@ -3208,12 +3208,12 @@ img {
 .hover-state h4,
 .hover-state h5,
 .hover-state h6 {
-  color: #ffffff;
+  color: #fff;
 }
 .hover-state p,
 .hover-state span,
 .hover-state li {
-  color: #ffffff;
+  color: #fff;
 }
 .hover-state * {
   transition: all 0.3s ease;
@@ -3627,12 +3627,12 @@ img {
 .cover h4,
 .cover h5,
 .cover h6 {
-  color: #ffffff;
+  color: #fff;
 }
 .cover p,
 .cover span,
 .cover li {
-  color: #ffffff;
+  color: #fff;
 }
 .image-bg.bg-light h1,
 .image-bg.bg-light h2,
@@ -3640,12 +3640,12 @@ img {
 .image-bg.bg-light h4,
 .image-bg.bg-light h5,
 .image-bg.bg-light h6 {
-  color: #222222;
+  color: #222;
 }
 .image-bg.bg-light p,
 .image-bg.bg-light span,
 .image-bg.bg-light li {
-  color: #777777;
+  color: #777;
 }
 .cover:first-child .fullscreen {
   max-height: 100%;
@@ -4123,7 +4123,7 @@ video {
   height: 100%;
   top: 0;
   left: 0;
-  background: #222222;
+  background: #222;
   opacity: 0.5;
   z-index: 2;
 }
@@ -4615,7 +4615,7 @@ video {
 .bg-dark .filters.floating h4,
 .bg-dark .filters.floating h5,
 .bg-dark .filters.floating h6 {
-  color: #ffffff;
+  color: #fff;
 }
 .bg-dark .filters.floating p,
 .bg-dark .filters.floating span,
