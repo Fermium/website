@@ -87,8 +87,12 @@ var/www:
   * *_site:* The output directory for Jekyll.
   * *site:* The directory if the site is not built by Travis-CI. If this directory is present *_site* will be ignored.
               
-### Thanks
-This site was derived from [ionic-site](https://github.com/driftyco/ionic-site).
+              
+### Dependencies
+
+This website in order to be built and deployed uses a mix of Ruby and Node.js packages.
+A global Ruby Gemfile in the root directory includes the other.
+The Packages.json file (Node.js) is custom for every website.
 
 ### TODOs
 

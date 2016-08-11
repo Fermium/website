@@ -14,22 +14,21 @@ before_install:
 - sudo apt-get update
 - sudo apt-get -qq -y install nginx 
 
+install:
+- bundle install
+- sh -c "cd Websites/fermiumlabs_com && npm install"
+
 script:
 - sh -c "cd Websites/fermiumlabs_com && bundle exec jekyll build" #build fermiumlabs.com withouth dir change
 - bash _scripts/tests/nginx/nginx.sh
 - bash _scripts/tests/html/htmlproofer.sh
 
 after_success:
-#deploy if is not a pull request. If it's the master branch, also deploy config
-- test $TRAVIS_PULL_REQUEST == "false" && bash _scripts/deploy.sh
+#deploy if is not a pull request,, but only on master or develop. If it's the master branch, also deploy config
+- test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master" && bash _scripts/deploy.sh
+- test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "develop" && bash _scripts/deploy.sh
 - test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master" && bash _scripts/deploy_config.sh
 - slack_message.sh -t "Deployed" -b "$(cat slack_message.txt)" -c "repositories" -u "$SLACK_WEBHOOK_URL"
-
-#Only the master and develop branches destinations git configured in the server
-branches:
-  only:
-  - master
-  - develop
 
 notifications:
   slack:
