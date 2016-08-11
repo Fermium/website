@@ -14,8 +14,6 @@ before_install:
 - sudo apt-get update
 - sudo apt-get -qq -y install nginx zip 
 - npm install npm -g
-- transfer() { if [ $# -eq 0 ]; then echo "No arguments specified. Usage:\necho transfer /tmp/test.md\ncat /tmp/test.md | transfer test.md"; return 1; fi 
-- tmpfile=$( mktemp -t transferXXX ); if tty -s; then basefile=$(basename "$1" | sed -e 's/[^a-zA-Z0-9._-]/-/g'); curl --progress-bar --upload-file "$1" "https://transfer.sh/$basefile" >> $tmpfile; else curl --progress-bar --upload-file "-" "https://transfer.sh/$1" >> $tmpfile ; fi; cat $tmpfile; rm -f $tmpfile; }
 
 install:
 - bundle install
@@ -32,7 +30,7 @@ after_success:
 - test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "develop" && bash _scripts/deploy.sh
 - test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master" && bash _scripts/deploy_config.sh
 - zip -r fermiumlabs_com.zip Websites/fermiumlabs_com/_site
-- transfer fermiumlabs_com.zip >> slack_message.txt #Upload and notify
+- curl --upload-file ./fermiumlabs_com.zip https://transfer.sh/fermiumlabs_com.zip  >> slack_message.txt #Upload and notify
 - slack_message.sh -t "Deployed" -b "$(cat slack_message.txt)" -c "repositories" -u "$SLACK_WEBHOOK_URL"
 
 notifications:
