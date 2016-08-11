@@ -356,3 +356,41 @@ width: 50%;
   -moz-transform: translate3d(100%, 0, 0);
 }
 }
+
+.btn {
+  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  border: 2px solid #E3183D;
+  padding: 0 26px;
+  height: 40px;
+  min-width: 150px;
+  line-height: 36px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 0;
+  color: #E3183D;
+  text-align: center;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  margin-right: 8px;
+  margin-bottom: 24px;
+}
+.btn:hover {
+  background: #E3183D;
+  color: #fff;
+}
+
+.color-primary{
+	color:#E3183D !important;
+}
+
+.cookie-link {
+    color:#eb274a;
+    opacity:0.5;
+}
+.cookie-link:hover {
+    color:#eb274a;
+    opacity:1;
+}
