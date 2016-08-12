@@ -20,16 +20,18 @@ server {
 		try_files $uri $uri/ =404;
 	}
 	
-	error_page 400 /errors/400/;
-	error_page 401 /errors/401/;
-	error_page 403 /errors/403/;
-	error_page 404 /errors/404/;
-	error_page 500 /errors/500/;
+	#Error pages, with jekyll pretty-link style urls
+	error_page 400 /errors/400/index.html;
+	error_page 401 /errors/401/index.html;
+	error_page 403 /errors/403/index.html;
+	error_page 404 /errors/404/index.html;
+	error_page 500 /errors/500/index.html;
 	
+	#Error pages location
 	location ^~ /errors/ {
     internal;
     root /var/www/html/fermiumlabs_com/master;
- }
+  }
 	
 }
 
