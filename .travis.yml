@@ -22,7 +22,7 @@ install:
 - bundle install
 - sh -c "cd Websites/fermiumlabs_com && npm install"
 script:
-- sh -c "cd Websites/fermiumlabs_com && gulp build"
+- sh -c "cd Websites/fermiumlabs_com && gulp build-deploy"
 - bash _scripts/tests/nginx/nginx.sh
 - bash _scripts/tests/html/htmlproofer.sh
 after_success:
