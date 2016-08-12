@@ -13,6 +13,9 @@ before_install:
 - sudo add-apt-repository -y ppa:nginx/development 
 - sudo apt-get update
 - sudo apt-get -qq -y install nginx zip 
+- sudo apt-get remove -qq -y nodejs
+- curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+- sudo apt-get install -qq -y nodejs
 - npm install npm -g
 
 install:
