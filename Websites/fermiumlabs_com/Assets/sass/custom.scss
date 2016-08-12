@@ -6,6 +6,19 @@
 4. Animations
 **/
 /** 1. Navigator **/
+$font: "Roboto","Roboto Condensed";
+$color-primary: #eb274a;
+body{
+  font-family: $font !important;
+  font-weight: thin;
+}
+.tag{
+  font-family: $font !important;
+}
+.hvr-underline-from-center:before, .hvr-underline-from-left:before{
+  background: $color-primary !important;
+}
+
 .form-error{
   background: none;
   display:inline-block;
@@ -279,7 +292,7 @@ a:hover{
   height: 100%;
   top: 0;
   left: 0;
-  background: #eb274a;
+  background: $color-primary;
   opacity: 0.4;
   z-index: 2;
 }
@@ -405,11 +418,11 @@ width: 50%;
 }
 
 .cookie-link {
-    color:#eb274a;
+    color:$color-primary;
     opacity:0.5;
 }
 .cookie-link:hover {
-    color:#eb274a;
+    color:$color-primary;
     opacity:1;
 }
 .hide-cookie-modal{

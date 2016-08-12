@@ -30,9 +30,12 @@ title:  Fermium LABS
 		                            <p class="lead mb40">
 		                                {% for tags in project.tags %}
 
-		                                <small>{{tags}}</small>
+		                                <small class="tag">{{tags}}</small>
                                   {% endfor %}
 		                            </p>
+																<p class="lead mb40">
+																		{{project.description}}
+																</p>
                                 <div class="row policies text-left row-centered">
                                   <h4 class="text-center">Policies</h4>
 
@@ -40,8 +43,8 @@ title:  Fermium LABS
                                   {% assign loopindex= forloop.index | modulo: 2 %}
                                   {% if loopindex==1 %}
 																	<div class="row policy-line">
-																		
-																	
+
+
                                   <div class="col-sm-4">
                                     {{policy.name}}: {{policy.value}}
                                   </div>
@@ -60,12 +63,10 @@ title:  Fermium LABS
 		                    </div>
 
 		                </div>
-									
+
 
 		            </li>
-	
+
 					{% endfor %}
 		        </ul>
 		    </section></div>
-
-
