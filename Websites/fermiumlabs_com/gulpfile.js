@@ -32,21 +32,13 @@ gulp.task('clean', function () {
         .pipe(clean());
 });
 
-
-// Expand css adding useful fixes for the most common browsers
-gulp.task('css-autoprefixer', ['css-build'], function() {
+// Minify the css
+gulp.task('css-postprocess',['css-build'], function() {
    return gulp.src('_site/Assets/css/**/*.css')
        .pipe(changed('_site/Assets/css/**/*.css'))
        .pipe(autoprefixer())
-       .pipe(gulp.dest('_site/Assets/css/'));
-});
-
-// Minify the css
-gulp.task('css-minify',['css-build', 'css-autoprefixer'], function() {
-   return gulp.src('_site/Assets/css/**/*.css')
-       .pipe(changed('_site/Assets/css/**/*.css'))
-       .pipe(minifyCss({keepBreaks: false}))
        .pipe(cssnano())
+       .pipe(minifyCss({keepBreaks: false}))
        .pipe(gulp.dest('_site/Assets/css/'));
 });
 
@@ -105,7 +97,7 @@ gulp.task('watch', function () {
 // Build sass and less
 gulp.task('css-build', ['sass', 'less']);
 // Optimize css (build sass, less, launch autoprefixer, miniify)
-gulp.task('css-optimize', ['css-build', 'css-minify']);
+gulp.task('css-optimize', ['css-build', 'css-postprocess']);
 
 // Build css, site with jekyll, improve css with autoprefixer
 gulp.task('build', ['jekyll-build', 'css-optimize', 'compress-js']);
