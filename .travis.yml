@@ -27,17 +27,12 @@ before_install:
 - npm install npm -g
 # Tools
 - npm install -g cloudflare-cli
-- npm install -g npm-check-updates
 
 install:
 # Install ruby
 - bundle install
 # Fermiumlabs.com nodejs stuff
 - sh -c "cd Websites/fermiumlabs_com && npm install"
-# Temporary
-- sh -c "cd Websites/fermiumlabs_com && ncu" #report on packages that needs to be updated
-- sh -c "cd Websites/fermiumlabs_com && node -v" #report on packages that needs to be updated
-- sh -c "cd Websites/fermiumlabs_com && npm -v" #report on packages that needs to be updated
 script:
 # Fermiumlabs.com
 - sh -c "cd Websites/fermiumlabs_com && gulp build"
@@ -45,8 +40,6 @@ script:
 - bash _scripts/tests/nginx/nginx.sh
 # Test html
 - bash _scripts/tests/html/htmlproofer.sh
-#TEST TEST TEST TEST 
-- cfcli purgecache
 
 
 after_success:
