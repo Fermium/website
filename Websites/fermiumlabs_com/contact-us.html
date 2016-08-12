@@ -1,6 +1,6 @@
---- 
-layout: default 
-title: Fermium LABS - Contact Us 
+---
+layout: default
+title: Fermium LABS - Contact Us
 ---
 <div class="main-container">
   <section class="page-title page-title-5 image-bg overlay parallax">
@@ -13,14 +13,16 @@ title: Fermium LABS - Contact Us
 		                    <h3 class="uppercase mb0">Contact us</h3>
 		                </div>
 		            </div>
-		            
+
 		        </div>
-		        
-		        
+
+
 		    </section>
   <section>
     <div class="container">
       <div class="row">
+
+
         <div class="col-sm-6 col-md-5">
           <p>
 						Quite often we're working out-of-office, out of the city or with customers.
@@ -36,15 +38,15 @@ title: Fermium LABS - Contact Us
           </p>
           <hr>
           <p>
-            <strong>E:</strong> info@fermiumlabs.com
+            <strong><i class="fa fa-at" aria-hidden="true"></i>&nbsp;</strong> info@fermiumlabs.com
 						<br>
-						<strong>E:</strong> support@fermiumlabs.com
+						<strong><i class="fa fa-at" aria-hidden="true"></i>&nbsp;</strong> support@fermiumlabs.com
             <br>
-            <strong>P (IT):</strong> +39 049 736 0954
+            <strong><i class="fa fa-phone" aria-hidden="true"></i> (IT):</strong> +39 049 736 0954
 						<br>
-						<strong>P (US):</strong> +1 646 713 1956
+						<strong><i class="fa fa-phone" aria-hidden="true"></i> (US):</strong> +1 646 713 1956
           </p>
-					<div>
+					<!--<div>
 						<h4 class="text-center office">
 							Are we in office?
 						</h4>
@@ -56,15 +58,24 @@ title: Fermium LABS - Contact Us
 								</div>
 							</div>
 							<div  class="col-centered col-md-3" id="s">
-								
+
 									<img class="img-circle" alt="Name Surname" src="/Assets/img/team-1.jpg">
 									<div class="overlay-status">
-										
+
 									</div>
-								
+
 							</div>
 						</div>
-					</div>
+					</div>-->
+          <div class="time">
+<a href="http://time.is/Italy" id="time_is_link" rel="nofollow" style="color:#666"><svg style="margin-right:20px;height:auto;max-height:14px;max-width:16px"><image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="//lipis.github.io/flag-icon-css/flags/4x3/it.svg" width="100%" height="100%"></image></svg></a>
+  <span id="Italy_z723" style="font-size:1.5em"></span>
+
+  <script src="http://widget.time.is/t.js"></script>
+  <script>
+  time_is_widget.init({Italy_z723:{time_format:"12hours:minutes:secondsAMPM"}});
+  </script>
+</div>
 					<br>
 					<br>
         </div>
@@ -76,13 +87,24 @@ title: Fermium LABS - Contact Us
 					<br>
 					<br>
 					<br>
-          <form class="former" data-success="Thanks for your submission, we will be in touch shortly." data-error="Please fill all fields correctly." method="POST" action="./php/former.php" name="former">
-            <input type="text" class="validate-required" name="z_name" placeholder="Your Name">
-            <input type="text" class="validate-required validate-email" name="z_requester" placeholder="Email Address">
-            <input type="text" class="validate-required" name="z_subject" placeholder="Your Subject">
-            <textarea class="validate-required" name="z_description" rows="4" placeholder="Message"></textarea>
-            <input type="submit" value="submit" id="submitter">
+          <form class="former toggle-disabled" id="zendesk-form" data-success="Thanks for your submission, we will be in touch shortly." data-error="Please fill all fields correctly." name="former">
+            <p><input type="text" class="validate-required" id="z_name" data-validation="required" placeholder="Name (and company)"></p>
+            <p><input type="text" class="validate-required validate-email" name="email" data-validation="email" id="z_requester" placeholder="Email"></p>
+            <p><input type="text" class="validate-required" id="z_subject"  placeholder="Subject"></p>
+            <p><textarea class="validate-required" id="z_description" rows="4" data-validation="required" placeholder="Message"></textarea></p>
+
+            <input type="submit" value="submit" id="submitter" disabled="disabled">
           </form>
+
+          <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+          <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
+        <script>
+        $.validate({
+          modules : 'toggleDisabled',
+          form : '#zendesk-form',
+          disabledFormFilter : 'form.toggle-disabled',
+        });
+ </script>
         </div>
       </div>
 
@@ -92,5 +114,17 @@ title: Fermium LABS - Contact Us
   <section class="pt240 pb240 map-holder">
     <div class="map-canvas " data-address="Fermium LABS srl, Via Monselice 15A, Padova, PD" data-maps-api-key="AIzaSyAR-3ZE8IU22KoprKUxF8ONXyma1IYqqxU" data-map-style='[{"featureType":"water","stylers":[{"saturation":43},{"lightness":-11},{"hue":"#0088ff"}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"hue":"#ff0000"},{"saturation":-100},{"lightness":99}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"color":"#808080"},{"lightness":54}]},{"featureType":"landscape.man_made","elementType":"geometry.fill","stylers":[{"color":"#ece2d9"}]},{"featureType":"poi.park","elementType":"geometry.fill","stylers":[{"color":"#ccdca1"}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"color":"#767676"}]},{"featureType":"road","elementType":"labels.text.stroke","stylers":[{"color":"#ffffff"}]},{"featureType":"poi","stylers":[{"visibility":"on"}]},{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#EBE5E0"}]},{"featureType":"poi.park","stylers":[{"visibility":"on"}]},{"featureType":"poi.sports_complex","stylers":[{"visibility":"on"}]}]' data-map-zoom="15"></div>
   </section>
-	
+
 <script src="/Assets/js/inoffice.js"></script>
+
+<div class="modal-strip bg-white">
+ <div class="container">
+  <div class="row">
+   <div class="col-sm-12 overflow-hidden">
+    <i class="ti-info-alt icon icon-sm pull-left color-primary"></i>
+    <p class="mb0 pull-left">Hey there user, our site uses cookies and by continuing to browse, you're agreeing to our <a class="cookie-link" href="/cookie-policy.html">terms of service</a></p>
+   </div>
+  </div>
+ </div>
+ <a class="btn btn-sm close-modal cookie-accept">Ok, I agree</a>
+</div>
