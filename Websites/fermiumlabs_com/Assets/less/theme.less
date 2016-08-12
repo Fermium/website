@@ -199,8 +199,10 @@ hr.short-thick{ max-width: 50px; border-top: 5px solid #ccc; opacity: 1 !importa
 @media all and (max-width: 767px){
 	.text-center-xs{ text-align: center !important; }
 }
-
-@heading-font: "Raleway";
+a:focus{
+color:@color-primary !important;  
+}
+@heading-font: "Roboto";
 .bold{ font-weight: 600 !important; }
 .thin{ font-weight: 100 !important; }
 
@@ -252,7 +254,7 @@ p.lead{ font-size: 16px; font-weight: 400; line-height: 28px; }
 	p{ font-size: 12px; }
 }
 
-a,a:visited,a:focus,a:active,a:hover{ text-decoration: none; outline: none; }
+a,a:visited,a:focus,a:active,a:hover{ text-decoration: none !important; outline: none; }
 a{ font-weight: 600; color: @color-primary; .transition(0.3s); cursor: poitner; }
 .image-bg a, .bg-primary a{ color: #fff; }
 .image-bg a:hover, .bg-primary a:hover{ color: #fff; opacity: .9; }
