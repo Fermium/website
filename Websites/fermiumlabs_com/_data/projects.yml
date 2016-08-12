@@ -1,12 +1,19 @@
 - name:  Houston
+  subtitle: "Factory mission control"
   project-page: "/contact-us"
   tw-tag: "#pr-houston"
   image: "Assets/img/projects/mission-control-nasa-1.jpg"
   slide: 1
-  description: "Factory command center<br>
-Factory mission control<br>
-Your own mission control
-"
+  description: "
+  You can't know what is gonna break before it does.<br>If something slows down you may notice - but finding the issue:<br>
+  That's another matter. <br> <br>
+  You can't be inside every machine, every system of your factory.<br> <br>
+  Humans are not omnipresent.<br>
+  This is why we're building Houston.<br> <br>
+  Houston is an integrated *hardware-software* solution. <br>
+  Conceived for complex machinery systems and their environments: <br> 
+  From small production lines to **entire** factories. <br>
+  "
   date:  23-04-2016
   tags:  ["tag4","tag5","tag6"]
   state: aaa
@@ -28,14 +35,10 @@ Your own mission control
       color:  "#EB274A"
   policies:
     - name:  "Market"
-      value: "local"
+      value: "Local"
+    - name:  "Support"
+      value: "Direct"
     - name:  "OS/OW"
       value: "mixed"
     - name:  "Open Docs"
-      value: "Open Docs"
-    - name:  "Open Docs"
-      value: "Open Docs"
-    - name:  "Open Docs"
-      value: "Open Docs"
-    - name:  "Open Docs"
-      value: "Open Docs"
+      value: "NDA required"
