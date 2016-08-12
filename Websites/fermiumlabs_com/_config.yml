@@ -6,21 +6,24 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Your awesome title
-email: your-email@domain.com
+title: Fermium LABS
+email: info@fermiumlabs.com
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Fermium LABS is an innovative startup in the Hearth of Italy.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://yourdomain.com" # the base hostname & protocol for your site
+url: "https://fermiumlabs.com" # the base hostname & protocol for your site
 twitter_username: fermiumlabs
 github_username:  fermiumlabs
-
 # Build settings
 markdown: kramdown
 
-#Fermiumlabs mods
-gems:
-  - jekyll-sitemap
-exclude: [vendor]
+exclude: ["_app",
+          "Gemfile",
+          "Gemfile.lock",
+          "gulpfile.js",
+          "node_modules",
+          "package.json",
+          "*.scss",
+          "*.less"]
+# Don't forget that Jekyll automatically 
+# excludes files with a dot prefix

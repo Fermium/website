@@ -1,0 +1,72 @@
+---
+layout: default
+title:  Fermium LABS
+---
+
+		<div class="main-container">
+		<section class="cover fullscreen image-slider slider-all-controls controls-inside parallax">
+		        <ul class="slides flex">
+				{% for project in site.data.projects %}
+		            <li class="overlay image-bg ">
+		                <div class="background-image-holder">
+		                    <img alt="image" class="background-image blur " src="{{project.image}}">
+		                </div>
+		                <div class="container v-align-transform">
+		                    <div class="row text-center ">
+                          <div class="col-sm-4">
+                            <div id="{{project.slide}}" class="morris-chart prettyprint linenums">
+                     						<script>
+																	new Morris.Donut({
+																		element: '{{project.slide}}',
+																		backgroundColor: 'transparent',
+																		resize: true,
+																		data: {{project.donut|jsonify}},
+																	})
+																</script>
+                            </div>
+                          </div>
+		                        <div class="col-sm-8 ">
+		                            <h2 class="mb-xs-16 project-link hvr-underline-from-center"><a href="{{project.project-page}}">{{ project.name }}</a></h2>
+		                            <p class="lead mb40">
+		                                {% for tags in project.tags %}
+
+		                                <small class="tag">{{tags}}</small>
+                                  {% endfor %}
+		                            </p>
+																<p class="lead mb40">
+																		{{project.description}}
+																</p>
+                                <div class="row policies text-left row-centered">
+                                  <h4 class="text-center">Policies</h4>
+
+                                  {% for policy in project.policies %}
+                                  {% assign loopindex= forloop.index | modulo: 2 %}
+                                  {% if loopindex==1 %}
+																	<div class="row policy-line">
+
+
+                                  <div class="col-sm-4">
+                                    {{policy.name}}: {{policy.value}}
+                                  </div>
+                                  {% else %}
+                                  <div class="col-sm-4">
+                                    {{policy.name}}: {{policy.value}}
+                                  </div>
+																	</div>
+                                  {% endif %}
+                                  {% endfor %}
+
+                                </div>
+                                <div id="twitter_update_list">
+                                </div>
+		                        </div>
+		                    </div>
+
+		                </div>
+
+
+		            </li>
+
+					{% endfor %}
+		        </ul>
+		    </section></div>
