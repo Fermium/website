@@ -23,13 +23,14 @@ before_install:
 install:
 - bundle install
 - sh -c "cd Websites/fermiumlabs_com && npm install"
+- sh -c "cd Websites/fermiumlabs_com && ncu" #report on packages that needs to be updated
+- sh -c "cd Websites/fermiumlabs_com && node -v" #report on packages that needs to be updated
+- sh -c "cd Websites/fermiumlabs_com && npm -v" #report on packages that needs to be updated
 script:
 - sh -c "cd Websites/fermiumlabs_com && gulp build-deploy"
 - bash _scripts/tests/nginx/nginx.sh
 - bash _scripts/tests/html/htmlproofer.sh
-- sh -c "cd Websites/fermiumlabs_com && ncu" #report on packages that needs to be updated
-- sh -c "cd Websites/fermiumlabs_com && node -v" #report on packages that needs to be updated
-- sh -c "cd Websites/fermiumlabs_com && npm -v" #report on packages that needs to be updated
+
 
 after_success:
 - test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master" && bash
