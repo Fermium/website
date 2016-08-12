@@ -38,7 +38,7 @@ install:
 - sh -c "cd Websites/fermiumlabs_com && npm -v" #report on packages that needs to be updated
 script:
 # Fermiumlabs.com
-- sh -c "cd Websites/fermiumlabs_com && gulp build-deploy"
+- sh -c "cd Websites/fermiumlabs_com && gulp build"
 # Test Nginx config
 - bash _scripts/tests/nginx/nginx.sh
 # Test html
