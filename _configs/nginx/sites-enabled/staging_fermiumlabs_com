@@ -24,23 +24,25 @@ server {
 	
 		# First attempt to serve request as file, then
 		# as directory, then fall back to displaying a 404.
-		try_files $uri $uri/ =404;
+		try_files $uri $uri/index.html $uri/ =404;
 		
 		#Allow access only from our IPs
 		#allow   123.123.123.123; 
 		#deny    all;
 	}
 	
-	error_page 400 /errors/400.html;
-	error_page 401 /errors/401.html;
-	error_page 403 /errors/403.html;
-	error_page 404 /errors/404.html;
-	error_page 500 /errors/500.html;
+	#Error pages, with jekyll pretty-link style urls
+	error_page 400 /errors/400/index.html;
+	error_page 401 /errors/401/index.html;
+	error_page 403 /errors/403/index.html;
+	error_page 404 /errors/404/index.html;
+	error_page 500 /errors/500/index.html;
 	
-	location ^~ /error/ {
-		internal;
-		root /var/www/html/fermiumlabs_com/develop;
-	}
+	#Error pages location
+	location ^~ /errors/ {
+    internal;
+    root /var/www/html/fermiumlabs_com/develop;
+  }
 
 
 }
