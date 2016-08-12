@@ -17,6 +17,9 @@ github_username:  fermiumlabs
 # Build settings
 markdown: kramdown
 
+# Generate files to be used withouth .html extension
+permalink: pretty
+
 exclude: ["_app",
           "Gemfile",
           "Gemfile.lock",
