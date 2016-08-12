@@ -19,6 +19,7 @@ before_install:
 - sudo apt-get install -qq -y nodejs
 - npm install npm -g
 - npm install -g npm-check-updates
+- source ~/.bashrc
 
 install:
 - bundle install
