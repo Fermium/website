@@ -13,7 +13,7 @@ var clean        = require('gulp-clean');
 var changed      = require('gulp-changed');
 var uglify       = require('gulp-uglify');
 var pump         = require('pump');
-
+var cssnano      = require('gulp-cssnano');
 
 // Launch jekyll for a standard build
 gulp.task('jekyll-build', function (cb) {
@@ -46,6 +46,7 @@ gulp.task('css-minify',['css-build', 'css-autoprefixer'], function() {
    return gulp.src('_site/Assets/css/**/*.css')
        .pipe(changed('_site/Assets/css/**/*.css'))
        .pipe(minifyCss({keepBreaks: false}))
+       .pipe(cssnano())
        .pipe(gulp.dest('_site/Assets/css/'));
 });
 
