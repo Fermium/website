@@ -2,6 +2,9 @@
 layout: page
 title:  Cookie Policy
 menu: white
+description: Fermium LABS - Cookie Policy
+opengraph_type: article
+opengraph_image:  
 ---
 # Cookie Policy for Fermium LABS srl
 
@@ -34,7 +37,7 @@ We use cookies when you are logged in so that we can remember this fact. This pr
 
 ###### Newsletter service
 
-This site offers newsletter or email subscription services and cookies may be used to remember if you are already registered and whether to show certain notifications which might only be valid to subscribed/unsubscribed users. 
+This site offers newsletter or email subscription services and cookies may be used to remember if you are already registered and whether to show certain notifications which might only be valid to subscribed/unsubscribed users.
 
 ###### Ecommerce
 
