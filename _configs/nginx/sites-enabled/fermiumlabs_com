@@ -20,18 +20,15 @@ server {
 		try_files $uri $uri/ =404;
 	}
 	
-	error_page 400 /errors/400;
-	error_page 401 /errors/401;
-	error_page 403 /errors/403;
-	error_page 404 /errors/404;
-	error_page 500 /errors/500;
+	error_page 400 /errors/400/;
+	error_page 401 /errors/401/;
+	error_page 403 /errors/403/;
+	error_page 404 /errors/404/;
+	error_page 500 /errors/500/;
 	
 	location ^~ /errors/ {
     internal;
     root /var/www/html/fermiumlabs_com/master;
-		# First attempt to serve request as file, then
-		# as directory, then fall back to displaying a 404.
-		try_files $uri $uri/ =404;
  }
 	
 }
