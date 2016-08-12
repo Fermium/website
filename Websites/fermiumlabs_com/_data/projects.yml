@@ -3,6 +3,10 @@
   tw-tag: "#pr-houston"
   image: "Assets/img/projects/mission-control-nasa-1.jpg"
   slide: 1
+  description: "Factory command center<br>
+Factory mission control<br>
+Your own mission control
+"
   date:  23-04-2016
   tags:  ["tag4","tag5","tag6"]
   state: aaa
