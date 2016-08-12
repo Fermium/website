@@ -23,6 +23,7 @@ before_install:
 - curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
 - sudo apt-get install -qq -y nodejs
 - nvm install node
+- source ~/.bashrc
 - npm install npm -g
 # Tools
 - npm install -g cloudflare-cli
