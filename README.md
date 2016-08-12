@@ -94,6 +94,37 @@ This website in order to be built and deployed uses a mix of Ruby and Node.js pa
 A global Ruby Gemfile in the root directory includes the other.
 The Packages.json file (Node.js) is custom for every website.
 
+```bash
+bundle install
+#example for main site
+cd /Website/fermiumlabs_com
+npm install
+
+```
+
+## Opengraph and social networks compatibility
+
+This website follows the [Opengraph](http://ogp.me/) specifications, including those from:
+
+* [Facebook](https://developers.facebook.com/docs/sharing/opengraph)
+* [Twitter](https://dev.twitter.com/cards/markup)
+* [Google plus](https://developers.google.com/+/web/snippet/)
+
+## Theme -- READ CAREFULLY IF FORKING
+
+This website is based on a commercial template: [Foundry](http://foundry.mediumra.re).
+You MUST buy it if you're using the graphic layout. It's cheap, and great.
+
 ### TODOs
 
 * Better licensing
+* Lossless image optimizations
+* Project pages
+* Fix error in html found by Htmlproofer
+* Test from mobile
+* Fix popup problem (it displays for about a second... We should try to append it after the page has loaded)
+* Move stuff outside head, and into body
+* Check if more css needs to be moved into sass
+* Integrate the various .js files together and move them outside of head
+* Make the in-office check work
+* Add our ugly faces to the "about us" page 
