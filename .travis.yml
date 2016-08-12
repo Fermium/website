@@ -18,6 +18,8 @@ before_install:
 - curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
 - sudo apt-get install -qq -y nodejs
 - npm install npm -g
+- npm install -g npm-check-updates
+
 install:
 - bundle install
 - sh -c "cd Websites/fermiumlabs_com && npm install"
@@ -25,6 +27,10 @@ script:
 - sh -c "cd Websites/fermiumlabs_com && gulp build-deploy"
 - bash _scripts/tests/nginx/nginx.sh
 - bash _scripts/tests/html/htmlproofer.sh
+- sh -c "cd Websites/fermiumlabs_com && ncu" #report on packages that needs to be updated
+- sh -c "cd Websites/fermiumlabs_com && node -v" #report on packages that needs to be updated
+- sh -c "cd Websites/fermiumlabs_com && npm -v" #report on packages that needs to be updated
+
 after_success:
 - test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master" && bash
   _scripts/deploy.sh
@@ -33,6 +39,7 @@ after_success:
 - test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master" && bash
   _scripts/deploy_config.sh
 - test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master" && cfcli purgecache
+#BEWARE NOT TO ZIP OUTSIDE THE "Websited" dir!
 - zip -r fermiumlabs_com.zip Websites/fermiumlabs_com/_site
 - curl --upload-file ./fermiumlabs_com.zip https://transfer.sh/fermiumlabs_com.zip  >>
   slack_message.txt
