@@ -12,20 +12,23 @@ server {
 	
 	server_name staging.fermiumlabs.com ~^staging.srv\d+\.web.fermiumlabs\.com$;
 	
-
+	
 	location / {
+
 		
 		root /var/www/html/fermiumlabs_com/develop;
 		index index.html;
+		
+		#disable indexing
+		add_header  X-Robots-Tag "noindex, nofollow, nosnippet, noarchive";
 	
 		# First attempt to serve request as file, then
 		# as directory, then fall back to displaying a 404.
 		try_files $uri $uri/ =404;
 		
 		#Allow access only from our IPs
-		allow   178.62.121.89; #vpn
-		allow   79.59.181.186; #office
-		deny    all;
+		#allow   123.123.123.123; 
+		#deny    all;
 	}
 	
 	error_page 400 /errors/400.html;
