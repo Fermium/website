@@ -43,10 +43,10 @@ title:  Fermium LABS
 																	{{ project.description | markdownify }}
 																</p>
                                 <div class="row policies text-left row-centered">
-																	{% if project.policies!=null %}
-                                  <h4 class="text-center">Policies</h4>
-																	{% endif %}
                                   {% for policy in project.policies %}
+																	{% if forloop.index0==0 %}
+																	<h4 class="text-center">Policies</h4>
+																	{% endif %}
                                   {% assign loopindex= forloop.index | modulo: 2 %}
                                   {% if loopindex==1 %}
 																	<div class="row policy-line">
