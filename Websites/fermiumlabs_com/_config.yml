@@ -9,10 +9,11 @@
 title: Fermium LABS
 email: info@fermiumlabs.com
 description: > # this means to ignore newlines until "baseurl:"
-  Fermium LABS is an innovative startup in the Hearth of Italy.
+  Fermium LABS srl is a company dedicated to exploiting young mind views and new technologies for the sake of innovation.
+  (Our own, by the way)
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://fermiumlabs.com" # the base hostname & protocol for your site
-twitter_username: @fermiumlabs
+twitter_username: "@fermiumlabs"
 github_username:  fermiumlabs
 # Build settings
 markdown: kramdown
