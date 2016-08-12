@@ -35,7 +35,7 @@ install:
 - sh -c "cd Websites/fermiumlabs_com && npm install"
 script:
 # Fermiumlabs.com
-- sh -c "cd Websites/fermiumlabs_com && gulp build"
+- sh -c "cd Websites/fermiumlabs_com && gulp build-deploy"
 # Test Nginx config
 - bash _scripts/tests/nginx/nginx.sh
 # Test html
@@ -53,7 +53,6 @@ after_success:
 - test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master" && bash
   _scripts/deploy_config.sh
 # If master and not a pull request, clear cloudflare cache
-
 - test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master" && cfcli purgecache
 # Zip and upload to transfer.sh
 # BEWARE NOT TO ZIP OUTSIDE THE "Websited" dir!
