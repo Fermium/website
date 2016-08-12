@@ -20,7 +20,8 @@ title:  Fermium LABS
 																	element: '{{project.slide}}',
 																	backgroundColor: 'transparent',
 																	resize: true,
-																	data: {{project.donut|jsonify}}
+																	data: {{project.donut|jsonify}},
+																	formatter: function(value,data) {return value+" %"}
 																});
 																$('.morris-chart svg text').attr("style", "font-family: Roboto").attr("font-weight", "bold");
 																	</script>
@@ -31,7 +32,7 @@ title:  Fermium LABS
 																	<h1 class="mb-xs-16 project-link title hvr-underline-from-center"><a href="{{project.project-page}}">{{ project.name }}</a></h1>
 																</div>
 																<div class="row">
-																<h3 class="mb-xs-16 project-link subtitle hvr-underline-from-center"><a href="{{project.project-page}}">{{ project.subtitle }}</a></h3>
+																<h3 class="mb-xs-16 project-link subtitle">{{ project.subtitle }}</h3>
 															</div>
 																<!--<p class="lead mb40">
 		                                {% for tags in project.tags %}
