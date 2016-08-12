@@ -10,7 +10,6 @@ $font: "Roboto","Roboto Condensed";
 $color-primary: #eb274a;
 body{
   font-family: $font !important;
-  font-weight: thin;
 }
 .tag{
   font-family: $font !important;
@@ -272,9 +271,9 @@ a:hover{
 .social-list li{
 	font-size:1.3em;
 }
-
-.overlay{
-	background: rgba(0,0,0,0.7);
+svg text{
+  font-family: $font;
+  font-weight: 100;
 }
 .policy-line{
 	margin-left:25%;
