@@ -33,12 +33,3 @@
     - label:  "Frontend"
       value:  15
       color:  "#EB274A"
-  policies:
-    - name:  "Market"
-      value: "Local"
-    - name:  "Support"
-      value: "Direct"
-    - name:  "OS/OW"
-      value: "mixed"
-    - name:  "Open Docs"
-      value: "NDA required"
