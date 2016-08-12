@@ -25,5 +25,5 @@ exclude: ["_app",
           "package.json",
           "*.scss",
           "*.less"]
- # Don't forget that Jekyll automatically 
-x# excludes files with a dot prefix
+# Don't forget that Jekyll automatically 
+# excludes files with a dot prefix

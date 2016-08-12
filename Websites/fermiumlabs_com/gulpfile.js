@@ -11,19 +11,11 @@ var autoprefixer = require('gulp-autoprefixer');
 var minifyCss    = require('gulp-minify-css');
 
 
-var jekyll   = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
-var messages = {
-    jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
-};
-
-/**
- * Build the Jekyll Site
- */
-gulp.task('jekyll-build', function (done) {
-    browserSync.notify(messages.jekyllBuild);
-    return cp.spawn( jekyll , ['build'], {stdio: 'inherit'})
-        .on('close', done);
+gulp.task('jekyll-build', function (cb) {
+   var build = require('child_process').spawn('jekyll', ['build'], {stdio: 'inherit'});
+   build.on('exit', cb);
 });
+
 
 /* you should not run this task during development*/
 gulp.task('optimize-images', function () {
@@ -35,7 +27,7 @@ gulp.task('optimize-images', function () {
         .pipe(gulp.dest('_site/'));
 });
 
-gulp.task('css-autoprefixer', function() {
+gulp.task('css-autoprefixer', ['css-build'], function() {
    return gulp.src('_site/Assets/css/**/*.css')
        .pipe(autoprefixer())
        .pipe(gulp.dest('_site/Assets/css/'));
@@ -69,7 +61,7 @@ gulp.task('browser-sync', ['build'], function() {
 /**
  * Compile files from _scss into both _site/css (for live injecting) and site (for future jekyll builds)
  */
-gulp.task('sass', function () {
+gulp.task('sass',['jekyll-build'], function () {
     return gulp.src('Assets/sass/**/*.scss')
         .pipe(sass({
             includePaths: ['scss'],
@@ -81,7 +73,7 @@ gulp.task('sass', function () {
         .pipe(gulp.dest('_site/Assets/css'));
 });
 
-gulp.task('less', function () {
+gulp.task('less',['jekyll-build'], function () {
   return gulp.src('Assets/less/**/*.less')
     .pipe(less({
       paths: [ path.join(__dirname, 'less', 'includes') ]
@@ -100,9 +92,12 @@ gulp.task('watch', function () {
     gulp.watch(['*.html', '_layouts/*.html', '_posts/*'], ['jekyll-rebuild']);
 });
 
+//build sass and less
+gulp.task('css-build', ['sass', 'less']);
+
 
 // build css, site with jekyll, improve css with autoprefixer
-gulp.task('build', ['sass', 'less', 'jekyll-build', 'css-autoprefixer']);
+gulp.task('build', ['css-build', 'css-autoprefixer']);
 
 // build launch browsersync and watch for changes
 gulp.task('default', ['browser-sync', 'watch']);
