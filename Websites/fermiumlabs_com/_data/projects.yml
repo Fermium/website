@@ -1,34 +1,8 @@
-- name:  Project 1
+- name:  Houston
   project-page: "#"
   tw-tag: "#trump"
-  image: "Assets/img/projects/project1.JPG"
+  image: "Assets/img/projects/mission-control-nasa-1.jpg"
   slide: 1
-  date:  23-04-2016
-  tags:  ["tag1","tag2","tag3"]
-  state: aaa
-  donut:
-    - label:  "aa"
-      value:  13
-      color:
-    - label:  "aaa"
-      value:  25
-      color:
-    - label:  "aaa"
-      value:  36
-      color:
-  policies:
-    - name:  "Market"
-      value: "local"
-    - name:  "OS/OW"
-      value: "mixed"
-    - name:  "Open Docs"
-      value: "Open Docs"
-
-- name:  Project 2
-  project-page: "#"
-  tw-tag: "#trump"
-  image: "Assets/img/projects/project1.JPG"
-  slide: 2
   date:  23-04-2016
   tags:  ["tag4","tag5","tag6"]
   state: aaa
