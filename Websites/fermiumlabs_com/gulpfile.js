@@ -1,11 +1,14 @@
-var gulp        = require('gulp');
-var browserSync = require('browser-sync');
-var sass        = require('gulp-sass');
-var prefix      = require('gulp-autoprefixer');
-var cp          = require('child_process');
-var less        = require('gulp-less');
-var path        = require('path');
-var Promise     = require('es6-promise').Promise;
+var gulp         = require('gulp');
+var browserSync  = require('browser-sync');
+var sass         = require('gulp-sass');
+var prefix       = require('gulp-autoprefixer');
+var cp           = require('child_process');
+var less         = require('gulp-less');
+var path         = require('path');
+var Promise      = require('es6-promise').Promise;
+var imagemin     = require('gulp-imagemin');
+var autoprefixer = require('gulp-autoprefixer');
+var minifyCss    = require('gulp-minify-css');
 
 
 var jekyll   = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
@@ -22,6 +25,29 @@ gulp.task('jekyll-build', function (done) {
         .on('close', done);
 });
 
+/* you should not run this task during development*/
+gulp.task('optimize-images', function () {
+    return gulp.src(['_site/**/*.jpg', '_site/**/*.jpeg', '_site/**/*.gif', '_site/**/*.png'])
+        .pipe(imagemin({
+            progressive: false,
+            svgoPlugins: [{removeViewBox: false}]
+            }))
+        .pipe(gulp.dest('_site/'));
+});
+
+gulp.task('css-autoprefixer', function() {
+   return gulp.src('_site/Assets/css/**/*.css')
+       .pipe(autoprefixer())
+       .pipe(gulp.dest('_site/Assets/css/'));
+});
+
+gulp.task('css-minify', function() {
+   return gulp.src('_site/Assets/css/**/*.css')
+       .pipe(minifyCss({keepBreaks: false}))
+       .pipe(gulp.dest('_site/Assets/css/'));
+});
+
+
 /**
  * Rebuild Jekyll & do page reload
  */
@@ -32,7 +58,7 @@ gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
 /**
  * Wait for jekyll-build, then launch the Server
  */
-gulp.task('browser-sync', ['sass', 'less', 'jekyll-build'], function() {
+gulp.task('browser-sync', ['build'], function() {
     browserSync({
         server: {
             baseDir: '_site'
@@ -52,7 +78,7 @@ gulp.task('sass', function () {
         .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
         .pipe(gulp.dest('_site/Assets/css'))
         .pipe(browserSync.reload({stream:true}))
-        .pipe(gulp.dest('Assets/css'));
+        .pipe(gulp.dest('_site/Assets/css'));
 });
 
 gulp.task('less', function () {
@@ -60,7 +86,7 @@ gulp.task('less', function () {
     .pipe(less({
       paths: [ path.join(__dirname, 'less', 'includes') ]
     }))
-    .pipe(gulp.dest('Assets/css'))
+    .pipe(gulp.dest('_site/Assets/css'))
     .pipe(browserSync.reload({stream:true}));
 });
 
@@ -74,9 +100,12 @@ gulp.task('watch', function () {
     gulp.watch(['*.html', '_layouts/*.html', '_posts/*'], ['jekyll-rebuild']);
 });
 
-/**
- * Default task, running just `gulp` will compile the sass,
- * compile the jekyll site, launch BrowserSync & watch files.
- */
+
+// build css, site with jekyll, improve css with autoprefixer
+gulp.task('build', ['sass', 'less', 'jekyll-build', 'css-autoprefixer']);
+
+// build launch browsersync and watch for changes
 gulp.task('default', ['browser-sync', 'watch']);
-gulp.task('build', ['sass', 'less', 'jekyll-build']);
+
+// build for deploy, with minification and (boring) image optimizations
+gulp.task('build-deploy', ['build', 'css-minify', 'optimize-images']);
