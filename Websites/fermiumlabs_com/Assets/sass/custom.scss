@@ -6,9 +6,23 @@
 4. Animations
 **/
 /** 1. Navigator **/
-
-
-
+.form-error{
+  background: none;
+  display:inline-block;
+}
+.form-success{
+  background: none;
+  display:inline-block;
+}
+.help-block{
+  margin:0;
+}
+#zendesk-form input,textarea{
+  margin-bottom:5px;
+}
+nav.transparent {
+ background: none;
+}
 nav.fixed.reveal-nav{
 	position:fixed;
 	visibility:visible;
@@ -33,6 +47,10 @@ nav.outOfSight{
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
   overflow: hidden;
+}
+
+.offscreen-container li.hvr-grow{
+  display:block;
 }
 .offscreen-container.reveal-nav {
   transform: translate3d(299.8%, 0, 0);
@@ -204,7 +222,7 @@ margin-top:-55px;
 }
 }
 @media screen\9{
-	
+
 .module.widget-handle {
 
 margin-top:-55px;
@@ -220,7 +238,7 @@ background: -moz-linear-gradient(4.95% 114.83% 35.74deg,rgba(227,24,61,1) 0%,rgb
   background: linear-gradient(54.26deg,rgba(227,24,61,1) 0%,rgba(227,29,60,1) 5.16%,rgba(231,66,53,1) 46.01%,rgba(233,89,49,1) 79.07%,rgba(234,97,47,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#E3183D',endColorstr='#EA612F',GradientType=1);
 	color: rgba(255,255,255,0.6);
-	
+
 }
 
 .bg-fl h5{
@@ -266,7 +284,7 @@ a:hover{
   z-index: 2;
 }
 
-video#bgvid { 
+video#bgvid {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -279,21 +297,21 @@ video#bgvid {
     -moz-transform: translateX(-50%) translateY(-50%);
     -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
-    background-size: cover; 
+    background-size: cover;
 }
 .vcenter {
     display: inline-block;
     vertical-align: middle;
     float: none;
 }
-video { 
-	display: block; 
+video {
+	display: block;
 }
-@media all and (max-width: 767px){   
-	.logo{ 
-		position: absolute; left: 0; 
-	} 
-} 
+@media all and (max-width: 767px){
+	.logo{
+		position: absolute; left: 0;
+	}
+}
 
 .page-title-3,
 .page-title-5 {
