@@ -1,46 +1,26 @@
-- name:  Project 1
-  project-page: "#"
-  tw-tag: "#trump"
-  image: "Assets/img/projects/project1.JPG"
+- name:  Houston
+  project-page: "/contact-us"
+  tw-tag: "#pr-houston"
+  image: "Assets/img/projects/mission-control-nasa-1.jpg"
   slide: 1
-  date:  23-04-2016
-  tags:  ["tag1","tag2","tag3"]
-  state: aaa
-  donut:
-    - label:  "aa"
-      value:  13
-      color:
-    - label:  "aaa"
-      value:  25
-      color:
-    - label:  "aaa"
-      value:  36
-      color:
-  policies:
-    - name:  "Market"
-      value: "local"
-    - name:  "OS/OW"
-      value: "mixed"
-    - name:  "Open Docs"
-      value: "Open Docs"
-
-- name:  Project 2
-  project-page: "#"
-  tw-tag: "#trump"
-  image: "Assets/img/projects/project1.JPG"
-  slide: 2
   date:  23-04-2016
   tags:  ["tag4","tag5","tag6"]
   state: aaa
   donut:
-    - label:  "aa"
-      value:  21
+    - label:  "Embedded Hardware"
+      value:  25
       color:
-    - label:  "aaa"
-      value:  59
-      color:
-    - label:  "aaa"
+    - label:  "System Engineering"
       value:  20
+      color:
+    - label:  "High performance \ndata-relay"
+      value:  10
+      color:
+    - label:  "Statistical \nProcessing SW"
+      value:  30
+      color:
+    - label:  "Frontend"
+      value:  15
       color:
   policies:
     - name:  "Market"
