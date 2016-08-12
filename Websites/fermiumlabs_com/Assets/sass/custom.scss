@@ -6,8 +6,20 @@
 4. Animations
 **/
 /** 1. Navigator **/
-
-
+.form-error{
+  background: none;
+  display:inline-block;
+}
+.form-success{
+  background: none;
+  display:inline-block;
+}
+.help-block{
+  margin:0;
+}
+#zendesk-form input,textarea{
+  margin-bottom:5px;
+}
 nav.transparent {
  background: none;
 }

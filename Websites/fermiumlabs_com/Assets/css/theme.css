@@ -2009,31 +2009,10 @@ form.halves span,
 form.thirds span {
   clear: both;
 }
-.form-error,
-.form-success {
-  background: #58ce38;
-  padding: 12px;
-  width: 80%;
-  color: #fff;
-  clear: both;
-  display: block;
-  max-width: 700px;
-  position: relative;
-  top: 16px;
-  margin: 0 auto;
-  word-break: break-word;
-}
-.form-error {
-  background: #ce3838;
-}
-.form-error a,
-.form-success a {
-  display: block;
-  color: #fff;
-}
-.attempted-submit .field-error {
-  outline: 1px solid #ce3838 !important;
-}
+/*.form-error, .form-success{ background: #58ce38; padding: 12px; width: 80%; color: #fff; clear: both; display: block; max-width: 700px; position: relative; top: 16px; margin: 0 auto; word-break: break-word;}
+.form-error{ background: #ce3838; }
+.form-error a, .form-success a{ display: block; color: #fff; }
+.attempted-submit .field-error{ outline: 1px solid #ce3838 !important; }*/
 form iframe.mail-list-form {
   display: none;
 }
