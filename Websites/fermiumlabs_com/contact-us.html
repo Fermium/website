@@ -2,6 +2,17 @@
 layout: default
 title: Fermium LABS - Contact Us
 ---
+
+<div class="modal-strip bg-white hidden">
+ <div class="container">
+  <div class="row">
+   <div id="message-area" class="col-sm-12 overflow-hidden">
+
+   </div>
+  </div>
+ </div>
+</div>
+
 <div class="main-container">
   <section class="page-title page-title-5 image-bg overlay parallax">
 		        <div class="background-image-holder">
@@ -91,9 +102,10 @@ title: Fermium LABS - Contact Us
             <p><input type="text" class="validate-required" id="z_name" data-validation="required" placeholder="Name (and company)"></p>
             <p><input type="text" class="validate-required validate-email" name="email" data-validation="email" id="z_requester" placeholder="Email"></p>
             <p><input type="text" class="validate-required" id="z_subject"  placeholder="Subject"></p>
+            <input class="hidden" type="reset">
             <p><textarea class="validate-required" id="z_description" rows="4" data-validation="required" placeholder="Message"></textarea></p>
 
-            <input type="submit" value="submit" id="submitter" disabled="disabled">
+            <input type="submit" value="submit" id="submitter" class="disabled">
           </form>
 
           <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -116,15 +128,3 @@ title: Fermium LABS - Contact Us
   </section>
 
 <script src="/Assets/js/inoffice.js"></script>
-
-<div class="modal-strip bg-white">
- <div class="container">
-  <div class="row">
-   <div class="col-sm-12 overflow-hidden">
-    <i class="ti-info-alt icon icon-sm pull-left color-primary"></i>
-    <p class="mb0 pull-left">Hey there user, our site uses cookies and by continuing to browse, you're agreeing to our <a class="cookie-link" href="/cookie-policy.html">terms of service</a></p>
-   </div>
-  </div>
- </div>
- <a class="btn btn-sm close-modal cookie-accept">Ok, I agree</a>
-</div>
