@@ -17,9 +17,9 @@ before_install:
 - sudo apt-get remove -qq -y nodejs
 - curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
 - sudo apt-get install -qq -y nodejs
+- source ~/.bashrc
 - npm install npm -g
 - npm install -g npm-check-updates
-- source ~/.bashrc
 
 install:
 - bundle install
