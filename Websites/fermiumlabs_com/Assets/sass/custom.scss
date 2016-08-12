@@ -8,6 +8,15 @@
 /** 1. Navigator **/
 $font: "Roboto","Roboto Condensed";
 $color-primary: #eb274a;
+
+.title{
+  font-size:4.5em;
+  margin: 0;
+}
+.subtitle{
+  font-size:2em;
+  margin-top:10px;
+}
 body{
   font-family: $font !important;
 }
