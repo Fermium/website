@@ -23,18 +23,3 @@ if(isMobile){
   }
   $(".collab-wrapper").unwrap();
 }
-
-
-$(".former").submit(function(){
-  $.post("//websitephp7scripts.fermiumlabs.com/contactuszendesk.php",{z_subject: $("#z_subject").val(),z_description: $("#z_description").val(),z_name: $("#z_name").val(),z_requester: $("#z_requester").val()})
-  .done(function(){
-    $(".modal-strip #message-area").html('<i class="fa fa-check" aria-hidden="true"></i> <p class="mb0 pull-left">Thank you, we are on it!</p>');
-    $(".modal-strip").removeClass("hidden");
-    $('#zendesk-form').trigger("reset");
-  })
-  .fail(function(){
-    alert("failed");
-  });
-
-  return false;
-});
