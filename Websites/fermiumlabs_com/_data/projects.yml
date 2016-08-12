@@ -13,19 +13,19 @@ Your own mission control
   donut:
     - label:  "Embedded Hardware"
       value:  25
-      color:
+      color:  "#F16A3B"
     - label:  "System Engineering"
       value:  20
-      color:
+      color:  "#972D07"
     - label:  "High performance \ndata-relay"
       value:  10
-      color:
+      color:  "#D91E36"
     - label:  "Statistical \nProcessing SW"
       value:  30
-      color:
+      color:  "#6B2737"
     - label:  "Frontend"
       value:  15
-      color:
+      color:  "#EB274A"
   policies:
     - name:  "Market"
       value: "local"
