@@ -28,6 +28,7 @@ exclude: ["_app",
           "node_modules",
           "package.json",
           "*.scss",
-          "*.less"]
+          "*.less",
+          "*.js"]
 # Don't forget that Jekyll automatically
 # excludes files with a dot prefix

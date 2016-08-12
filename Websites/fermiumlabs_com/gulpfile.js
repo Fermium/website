@@ -4,11 +4,15 @@ var sass         = require('gulp-sass');
 var prefix       = require('gulp-autoprefixer');
 var cp           = require('child_process');
 var less         = require('gulp-less');
-const path       = require('path');
+var path         = require('path');
 var Promise      = require('es6-promise').Promise;
 var imagemin     = require('gulp-imagemin');
 var autoprefixer = require('gulp-autoprefixer');
 var minifyCss    = require('gulp-minify-css');
+var clean        = require('gulp-clean');
+var changed      = require('gulp-changed');
+var uglify       = require('gulp-uglify');
+var pump         = require('pump');
 
 
 // Launch jekyll for a standard build
@@ -22,20 +26,17 @@ gulp.task('jekyll-rebuild', ['build'], function () {
     browserSync.reload();
 });
 
-
-// Optimize existing images in _site. Very slow
-gulp.task('optimize-images',['build'], function () {
-    return gulp.src(['_site/**/*.jpg', '_site/**/*.jpeg', '_site/**/*.gif', '_site/**/*.png'])
-        .pipe(imagemin({
-            progressive: false,
-            svgoPlugins: [{removeViewBox: false}]
-            }))
-        .pipe(gulp.dest('_site/'));
+// Clean content of _site dir
+gulp.task('clean', function () {
+    return gulp.src('_site', {read: false})
+        .pipe(clean());
 });
+
 
 // Expand css adding useful fixes for the most common browsers
 gulp.task('css-autoprefixer', ['css-build'], function() {
    return gulp.src('_site/Assets/css/**/*.css')
+       .pipe(changed('_site/Assets/css/**/*.css'))
        .pipe(autoprefixer())
        .pipe(gulp.dest('_site/Assets/css/'));
 });
@@ -43,8 +44,20 @@ gulp.task('css-autoprefixer', ['css-build'], function() {
 // Minify the css
 gulp.task('css-minify',['css-build', 'css-autoprefixer'], function() {
    return gulp.src('_site/Assets/css/**/*.css')
+       .pipe(changed('_site/Assets/css/**/*.css'))
        .pipe(minifyCss({keepBreaks: false}))
        .pipe(gulp.dest('_site/Assets/css/'));
+});
+
+// Copy and compress css
+gulp.task('compress-js', ['jekyll-build'], function (cb) {
+  pump([
+        gulp.src('Assets/js/**/*.js'),
+        uglify(),
+        gulp.dest('_site/Assets/js')
+    ],
+    cb
+  );
 });
 
 
@@ -94,7 +107,7 @@ gulp.task('css-build', ['sass', 'less']);
 gulp.task('css-optimize', ['css-build', 'css-minify']);
 
 // Build css, site with jekyll, improve css with autoprefixer
-gulp.task('build', ['jekyll-build', 'css-optimize']);
+gulp.task('build', ['jekyll-build', 'css-optimize', 'compress-js']);
 
 // Build launch browsersync and watch for changes
 gulp.task('default', ['browser-sync', 'watch']);
