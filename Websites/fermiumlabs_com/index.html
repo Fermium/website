@@ -27,15 +27,16 @@ title:  Fermium LABS
                             </div>
                           </div>
 		                        <div class="col-sm-8 ">
-		                            <h2 class="mb-xs-16 project-link hvr-underline-from-center"><a href="{{project.project-page}}">{{ project.name }}</a></h2>
-		                            <p class="lead mb40">
+		                            <h1 class="mb-xs-16 project-link hvr-underline-from-center"><a href="{{project.project-page}}">{{ project.name }}</a></h1>
+																<h3 class="mb-xs-16 project-link hvr-underline-from-center"><a href="{{project.project-page}}">{{ project.subtitle }}</a></h3>
+		                            <!--<p class="lead mb40">
 		                                {% for tags in project.tags %}
 
 		                                <small class="thin">{{tags}}</small>
                                   {% endfor %}
-		                            </p>
+		                            </p>-->
 																<p class="lead mb40 thin">
-																		{{project.description}}
+																	{{ project.description | markdownify }}
 																</p>
                                 <div class="row policies text-left row-centered">
                                   <h4 class="text-center">Policies</h4>
