@@ -2,17 +2,7 @@
 layout: default
 title: Fermium LABS - Contact Us
 ---
-
-<div class="modal-strip bg-white hidden">
- <div class="container">
-  <div class="row">
-   <div id="message-area" class="col-sm-12 overflow-hidden">
-
-   </div>
-  </div>
- </div>
-</div>
-
+<link href="/Assets/css/jquery-toast-plugin.min.css" rel="stylesheet" type="text/css" media="all" />
 <div class="main-container">
   <section class="page-title page-title-5 image-bg overlay parallax">
 		        <div class="background-image-holder">
@@ -128,3 +118,26 @@ title: Fermium LABS - Contact Us
   </section>
 
 <script src="/Assets/js/inoffice.js"></script>
+<script src="/Assets/js/jquery-toast-plugin.min.js"></script>
+<script>
+$(".former").submit(function(){
+  $.post("//websitephp7scripts.fermiumlabs.com/contactuszendesk.php",{z_subject: $("#z_subject").val(),z_description: $("#z_description").val(),z_name: $("#z_name").val(),z_requester: $("#z_requester").val()})
+  .done(function(){
+    $('#zendesk-form').trigger("reset");
+    /*$.toast({
+    heading: 'Success',
+    text: 'Thank you, we\'re on it!',
+    showHideTransition: 'slide',
+    icon: 'success',
+    loader:false
+  });*/
+  alert("Thank you, we're on it!")
+
+  })
+  .fail(function(){
+    alert("failed");
+  });
+
+  return false;
+});
+</script>
