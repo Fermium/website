@@ -1,0 +1,45 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "FermiumLABS website dependencies",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fermiumlabs/website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fermiumlabs/website/issues"
+  },
+  "homepage": "https://github.com/fermiumlabs/website#readme",
+  "dependencies": {
+    "angular-morris-chart": "^1.2.0",
+    "browser-sync": "^2.14.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-sass": "^2.3.2"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.4.0",
+    "browser-sync": "^2.14.0",
+    "es6-promise": "^3.2.1",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-imagemin": "^3.0.2",
+    "gulp-jekyll": "0.0.0",
+    "gulp-less": "^3.1.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-uglify": "^2.0.0",
+    "gulp-uncss": "^1.0.6",
+    "imagemin-pngquant": "^5.0.0",
+    "path": "^0.12.7",
+    "uncss": "^0.14.1"
+  }
+}

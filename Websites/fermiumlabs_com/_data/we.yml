@@ -1,0 +1,10 @@
+- name: Davide Bortolami
+  picture: "/Assets/img/team-1.jpg"
+  title: Fat Pirate
+  description: Does something with electric stuff and bla bla bla bla quite long text to see what happens there with longer texts
+  
+  
+- name: Simone Tosato
+  picture: "/Assets/img/team-1.jpg"
+  title: Other Guy
+  description: Does different things

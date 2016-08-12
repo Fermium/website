@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  
+  {% include head.html %}
+  {% include cookieconsent.html %}
+  </head>
+  
+  <body class="animate-in">
+
+    {% include header.html %}
+
+    <div class="page-content">
+      <div class="wrapper">
+      <style>
+        section a {
+          color:#eb274a;
+          opacity:0.5;
+        }
+        section a:hover {
+          color:#eb274a;
+          opacity:1;
+        }
+        section h1,h2,h3{
+          text-align:center;
+        }
+        .container{
+          padding-left:50px;
+          padding-right:50px;
+        }
+      </style>
+
+      <div class="main-container ">
+        <section >
+          <div class="container">
+        {{ content }}
+            </div>
+          </section>
+        </div>
+
+        
+      
+      
+      </div>
+    </div>
+
+    {% include footer.html %}
+    {% include scripts.html %}
+    
+  </body>
+
+</html>

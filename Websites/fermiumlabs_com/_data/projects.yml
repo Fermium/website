@@ -1,0 +1,37 @@
+- name:  Houston
+  project-page: "/contact-us"
+  tw-tag: "#pr-houston"
+  image: "Assets/img/projects/mission-control-nasa-1.jpg"
+  slide: 1
+  date:  23-04-2016
+  tags:  ["tag4","tag5","tag6"]
+  state: aaa
+  donut:
+    - label:  "Embedded Hardware"
+      value:  25
+      color:
+    - label:  "System Engineering"
+      value:  20
+      color:
+    - label:  "High performance \ndata-relay"
+      value:  10
+      color:
+    - label:  "Statistical \nProcessing SW"
+      value:  30
+      color:
+    - label:  "Frontend"
+      value:  15
+      color:
+  policies:
+    - name:  "Market"
+      value: "local"
+    - name:  "OS/OW"
+      value: "mixed"
+    - name:  "Open Docs"
+      value: "Open Docs"
+    - name:  "Open Docs"
+      value: "Open Docs"
+    - name:  "Open Docs"
+      value: "Open Docs"
+    - name:  "Open Docs"
+      value: "Open Docs"
