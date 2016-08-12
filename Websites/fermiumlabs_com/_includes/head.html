@@ -6,6 +6,36 @@
         <link href="/Assets/css/custom.css" rel="stylesheet" type="text/css" media="all" />
         <link href="/Assets/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
         <link href="/Assets/css/flexslider.css" rel="stylesheet" type="text/css" media="all" />-->
+
+
+        <meta content="{{page.description}}" name="description">
+        <!-- Google Plus -->
+        <!-- Update your html tag to include the itemscope and itemtype attributes. -->
+        <meta content="{{site.title}}" itemprop="name">
+        <meta content="{{page.description}}" itemprop="description">
+
+        <!-- Twitter -->
+        <meta content="{{page.description}}" name="twitter:card">
+        <meta content="{{site.twitter_username}}" name="twitter:site">
+        <meta content="{{page.title}}" name="twitter:title">
+        <meta content="{{page.description}}" name="twitter:description">
+        <meta content="@fermiumlabs" name="twitter:creator">
+
+
+        <!-- Open Graph data -->
+        <meta content="{{page.title}}" property="og:title"/>
+        <meta property=”og:type” content="{% if page.opengraph_type %}{{ page.opengraph_type | escape }}{% else %}{{ 'website' | escape }}{% endif %}" />
+        {% assign url= "https://fermiumlabs.com/" | append: page.url %}
+        <meta content={{url}} property="og:url"/>
+        <meta content="{% if page.opengraph_image %}{{ page.opengraph_image | escape }}{% else %}{{ 'https://fermiumlabs.com/Assets/Images/logo-vertical.png' | escape }}{% endif %}" property="og:image"/>
+        <meta content="{{page.description}}" property="og:description"/>
+        <meta content="{{site.title}}" property="og:site_name"/>
+
+
+
+
+
+
         <meta name="theme-color" content="#eb274a">
         <link href="/Assets/css/theme.css" rel="stylesheet" type="text/css" media="all" />
         <link href="/Assets/css/main.css" rel="stylesheet" type="text/css" media="all" />
