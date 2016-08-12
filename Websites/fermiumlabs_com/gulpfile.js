@@ -85,7 +85,7 @@ gulp.task('less',['jekyll-build'], function () {
 // Watch for changes and re-run related tasks
 // Needs a few fixes
 gulp.task('watch', function () {
-    gulp.watch(['./**/*.less','./**/*.scss','./**/*.html','./**/*.md'], ['jekyll-rebuild']);
+    gulp.watch(['./**/*.less','./**/*.scss','./**/*.html','./**/*.md','./**/*.yml'], ['jekyll-rebuild']);
 });
 
 // Build sass and less
