@@ -1,6 +1,6 @@
 - name:  Houston
   subtitle: "Factory mission control"
-  project-page: "/contact-us"
+  project-page: "/contact-us/"
   tw-tag: "#pr-houston"
   image: "Assets/img/projects/mission-control-nasa-1.jpg"
   slide: 1
