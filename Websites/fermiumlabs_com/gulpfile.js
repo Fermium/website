@@ -14,6 +14,8 @@ var changed      = require('gulp-changed');
 var uglify       = require('gulp-uglify');
 var pump         = require('pump');
 var cssnano      = require('gulp-cssnano');
+var htmlmin      = require('gulp-htmlmin');
+
 
 // Launch jekyll for a standard build
 gulp.task('jekyll-build', function (cb) {
@@ -33,7 +35,7 @@ gulp.task('clean', function () {
 });
 
 // Minify the css
-gulp.task('css-postprocess',['css-build'], function() {
+gulp.task('css-postprocess',['sass', 'less'], function() {
    return gulp.src('_site/Assets/css/**/*.css')
        .pipe(changed('_site/Assets/css/**/*.css'))
        .pipe(autoprefixer())
@@ -43,7 +45,7 @@ gulp.task('css-postprocess',['css-build'], function() {
 });
 
 // Copy and compress css
-gulp.task('compress-js', ['jekyll-build'], function (cb) {
+gulp.task('js-optimize', ['jekyll-build'], function (cb) {
   pump([
         gulp.src('Assets/js/**/*.js'),
         uglify(),
@@ -62,6 +64,19 @@ gulp.task('browser-sync', ['build'], function() {
             baseDir: '_site'
         }
     });
+});
+
+gulp.task('html-optimize', ['jekyll-build'], function() {
+    return gulp.src('./_site/**/*.html')
+        .pipe(htmlmin({
+            collapseWhitespace: true,
+            removeComments: true,
+            conservativeCollapse: true,
+            collapseBooleanAttributes: true,
+            removeRedundantAttributes: true,
+            lint: false,
+        }))
+        .pipe(gulp.dest('./_site/'));
 });
 
 
@@ -94,16 +109,14 @@ gulp.task('watch', function () {
     gulp.watch(['./**/*.less','./**/*.scss','./**/*.html','./**/*.md','./**/*.yml'], ['jekyll-rebuild']);
 });
 
-// Build sass and less
-gulp.task('css-build', ['sass', 'less']);
 // Optimize css (build sass, less, launch autoprefixer, miniify)
-gulp.task('css-optimize', ['css-build', 'css-postprocess']);
+gulp.task('css-optimize', ['sass', 'less', 'css-postprocess']);
 
 // Build css, site with jekyll, improve css with autoprefixer
-gulp.task('build', ['jekyll-build', 'css-optimize', 'compress-js']);
+gulp.task('build', ['jekyll-build', 'css-optimize', 'js-optimize']);
 
 // Build launch browsersync and watch for changes
 gulp.task('default', ['browser-sync', 'watch']);
 
 // Build for deploy, with minification and (boring) image optimizations
-gulp.task('build-deploy', ['build', 'optimize-images']);
+gulp.task('build-deploy', ['build', 'html-optimize']);
