@@ -21,6 +21,7 @@ markdown: kramdown
 # Generate files to be used withouth .html extension
 permalink: pretty
 
+
 exclude: ["_app",
           "Gemfile",
           "Gemfile.lock",
@@ -32,3 +33,6 @@ exclude: ["_app",
           "*.js"]
 # Don't forget that Jekyll automatically
 # excludes files with a dot prefix
+
+gems:
+  - jekyll-sitemap
