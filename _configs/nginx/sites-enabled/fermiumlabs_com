@@ -28,7 +28,7 @@ server {
 	error_page 404 /errors/404/index.html;
 	error_page 500 /errors/500/index.html;
 	
-	#Error pages location
+	# Error pages location
 	location ^~ /errors/ {
     internal;
     root /var/www/html/fermiumlabs_com/master;
