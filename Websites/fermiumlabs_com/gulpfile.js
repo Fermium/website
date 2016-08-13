@@ -6,7 +6,6 @@ var cp           = require('child_process');
 var less         = require('gulp-less');
 var path         = require('path');
 var Promise      = require('es6-promise').Promise;
-var imagemin     = require('gulp-imagemin');
 var autoprefixer = require('gulp-autoprefixer');
 var minifyCss    = require('gulp-minify-css');
 var clean        = require('gulp-clean');
@@ -118,5 +117,5 @@ gulp.task('build', ['jekyll-build', 'css-optimize', 'js-optimize']);
 // Build launch browsersync and watch for changes
 gulp.task('default', ['browser-sync', 'watch']);
 
-// Build for deploy, with minification and (boring) image optimizations
+// Build and optimize html
 gulp.task('build-deploy', ['build', 'html-optimize']);
