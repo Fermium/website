@@ -34,7 +34,7 @@ gulp.task('clean', function () {
 });
 
 // Minify the css
-gulp.task('css-postprocess',['sass', 'less'], function() {
+gulp.task('css-optimize',['sass', 'less'], function() {
    return gulp.src('_site/Assets/css/**/*.css')
        .pipe(changed('_site/Assets/css/**/*.css'))
        .pipe(autoprefixer())
@@ -65,6 +65,7 @@ gulp.task('browser-sync', ['build'], function() {
     });
 });
 
+// Uglify html. Goes in a race condition against jekyll apparently
 gulp.task('html-optimize', ['jekyll-build'], function() {
     return gulp.src('./_site/**/*.html')
         .pipe(htmlmin({
@@ -108,14 +109,11 @@ gulp.task('watch', function () {
     gulp.watch(['./**/*.less','./**/*.scss','./**/*.html','./**/*.md','./**/*.yml'], ['jekyll-rebuild']);
 });
 
-// Optimize css (build sass, less, launch autoprefixer, miniify)
-gulp.task('css-optimize', ['sass', 'less', 'css-postprocess']);
-
 // Build css, site with jekyll, improve css with autoprefixer
 gulp.task('build', ['jekyll-build', 'css-optimize', 'js-optimize']);
 
 // Build launch browsersync and watch for changes
 gulp.task('default', ['browser-sync', 'watch']);
 
-// Build and optimize html
+// Build and optimize html.
 gulp.task('build-deploy', ['build', 'html-optimize']);
