@@ -134,4 +134,4 @@ You MUST buy it if you're using the graphic layout. It's cheap, and great.
 * Move non-essential JS to async loading
 * Move non-essential blocking css
 * Implement twitter client-side search
-* 
+* Remove white flash on home screen 
