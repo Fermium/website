@@ -1,0 +1,21 @@
+---
+---
+/* TEAM */
+Co-Administrator:  Davide Bortolami
+Mail: d@fermiumlabs.com
+Twitter: @ddavidebor
+Location: Padua, Italy.
+
+Co-Administrator:  Simone Tosato
+Mail: s@fermiumlabs.com
+Location: Padua, Italy.
+
+
+/* THANKS */
+Serena Vinciguerra: http://www.serenavinciguerra.it (logo design, consulting)
+
+/* SITE */
+Last update: {{ site.time | date: "%-Y/%-m/%d"}}
+Standards: HTML5, CSS3 and tons of JS.
+Components: We started from the "Foundry" theme, and worked from there with standard components.
+Software: Jekyll and gulp mostly. check out https://github.com/fermiumlabs/website
