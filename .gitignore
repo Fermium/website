@@ -5,3 +5,4 @@ node_modules
 ## Environment normalization:
 .bundle/
 vendor/
+Websites/fermiumlabs_com/_asset_bundler_cache
