@@ -40,13 +40,14 @@ gulp.task('css-optimize',['sass', 'less'], function() {
        .pipe(autoprefixer())
        .pipe(cssnano())
        .pipe(minifyCss({keepBreaks: false}))
-       .pipe(gulp.dest('_site/Assets/css/'));
+       .pipe(gulp.dest('_site/Assets/css/'))
+       .pipe(browserSync.reload({stream:true}));
 });
 
 // Copy and compress css
 gulp.task('js-optimize', ['jekyll-build'], function (cb) {
   pump([
-        gulp.src('Assets/js/**/*.js'),
+        gulp.src('_site/Assets/js/**/*.js'),
         uglify(),
         gulp.dest('_site/Assets/js')
     ],
@@ -65,6 +66,15 @@ gulp.task('browser-sync', ['build'], function() {
     });
 });
 
+// Wait for build, then launch the browsersync server
+gulp.task('serve-only', function() {
+    browserSync({
+        server: {
+            baseDir: '_site'
+        }
+    });
+});
+
 // Uglify html. Goes in a race condition against jekyll apparently
 gulp.task('html-optimize', ['jekyll-build'], function() {
     return gulp.src('./_site/**/*.html')
@@ -76,7 +86,8 @@ gulp.task('html-optimize', ['jekyll-build'], function() {
             removeRedundantAttributes: true,
             lint: false,
         }))
-        .pipe(gulp.dest('./_site/'));
+        .pipe(gulp.dest('./_site/'))
+        .pipe(browserSync.reload({stream:true}));
 });
 
 
@@ -106,14 +117,17 @@ gulp.task('less',['jekyll-build'], function () {
 // Watch for changes and re-run related tasks
 // Needs a few fixes
 gulp.task('watch', function () {
+    gulp.watch(['./**/*.html','./**/*.md','./**/*.yml'], ['jekyll-rebuild']);
+    gulp.watch(['./**/*.less'], ['less']);
+    gulp.watch(['./**/*.scss'], ['sass']);
     gulp.watch(['./**/*.less','./**/*.scss','./**/*.html','./**/*.md','./**/*.yml'], ['jekyll-rebuild']);
 });
 
 // Build css, site with jekyll, improve css with autoprefixer
-gulp.task('build', ['jekyll-build', 'css-optimize', 'js-optimize']);
+gulp.task('build', ['jekyll-build','sass', 'less']);
 
 // Build launch browsersync and watch for changes
 gulp.task('default', ['browser-sync', 'watch']);
 
 // Build and optimize html.
-gulp.task('build-deploy', ['build', 'html-optimize']);
+gulp.task('build-deploy', ['build', 'html-optimize', 'css-optimize', 'js-optimize']);
