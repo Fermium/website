@@ -29,9 +29,6 @@ before_install:
 - npm install -g cloudflare-cli
 
 install:
-# Init git submodules
-- git submodule init 
-- git submodule update
 # Install ruby
 - bundle install
 # Fermiumlabs.com nodejs stuff
