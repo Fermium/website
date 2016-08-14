@@ -1,0 +1,3 @@
+[submodule "Websites/fermiumlabs_com/_plugins/asset_bundler"]
+	path = Websites/fermiumlabs_com/_plugins/asset_bundler
+	url = git://github.com/moshen/jekyll-asset_bundler.git
