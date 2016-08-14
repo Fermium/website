@@ -7,6 +7,7 @@ opengraph_image:
 ---
 <script src="https://use.fontawesome.com/5a2e728451.js" async></script>
 <link href="/Assets/css/jquery-toast-plugin.min.css" rel="stylesheet" type="text/css" media="all"/>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js" ></script>
 
 <div class="main-container">
   <section class="page-title page-title-5 image-bg overlay parallax">
@@ -103,7 +104,6 @@ opengraph_image:
             <input type="submit" value="submit" id="submitter" class="disabled">
           </form>
 
-        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js" ></script>
         <script>
         $.validate({
           modules : 'toggleDisabled',
@@ -122,7 +122,6 @@ opengraph_image:
   </section>
 
 <script src="/Assets/js/inoffice.js"></script>
-<script src="/Assets/js/jquery-toast-plugin.min.js"></script>
 <script>
 $(".former").submit(function(){
   $.post("//websitephp7scripts.fermiumlabs.com/contactuszendesk.php",{z_subject: $("#z_subject").val(),z_description: $("#z_description").val(),z_name: $("#z_name").val(),z_requester: $("#z_requester").val()})
