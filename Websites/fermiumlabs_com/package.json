@@ -41,6 +41,7 @@
     "gulp-sass": "^2.3.2",
     "gulp-uglify": "^2.0.0",
     "gulp-uncss": "^1.0.6",
+    "gulp-webserver": "^0.9.1",
     "imagemin-pngquant": "^5.0.0",
     "path": "^0.12.7",
     "pump": "^1.0.1",

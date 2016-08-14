@@ -14,6 +14,7 @@ var uglify       = require('gulp-uglify');
 var pump         = require('pump');
 var cssnano      = require('gulp-cssnano');
 var htmlmin      = require('gulp-htmlmin');
+var webserver    = require('gulp-webserver');
 
 
 // Launch jekyll for a standard build
@@ -33,19 +34,20 @@ gulp.task('clean', function () {
         .pipe(clean());
 });
 
-// Minify the css
-gulp.task('css-optimize',['sass', 'less'], function() {
+// Run autoprefixer to improve compatibility, then css nano with safe option to reduce size of 
+gulp.task('css-optimize',['sass', 'less', 'build'], function() {
    return gulp.src('_site/Assets/css/**/*.css')
-       .pipe(changed('_site/Assets/css/**/*.css'))
        .pipe(autoprefixer())
-       .pipe(cssnano())
-       .pipe(minifyCss({keepBreaks: false}))
+       .pipe(cssnano({
+         safe: true
+       }))
+       //.pipe(minifyCss({keepBreaks: true}))
        .pipe(gulp.dest('_site/Assets/css/'))
        .pipe(browserSync.reload({stream:true}));
 });
 
-// Copy and compress css
-gulp.task('js-optimize', ['jekyll-build'], function (cb) {
+// Copy and compress js
+gulp.task('js-optimize', ['build'], function (cb) {
   pump([
         gulp.src('_site/Assets/js/**/*.js'),
         uglify(),
@@ -66,24 +68,26 @@ gulp.task('browser-sync', ['build'], function() {
     });
 });
 
-// Wait for build, then launch the browsersync server
-gulp.task('serve-only', function() {
-    browserSync({
-        server: {
-            baseDir: '_site'
-        }
-    });
+//Simple http server
+gulp.task('serve', function() {
+  gulp.src('_site/')
+    .pipe(webserver({
+      livereload: false,
+      fallback: '/index.html',
+      directoryListing: false,
+      open: true
+    }));
 });
 
 // Uglify html. Goes in a race condition against jekyll apparently
-gulp.task('html-optimize', ['jekyll-build'], function() {
+gulp.task('html-optimize', ['build'], function() {
     return gulp.src('./_site/**/*.html')
         .pipe(htmlmin({
             collapseWhitespace: true,
             removeComments: true,
             conservativeCollapse: true,
             collapseBooleanAttributes: true,
-            removeRedundantAttributes: true,
+            removeRedundantAttributes: false, //if on it will break our contact us page
             lint: false,
         }))
         .pipe(gulp.dest('./_site/'))
@@ -120,7 +124,6 @@ gulp.task('watch', function () {
     gulp.watch(['./**/*.html','./**/*.md','./**/*.yml'], ['jekyll-rebuild']);
     gulp.watch(['./**/*.less'], ['less']);
     gulp.watch(['./**/*.scss'], ['sass']);
-    gulp.watch(['./**/*.less','./**/*.scss','./**/*.html','./**/*.md','./**/*.yml'], ['jekyll-rebuild']);
 });
 
 // Build css, site with jekyll, improve css with autoprefixer
