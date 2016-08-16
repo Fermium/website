@@ -1,10 +1,15 @@
-<div class="modal-strip bg-white" data-cookie="vacation-08-2016">         
+{% for notification in site.data.notifications %}
+<div class="modal-strip bg-white"  {% if notification.data-cookie %} data-cookie="{{ notification.data-cookie }}" {% endif %}>         
  <div class="container">
   <div class="row">
    <div class="col-sm-12 overflow-hidden">
-    <i class="ti-info-alt icon icon-sm pull-left color-primary"></i>
-    <p class="mb0 pull-left">Hey you! We're closed and on vacation until 25th August 2016. We'll send you a postcard.</a></p>
+    {{ notification.icon }}
+    <p class="mb0 pull-left">{{ notification.text | markdownify }}</a></p>
    </div>
   </div>
  </div>
+ {% if notification.button %} 
+ <a class="btn btn-sm close-modal">{{ notification.button.text | markdownify }}</a>
+ {% endif %}
 </div>
+{% endfor %}
