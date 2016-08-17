@@ -115,16 +115,30 @@ This website follows the [Opengraph](http://ogp.me/) specifications, including t
 This website is based on a commercial template: [Foundry](http://foundry.mediumra.re).
 You MUST buy it if you're using the graphic layout. It's cheap, and great.
 
+## License
+
+Don't copy our graphics, theme or content, they're copyrighted. Although we probably will not notice, the internet is a big place. Unless you're a competitor of us, then we will.
+
+You can use the technical stuff under the the [MIT](https://opensource.org/licenses/MIT) license.
+
 ### TODOs
 
 * Better licensing
 * Lossless image optimizations
+* FIX H1 AND H2!!!
 * Project pages
 * Fix error in html found by Htmlproofer
 * Test from mobile
-* Fix popup problem (it displays for about a second... We should try to append it after the page has loaded)
+* Fix cookie popup problem (it displays for about a second... We should try to append it after the page has loaded)
 * Move stuff outside head, and into body
 * Check if more css needs to be moved into sass
 * Integrate the various .js files together and move them outside of head
 * Make the in-office check work
 * Add our ugly faces to the "about us" page 
+* Move from Foundry's parallax.js to a more modern and open version that works on mobile too
+* Update jquery to the 3.x version
+* Dismiss cookie notification on page scroll
+* Move non-essential JS to async loading
+* Move non-essential blocking css
+* Implement twitter client-side search
+* Remove white flash on home screen 
