@@ -115,10 +115,17 @@ This website follows the [Opengraph](http://ogp.me/) specifications, including t
 This website is based on a commercial template: [Foundry](http://foundry.mediumra.re).
 You MUST buy it if you're using the graphic layout. It's cheap, and great.
 
+## License
+
+Don't copy our graphics, theme or content, they're copyrighted. Although we probably will not notice, the internet is a big place. Unless you're a competitor of us, then we will.
+
+You can use the technical stuff under the the [MIT](https://opensource.org/licenses/MIT) license.
+
 ### TODOs
 
 * Better licensing
 * Lossless image optimizations
+* FIX H1 AND H2!!!
 * Project pages
 * Fix error in html found by Htmlproofer
 * Test from mobile
