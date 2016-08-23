@@ -24,7 +24,8 @@ before_install:
 - sudo apt-get install -qq -y nodejs
 - nvm install node
 - source ~/.bashrc
-- npm install npm -g
+#- npm install npm -g
+- npm install -g --verbose npm@2.14.20
 # Tools
 - npm install -g cloudflare-cli
 
