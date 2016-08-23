@@ -5,28 +5,26 @@
   image: "Assets/img/projects/mission-control-nasa-1.jpg"
   slide: 1
   description: "
-  You can't know what is gonna break before it does.<br>If something slows down you may notice - but finding the issue:<br>
-  That's another matter. <br> <br>
-  You can't be inside every machine, every system of your factory.<br> <br>
-  Humans are not omnipresent.<br>
-  This is why we're building Houston.<br> <br>
-  Houston is an integrated *hardware-software* solution. <br>
-  Conceived for complex machinery systems and their environments: <br>
-  From small production lines to **entire** factories. <br><br><br>
-  [Get in touch](/contact-us/) for more informations.
+  We do not know what is gonna break before it does.<br> We cannot look into the past at our will.<br><br>
+  No one can be inside **every machine, every system** that you run.<br><br>
+  This is why we're building Houston.<br><br>
+  Engineered to guide you into your complex <br>machinery system:<br>
+  From a small production line to **entire** factories. <br><br>
+  You're the captain. Houston will help you manage your fleet.<br><br><br>
+  [Get in touch](/contact-us/) for more information.
   "
   date:  23-04-2016
   tags:  ["tag4","tag5","tag6"]
   state: aaa
   donut:
     - label:  "Embedded Hardware"
-      value:  25
+      value:  15
       color:  "#F16A3B"
     - label:  "System Engineering"
       value:  20
       color:  "#972D07"
-    - label:  "High performance \ndata-relay"
-      value:  10
+    - label:  "IT Infrastructure"
+      value:  20
       color:  "#D91E36"
     - label:  "Statistical \nProcessing SW"
       value:  30
