@@ -75,7 +75,8 @@ gulp.task('serve', function() {
       livereload: false,
       fallback: '/index.html',
       directoryListing: false,
-      open: true
+      open: true,
+      host:"0.0.0.0"
     }));
 });
 

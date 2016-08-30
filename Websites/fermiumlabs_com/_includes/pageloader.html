@@ -1,49 +1,22 @@
-<script src="/Assets/js/pace.min.js"></script>
-<style>
-.pace-running > :not(.pace) {
-  opacity: 0;
-}
+<script src='/Assets/js/nprogress.js'></script>
+<link rel='stylesheet' href='/Assets/css/nprogress.css'/>
+<script>
+NProgress.configure({ showSpinner: false });
+    // Show the progress bar
+    NProgress.start();
 
-.pace-done > :not(.pace) {
-  opacity: 1;
-  transition: opacity .5s ease;
-}
-.pace:before {
-  content: '';
-  position:fixed;
-  width:100%;
-  height: 100%;
-  max-height: 100%;
+    // Increase randomly
+    var interval = setInterval(function() { NProgress.inc(); }, 1000);
 
-  background-image: url("/Assets/img/logos/atom-white.svg");
-  background-color: #eb274a;
-  opacity: 0.8;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: 80% 80%;
-}
+    // Trigger finish when page fully loaded
+    jQuery(window).load(function () {
+        clearInterval(interval);
+        NProgress.done();
+    });
 
-.pace {
-  -webkit-pointer-events: none;
-  pointer-events: none;
+    // Trigger bar when exiting the page
+    jQuery(window).unload(function () {
+        NProgress.start();
+    });
 
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-}
-
-.pace-inactive {
-  display: none;
-}
-
-.pace .pace-progress {
-  background: #fff;
-  position: fixed;
-  z-index: 2000;
-  top: 0;
-  right: 100%;
-  width: 100%;
-  height: 4px;
-  box-shadow: 0px 2px 2px rgba(0,0,0,0.4);
-}
-</style>
+</script>
