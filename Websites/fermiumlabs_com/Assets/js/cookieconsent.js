@@ -8,6 +8,7 @@ var cookieValue = 'on';                     // Value of cookie
 
 function createDiv(){
    $('.cookie-accept').click(createCookie(window.cookieName,window.cookieValue, window.cookieDuration)); // Create the cookie
+   
 }
 
 
@@ -47,7 +48,7 @@ window.onload = function(){
 	}
 }
 
-function removeMe(){
-	var element = document.getElementById('cookie-law');
-	element.parentNode.removeChild(element);
-}
+
+$(window).scroll(function(){
+	$('.cookie-accept').trigger("click");
+});

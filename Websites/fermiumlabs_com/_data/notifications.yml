@@ -1,6 +1,0 @@
-- text:  "Hey you! We're closed and on vacation until 28th August 2016. We'll send you a postcard."
-  icon: "<i class=\"ti-info-alt icon icon-sm pull-left color-primary\"></i>"
-  button:
-  text: "Ok, I agree!"
-  #if data-cookie is not present the notification cannot be permanently dismissed
-  data-cookie: "complianceCookie"
