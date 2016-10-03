@@ -1,6 +1,7 @@
 function get_request(who) {
   $.get("//public-check-in.office.fermiumlabs.com/look/"+who+"_in_ufficio", function(response){
     if (response.status){
+
       $('#'+who+" .overlay-status").removeClass('not-in-office');
       $('#'+who+" .overlay-status").addClass('in-office');
     }
@@ -12,5 +13,5 @@ function get_request(who) {
   });
 }
 
-get_request('d'); 
+get_request('d');
 get_request('s');
