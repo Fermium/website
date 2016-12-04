@@ -1,4 +1,5 @@
-[![Build Status](https://travis-ci.org/fermiumlabs/website.svg?branch=master)](https://travis-ci.org/fermiumlabs/website)
+[![Build Status](https://travis-ci.org/fermiumlabs/website.svg?branch=master)](https://travis-ci.org/fermiumlabs/website) [![Analytics](https://ga-beacon.appspot.com/UA-69533556-3/website/readme/?flat)](https://github.com/igrigorik/ga-beacon)
+
 
 This repository contains the main website [fermiumlabs.com](https://fermiumlabs.com), the website [measuretocome.com](https://measuretocome.com) as well as the Nginx configuration.
 
