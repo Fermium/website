@@ -58,7 +58,7 @@ deploy:
     on:
       branch: develop
 
-after_success:
+after_deploy:
 # Zip and upload to transfer.sh
 # BEWARE NOT TO ZIP OUTSIDE THE "Websited" dir!
 - zip -r fermiumlabs_com.zip Websites/fermiumlabs_com/_site
