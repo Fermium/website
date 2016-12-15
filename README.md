@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.org/fermiumlabs/website.svg?branch=master)](https://travis-ci.org/fermiumlabs/website) [![Analytics](https://ga-beacon.appspot.com/UA-69533556-3/website/readme/?flat)](https://github.com/igrigorik/ga-beacon)
 
 
-This repository contains the main website [fermiumlabs.com](https://fermiumlabs.com), the website [measuretocome.com](https://measuretocome.com) as well as the Nginx configuration.
+This repository contains our main website [fermiumlabs.com](https://fermiumlabs.com) as well as the Nginx configuration.
 
 The website is automatically built, tested and deployed from Travis-CI to a list of servers.
 
@@ -95,6 +95,8 @@ This website in order to be built and deployed uses a mix of Ruby and Node.js pa
 A global Ruby Gemfile in the root directory includes the other.
 The Packages.json file (Node.js) is custom for every website.
 
+The website is built using Jekyll
+
 ```bash
 bundle install
 #example for main site
@@ -121,25 +123,3 @@ You MUST buy it if you're using the graphic layout. It's cheap, and great.
 Don't copy our graphics, theme or content, they're copyrighted. Although we probably will not notice, the internet is a big place. Unless you're a competitor of us, then we will.
 
 You can use the technical stuff under the the [MIT](https://opensource.org/licenses/MIT) license.
-
-### TODOs
-
-* Better licensing
-* Lossless image optimizations
-* FIX H1 AND H2!!!
-* Project pages
-* Fix error in html found by Htmlproofer
-* Test from mobile
-* Fix cookie popup problem (it displays for about a second... We should try to append it after the page has loaded)
-* Move stuff outside head, and into body
-* Check if more css needs to be moved into sass
-* Integrate the various .js files together and move them outside of head
-* Make the in-office check work
-* Add our ugly faces to the "about us" page 
-* Move from Foundry's parallax.js to a more modern and open version that works on mobile too
-* Update jquery to the 3.x version
-* Dismiss cookie notification on page scroll
-* Move non-essential JS to async loading
-* Move non-essential blocking css
-* Implement twitter client-side search
-* Remove white flash on home screen 

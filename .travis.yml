@@ -36,11 +36,11 @@ install:
 - sh -c "cd Websites/fermiumlabs_com && npm install"
 script:
 # Fermiumlabs.com
-- sh -c "cd Websites/fermiumlabs_com && gulp build-deploy"
+- sh -c "cd Websites/fermiumlabs_com && npm run gulp build-deploy"
+# Test html
+- sh -c "cd Websites/fermiumlabs_com && npm run gulp test"
 # Test Nginx config
 - bash _scripts/tests/nginx/nginx.sh
-# Test html
-- bash _scripts/tests/html/htmlproofer.sh
 
 
 after_success:

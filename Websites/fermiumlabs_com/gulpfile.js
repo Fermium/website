@@ -15,6 +15,7 @@ var pump         = require('pump');
 var cssnano      = require('gulp-cssnano');
 var htmlmin      = require('gulp-htmlmin');
 var webserver    = require('gulp-webserver');
+var shell = require('gulp-shell')
 
 
 // Launch jekyll for a standard build
@@ -119,6 +120,14 @@ gulp.task('less',['jekyll-build'], function () {
     .pipe(browserSync.reload({stream:true}));
 });
 
+gulp.task('test-internal', shell.task([
+    'bundle exec htmlproofer _site/ --allow-hash-href --assume-extension --check-html --disable-external || true'
+]));
+
+gulp.task('test-external', ['test-internal'],shell.task([
+    'bundle exec htmlproofer _site/ --external_only  || true'
+]));
+
 // Watch for changes and re-run related tasks
 // Needs a few fixes
 gulp.task('watch', function () {
@@ -126,6 +135,10 @@ gulp.task('watch', function () {
     gulp.watch(['./**/*.less'], ['less']);
     gulp.watch(['./**/*.scss'], ['sass']);
 });
+
+// test
+gulp.task('test', ['test-external','test-internal']);
+
 
 // Build css, site with jekyll, improve css with autoprefixer
 gulp.task('build', ['jekyll-build','sass', 'less']);
