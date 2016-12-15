@@ -56,7 +56,7 @@ do
                 test $TRAVIS_BRANCH == "master" && cfcli purgecache
                 
                 # concat a slack message report for our team
-                printf "Successfully deployed $WEBSITE on server $SERVER in dir $DEPLOY_DIR from commit $TRAVIS_COMMIT. Check out http://$(test $TRAVIS_BRANCH == "master" && echo "staging.")$WEBSITE_ADDR/deploy-info.txt\n\n" >> $TRAVIS_BUILD_DIR/slack_message.txt
+                printf "Successfully deployed $WEBSITE on server $SERVER in dir $DEPLOY_DIR from commit $TRAVIS_COMMIT. Check out http://$(test $TRAVIS_BRANCH == "develop" && echo "staging.")$WEBSITE_ADDR/deploy-info.txt\n\n" >> $TRAVIS_BUILD_DIR/slack_message.txt
                 
         done 
 done
