@@ -46,17 +46,17 @@ deploy:
   
 deploy:
   - provider: script
-    script: _scripts/deploy.sh
+    script: bash _scripts/deploy.sh
     skip_cleanup: true
     on:
       branch: master
   - provider: script
-    script: _scripts/deploy_config.sh
+    script: bash _scripts/deploy_config.sh
     skip_cleanup: true
     on:
       branch: master
   - provider: script
-    script: _scripts/deploy.sh
+    script: bash _scripts/deploy.sh
     skip_cleanup: true
     on:
       branch: develop
