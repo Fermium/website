@@ -42,30 +42,33 @@ script:
 # Test Nginx config
 - bash _scripts/tests/nginx/nginx.sh
 
+deploy:
+  
+deploy:
+  - provider: script
+    script: bash _scripts/deploy.sh
+    skip_cleanup: true
+    on:
+      branch: master
+  - provider: script
+    script: bash _scripts/deploy_config.sh
+    skip_cleanup: true
+    on:
+      branch: master
+  - provider: script
+    script: bash _scripts/deploy.sh
+    skip_cleanup: true
+    on:
+      branch: develop
 
-after_success:
-# If master and not a pull request, deploy
-- test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master" && bash
-  _scripts/deploy.sh
-# If develop and not a pull request, deploy
-- test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "develop" && bash
-  _scripts/deploy.sh
-# If master and not a pull request, deploy Nginx config
-- test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master" && bash
-  _scripts/deploy_config.sh
-# If master and not a pull request, clear cloudflare cache
-
-- test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master" && cfcli purgecache
+after_deploy:
 # Zip and upload to transfer.sh
 # BEWARE NOT TO ZIP OUTSIDE THE "Websited" dir!
 - zip -r fermiumlabs_com.zip Websites/fermiumlabs_com/_site
-- curl --upload-file ./fermiumlabs_com.zip https://transfer.sh/fermiumlabs_com.zip  >>
-  slack_message.txt
+- curl --upload-file ./fermiumlabs_com.zip https://transfer.sh/fermiumlabs_com.zip  >> slack_message.txt
 # Notify dev team
-- slack_message.sh -t "Deployed" -b "$(cat slack_message.txt)" -c "repositories" -u
-  "$SLACK_WEBHOOK_URL"
-  
-
+- slack_message.sh -t "Deployed" -b "$(cat slack_message.txt)" -c "repositories" -u "$SLACK_WEBHOOK_URL"
+        
 notifications:
   slack:
     on_success: always
