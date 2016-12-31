@@ -3,7 +3,6 @@ var browserSync  = require('browser-sync');
 var sass         = require('gulp-sass');
 var prefix       = require('gulp-autoprefixer');
 var cp           = require('child_process');
-var less         = require('gulp-less');
 var path         = require('path');
 var Promise      = require('es6-promise').Promise;
 var autoprefixer = require('gulp-autoprefixer');
@@ -36,7 +35,7 @@ gulp.task('clean', function () {
 });
 
 // Run autoprefixer to improve compatibility, then css nano with safe option to reduce size of 
-gulp.task('css-optimize',['sass', 'less', 'build'], function() {
+gulp.task('css-optimize',['sass', 'build'], function() {
    return gulp.src('_site/Assets/css/**/*.css')
        .pipe(autoprefixer())
        .pipe(cssnano({
@@ -110,15 +109,6 @@ gulp.task('sass',['jekyll-build'], function () {
         .pipe(gulp.dest('_site/Assets/css'));
 });
 
-// Build less to css and inject it in the already existing _site dir
-gulp.task('less',['jekyll-build'], function () {
-  return gulp.src('Assets/less/**/*.less')
-    .pipe(less({
-      paths: [ path.join(__dirname, 'less', 'includes') ]
-    }))
-    .pipe(gulp.dest('_site/Assets/css'))
-    .pipe(browserSync.reload({stream:true}));
-});
 
 gulp.task('test-internal', shell.task([
     'bundle exec htmlproofer _site/ --allow-hash-href --assume-extension --check-html --disable-external || true'
@@ -132,7 +122,6 @@ gulp.task('test-external', ['test-internal'],shell.task([
 // Needs a few fixes
 gulp.task('watch', function () {
     gulp.watch(['./**/*.html','./**/*.md','./**/*.yml'], ['jekyll-rebuild']);
-    gulp.watch(['./**/*.less'], ['less']);
     gulp.watch(['./**/*.scss'], ['sass']);
 });
 
@@ -141,7 +130,7 @@ gulp.task('test', ['test-external','test-internal']);
 
 
 // Build css, site with jekyll, improve css with autoprefixer
-gulp.task('build', ['jekyll-build','sass', 'less']);
+gulp.task('build', ['jekyll-build','sass']);
 
 // Build launch browsersync and watch for changes
 gulp.task('default', ['browser-sync', 'watch']);
