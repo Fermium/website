@@ -100,9 +100,7 @@ The website is built using Jekyll
 ```bash
 bundle install
 #example for main site
-cd /Website/fermiumlabs_com
-npm install
-
+( cd Websites/fermiumlabs_com && npm install ) 
 ```
 
 ## Opengraph and social networks compatibility
@@ -122,4 +120,4 @@ You MUST buy it if you're using the graphic layout. It's cheap, and great.
 
 Don't copy our graphics, theme or content, they're copyrighted. Although we probably will not notice, the internet is a big place. Unless you're a competitor of us, then we will.
 
-You can use the technical stuff under the the [MIT](https://opensource.org/licenses/MIT) license.
+You can use the technical stuff under the [MIT](https://opensource.org/licenses/MIT) license.
