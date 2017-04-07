@@ -22,12 +22,12 @@ if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine
         {{ content }}
       </div>
     </div>
-
+    {% include twitter.html %}
     {% include footer.html %}
     {% include scripts.html %}
-{% include cookieconsent.html %}
-{% include notifications.html %}
-  {% include pageloader.html %}
+    {% include cookieconsent.html %}
+    {% include notifications.html %}
+    {% include pageloader.html %}
   </body>
 
 </html>
