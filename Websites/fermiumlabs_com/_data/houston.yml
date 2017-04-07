@@ -1,0 +1,39 @@
+title : "Houston"
+cta : "Some text that sounds cooller"
+imgs :
+  header   : "/Assets/img/projects/houston.jpg"
+  description  : "/Assets/img/logos/Atom-Main_500px.png"
+  features : "/Assets/img/projects/houston.jpg"
+content :
+  description :
+    title : "Houston is doing cool things"
+    body  : "Text content to explain what we're doing"
+  features :
+    title : "Our super cool features"
+    body  : "Super cool features to make people think we're actually doing something"
+    blocks :
+      - icon  : "ti-mouse"
+        title : "title"
+        body  : "text"
+      - icon  : "ti-mouse"
+        title : "title"
+        body  : "text"
+      - icon  : "ti-mouse"
+        title : "title"
+        body  : "text"
+  long-description :
+    title : "Title"
+    body  : |
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ut sagittis lectus. Donec dapibus et felis sed vulputate. Mauris pellentesque ultrices consectetur. Vestibulum ut tortor ac massa accumsan tincidunt. Mauris vitae egestas lectus. Pellentesque sed neque ultricies, venenatis tortor rhoncus, faucibus arcu. Pellentesque mattis, nibh sed ornare tempor, justo magna euismod diam, ut vulputate orci ante non dui. Aliquam nec leo ac arcu facilisis vestibulum. Sed eget orci aliquam, sodales ligula vitae, pretium magna. Suspendisse potenti. Cras ac urna elit. Cras luctus convallis velit a mollis. Sed magna leo, hendrerit in quam eget, fringilla semper ligula. Sed risus lacus, condimentum a facilisis eu, egestas vitae elit. Nam quis tellus et mi rhoncus consequat.
+
+
+      Duis sit amet magna elit. Duis at commodo dolor. Ut bibendum augue in ipsum ultrices, sagittis aliquet justo sodales. Curabitur placerat, ligula a mattis feugiat, nunc purus fermentum quam, quis mollis tellus turpis vitae est. Suspendisse justo nunc, commodo non pellentesque sit amet, fringilla sit amet felis. Nam rhoncus sapien et tortor varius, ac placerat neque mollis. Morbi vestibulum viverra velit at congue. Morbi dignissim laoreet enim, eu rutrum sapien pellentesque et. Nam sed condimentum odio, quis imperdiet orci. Cras scelerisque, ex in sollicitudin aliquet, tortor purus posuere justo, ut luctus ipsum est non nulla. Sed non lobortis augue. Ut elementum elit in felis venenatis vestibulum.
+
+
+      Mauris finibus dui nunc, a bibendum massa elementum id. Phasellus interdum orci vitae velit tristique, nec pharetra tellus tincidunt. Cras at diam luctus, ultrices mi et, hendrerit magna. Nam vitae efficitur libero. Nullam viverra, risus sed porta volutpat, tellus ligula elementum justo, eget fermentum lectus felis vel ligula. Donec venenatis sollicitudin risus quis mollis. Fusce venenatis nulla neque, ac rutrum urna fringilla et. Ut justo metus, congue quis purus ut, ultricies lacinia urna. Etiam nec orci condimentum, efficitur felis non, dictum lacus. Sed at lacus finibus, facilisis dui eu, luctus mauris. Ut auctor fermentum neque, egestas iaculis quam. Nunc condimentum mauris eros, quis blandit magna maximus ac. Suspendisse potenti.
+
+
+      Nam tempus nibh ex, ac tristique nibh pharetra vel. Morbi lobortis volutpat diam, sit amet elementum ligula luctus a. Mauris lobortis convallis nisi, et consequat mi auctor eget. Pellentesque sed nunc tempor, pellentesque tellus a, condimentum tortor. Sed finibus, diam quis sollicitudin iaculis, ante tellus gravida felis, sit amet auctor diam lacus quis mi. Vivamus enim sapien, ultrices tempor tempus et, imperdiet ut augue. Curabitur nec lobortis nisl.
+
+
+      Mauris ultrices nisl ut mauris condimentum pretium. Phasellus imperdiet turpis vitae nibh interdum, a ultricies est consequat. Vivamus suscipit efficitur gravida. Fusce rutrum dui ac justo tempor, vitae pharetra ipsum imperdiet. In pellentesque id lorem vitae semper. Nulla imperdiet, quam quis tincidunt aliquam, est erat hendrerit lacus, sed viverra massa turpis a nisl. Donec varius lorem non sapien sodales varius nec sit amet ante. Morbi consectetur egestas massa, eget varius lorem pulvinar eget. Phasellus semper malesuada risus, lobortis lacinia lorem bibendum non. Praesent commodo tellus vitae bibendum pellentesque.

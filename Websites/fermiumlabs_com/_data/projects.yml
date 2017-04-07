@@ -1,18 +1,23 @@
 - name:  Houston
   subtitle: "Factory mission control"
-  project-page: "/contact-us/"
+  project-page: "/houston/"
   tw-tag: "#pr-houston"
-  image: "Assets/img/projects/mission-control-nasa-1.jpg"
+  image: "Assets/img/projects/houston.jpg"
   slide: 1
-  description: "
-  We do not know what is gonna break before it does.<br> We cannot look into the past at our will.<br><br>
-  No one can be inside **every machine, every system** that you run.<br><br>
-  This is why we're building Houston.<br><br>
-  Engineered to guide you into your complex <br>machinery system:<br>
-  From a small production line to **entire** factories. <br><br>
-  You're the captain. Houston will help you manage your fleet.<br><br><br>
-  [Get in touch](/contact-us/) for more information.
-  "
+  description: |
+    We do not know what is gonna break before it does.<br> We cannot look into the past at our will.
+
+    No one can be inside **every machine, every system** that you run.
+
+    This is why we're building Houston.
+
+    Engineered to guide you into your complex <br>machinery system:<br>
+    From a small production line to **entire** factories.
+
+    You're the captain. Houston will help you manage your fleet.
+
+    [Get in touch](/contact-us/) for more information.
+
   date:  23-04-2016
   tags:  ["tag4","tag5","tag6"]
   state: aaa

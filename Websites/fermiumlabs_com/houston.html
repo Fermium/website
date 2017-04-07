@@ -1,0 +1,91 @@
+---
+layout: default
+title:  Fermium LABS - Houston
+description: Fermium LABS srl is a company dedicated to exploiting young mind views and new technologies for the sake of innovation.
+opengraph_type:
+opengraph_image:
+---
+{% assign houston = site.data.houston %}
+{% assign imgs = houston.imgs %}
+{% assign content = houston.content %}
+		<div class="main-container">
+			<section class="cover fullscreen image-bg overlay parallax">
+		        <div class="background-image-holder">
+		            <img alt="image" class="background-image" src="{{imgs.header}}">
+		        </div>
+		        <div class="container v-align-transform">
+		            <div class="row">
+		                <div class="col-sm-12 text-center">
+		                    <h1 class="large uppercase mb16">{{houston.title}}</h1>
+		                    <h5 class="uppercase mb0">{{houston.cta}}</h5>
+		                </div>
+		            </div>
+
+		        </div>
+
+		        <div class="align-bottom relative-xs text-center hidden-xs hidden-sm">
+		            <a class="icon-scroll icon no-color smooth-scroll" href="#description"></a>
+		        </div>
+		    </section><section id="description">
+		        <div  class="container">
+		            <div class="row v-align-children">
+		                <div class="col-md-4 col-sm-5 mb-xs-24">
+		                    <h3>{{content.description.title}}</h3>
+		                    <p>
+		                        {{content.description.body | markdownify}}
+		                    </p>
+		                </div>
+		                <div class="col-md-7 col-md-offset-1 col-sm-6 col-sm-offset-1 text-center">
+		                    <img class="cast-shadow .img-responsive" alt="Screenshot" src="{{imgs.description}}">
+		                </div>
+		            </div>
+
+		        </div>
+
+		    </section><section id="features" class="image-bg overlay parallax">
+		        <div class="background-image-holder">
+		            <img alt="Background" class="background-image" src="{{imgs.features}}">
+		        </div>
+		        <div class="container">
+		            <div class="row">
+		                <div class="col-sm-12 text-center">
+		                    <h2 class="mb16">{{content.features.title}}</h2>
+		                    <p class="lead mb64">
+		                        {{content.features.body | markdownify}}
+		                    </p>
+		                </div>
+		            </div>
+
+		            <div class="row">
+								{% for feature in content.features.blocks %}
+		                <div class="col-sm-4">
+		                    <div class="feature feature-1 boxed">
+		                        <div class="text-center">
+		                            <i class="{{feature.icon}} icon"></i>
+		                            <h5 class="uppercase">{{feature.title}}</h5>
+		                        </div>
+		                        <p>
+		                            {{feature.body | markdownify}}
+		                        </p>
+		                    </div>
+		                </div>
+								{% endfor %}
+		            </div>
+
+		        </div>
+
+		    </section><section id='long-description'>
+		        <div class="container">
+		            <div class="row">
+		                <div class="col-sm-10 col-sm-offset-1 text-center">
+		                    <h3 class="uppercase color-primary mb40 mb-xs-24">{{content.long-description.title}}</h3>
+		                    <p class="lead">
+													{{content.long-description.body | markdownify}}
+		                    </p>
+		                </div>
+		            </div>
+
+		        </div>
+
+		    </section>
+		</div>

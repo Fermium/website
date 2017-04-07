@@ -15,7 +15,7 @@ var pump         = require('pump');
 var cssnano      = require('gulp-cssnano');
 var htmlmin      = require('gulp-htmlmin');
 var webserver    = require('gulp-webserver');
-var shell = require('gulp-shell')
+var shell = require('gulp-shell');
 
 
 // Launch jekyll for a standard build
@@ -35,7 +35,7 @@ gulp.task('clean', function () {
         .pipe(clean());
 });
 
-// Run autoprefixer to improve compatibility, then css nano with safe option to reduce size of 
+// Run autoprefixer to improve compatibility, then css nano with safe option to reduce size of
 gulp.task('css-optimize',['sass', 'less', 'build'], function() {
    return gulp.src('_site/Assets/css/**/*.css')
        .pipe(autoprefixer())
