@@ -14,7 +14,7 @@ if(isMobile){
 
 
   var lis = $(".collaborator");
-  if(lis.length%2!=0){
+  if(lis.length%2!==0){
     lis.last().append('<div class="collaborator col col-sm-6 col-md-2 col-centered flip-container" ontouchstart="this.classList.toggle(\'hover\');"></div>');
   }
   var lis = $(".collaborator");
@@ -38,4 +38,13 @@ $(function() {
       }
     }
   });
+});
+$(document).ready(function(){
+
+  $('.smooth-scroll').click(function(){
+    $('html, body').animate({
+        scrollTop: $( $(this).attr('href') ).offset().top
+    }, 1000);
+    return false;
+});
 });

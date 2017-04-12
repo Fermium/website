@@ -1,0 +1,32 @@
+title : "Houston"
+cta : "Industrial Analytics"
+imgs :
+  header   : "/Assets/img/projects/houston.jpg"
+  description  : "/Assets/img/logos/Atom-Main_500px.png"
+  features : "/Assets/img/projects/houston.jpg"
+content :
+  description :
+    title : "Houston is doing cool things"
+    body  : "Text content to explain what we're doing"
+  features :
+    title : "Our super cool features"
+    body  : "Super cool features to make people think we're actually doing something"
+    blocks :
+      - icon  : "ti-mouse"
+        title : "Trial-and-error to the extreme"
+        body  : |
+          To interface with machinery, write your code and test it on-the-fly. Make mistakes and retry as quickly and efficiently as possible.
+      - icon  : "ti-mouse"
+        title : "Behind your firewall"
+        body  : |
+          Houston's devices can be controlled only from your local network. You don't need to trust us.
+      - icon  : "ti-mouse"
+        title : "Globally available"
+        body  : |
+          Houston data ingest points are completely redundant and available from the EU, US and Asia.
+  long-description :
+    title : "Python at heart"
+    body  : |
+    
+      here logo "from java to python"
+      
