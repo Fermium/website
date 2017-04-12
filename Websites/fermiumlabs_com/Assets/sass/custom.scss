@@ -11,7 +11,28 @@
 /** 1. Navigator **/
 $font: "Roboto","Roboto Condensed";
 $color-primary: #eb274a;
-
+.bg-twitter {
+  //background: #2B2B29;
+  background: #3A3E3B;
+  color : #fefefe;
+}
+.opac8 { opacity: .8 }
+.opac6 { opacity: .6 }
+.ztop {
+  z-index: 9999;
+}
+.no-padding {
+  padding : 0px;
+}
+.tweet-crop{
+  text-overflow:ellipsis;
+}
+.timePosted a{
+  font-weight: lighter !important;
+}
+.tweet {
+  font-weight: bold !important;
+}
 .title{
   font-size:4.5em;
   margin: 0;
