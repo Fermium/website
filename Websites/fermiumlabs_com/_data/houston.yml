@@ -6,8 +6,14 @@ imgs :
   features : "/Assets/img/projects/houston.jpg"
 content :
   description :
-    title : "Houston is doing cool things"
-    body  : "Text content to explain what we're doing"
+    title : "Extract data from unwilling machinery"
+    body  : |
+      Houston devices can connect to almost anything digital with wires. Modbus PLCs, networked controllers, RS485 legacy devices.
+      Analog sensors are covered as well through an ADC/DAC expansion.
+
+      The key to connect quickly to partially-unkown hardware is being able to iterate fast. In Houston, the code you write can be executed istantaneusly, one piece at a time.
+
+
   features :
     title : "Our super cool features"
     body  : "Super cool features to make people think we're actually doing something"
@@ -24,7 +30,6 @@ content :
         title : "Globally available"
         body  : |
           Houston data ingest points are completely redundant and available from the EU, US and Asia.
-
       - icon  : "ti-mouse"
         title : "Safe"
         body  : |
@@ -42,9 +47,8 @@ content :
       * test
       * test
 
-      {:.lead}
       some more random text to check if classes are working
-      
+
   protocols :
     title : "Our super cool features"
     body  : "Super cool features to make people think we're actually doing something"
@@ -53,47 +57,51 @@ content :
         name  : "Modbus"
         description  : |
           Modbus may be the most important industrial comunication protocol, in particular for it's capability to read registers from legacy PLCs that do not support OPC-UA.
-          
+
           Houston supports the following ModBus variants:
-            
-            {:.bullet-list}  
-            {:.padding-fix}          
-            * Modbus over TCP 
-            * Modbus over UDP 
+
+            * Modbus over TCP
+            * Modbus over UDP
             * Modbus over Serial
-            
-              {:.bullet-list}
               * ASCII (for legacy applications)
               * RTU
               * Binary
-              
+
 
       - logo  : "/products/houston_img/protocols/opc-ua.png"
         name  : "OPC-UA"
         description  : |
-        
+
           [OPC-UA](https://en.wikipedia.org/wiki/OPC_Unified_Architecture) [IEC 62541](https://webstore.iec.ch/publication/21987) is the leading standard in industrial automation.
-          
+
           OPC-UA fixes the drawbacks of its long-live predecessor, OPC. It's more secure, cross platform and scalable.
-          
-          Houston Device include full native support for the OPC-UA protocol.
-          
+
+          Houston Device include full native support for the OPC-UA protocol, as well as a suite of complimentary software to discover and manage OPC-UA devices.
       - logo  : ""
         name  : "serial"
         description  : |
           Houston devices supports any common serial hardware protocol such as:
-            
+
             * [RS232](https://en.wikipedia.org/wiki/RS-232)
             * [RS485](https://en.wikipedia.org/wiki/RS-485)
             * [RS422](https://en.wikipedia.org/wiki/RS-422)
             * [UART](https://en.wikipedia.org/wiki/Universal_asynchronous_receiver/transmitter)
-          
-          
-      - logo  : "/Assets/img/logos/atom.svg"
-        name  : "fermiumlabs"
+
+
+      - logo  : "/products/houston_img/protocols/http.png"
+        name  : "HTTP API"
         description  : |
-          Houston's devices can be controlled only from your local network. You don't need to trust us.
+          Many modern industrial devices expose themselves through HTTP APIs.
+
+          Houston supports all APIs implemented through official HTTP standards.
+
       - logo  : "/Assets/img/logos/atom.svg"
-        name  : "fermiumlabs"
+        name  : "Cameras"
         description  : |
-          Houston data ingest points are completely redundant and available from the EU, US and Asia.
+          Houston supports any [UVC](https://en.wikipedia.org/wiki/USB_video_device_class)-compatible industrial camera, as well as webcams and video acquisition hardware.
+          One common example of application is taking a picture of every single manufactured product to analyze production quality.
+      - logo  : ""
+        name  : "NI-VISA"
+        description  : |
+          [VISA](https://en.wikipedia.org/wiki/Virtual_Instrument_Software_Architecture) is a popular API to interface with measurement instruments such as Multimeters, oscilloscopes and digital test equipments.
+          Houston device can be connected to VISA/VXI compatible instruments trought network, USB or USB/GPIB adapters.
