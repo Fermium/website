@@ -88,33 +88,28 @@ opengraph_image:
 		        </div>
 
 		    </section>
-				<section>
+				<section id='protocols'> 
 		        <div class="container">
-		            <div class="row">
-		                <div class="col-md-8 col-md-offset-2 col-sm-12 text-center">
-		                    <h4 class="uppercase mb80">{{content.protocols.title}}</h4>
-		                    <div class="icon-tabs ">
-		                        <ul class="tabs">
-															{% for protocol in content.protocols.blocks %}
-		                            <li >
-		                                <div class="tab-title opac1 modal-container">
-																			<a href='#' modal-link="{{forloop.index}}" class='btn-modal'>
-		                                    <img class="icon opac1" src="{{protocol.logo}}"></img>
-																				<span class='color-primary'>{{protocol.name}}</span>
-																			</a>
-																			<div class="foundry_modal">
-	                                    	{{protocol.description | markdownify}}
-	                                		</div>
-		                                </div>
-
-		                            </li>
-															{% endfor %}
-
-		                        </ul>
-		                    </div>
-
-		                </div>
-		            </div>
+							<div class='row'>
+								<div class="col-md-8 col-md-offset-2 col-sm-12 text-center">
+									<h4 class="uppercase mb80">{{content.protocols.title}}</h4>
+		            	<div class="row v-align-children  group">
+										{% for protocol in content.protocols.blocks %}
+	                        <div class="col-md-4 col-sm-4 modal-container align-bottom">
+															<a href='#' modal-link="{{forloop.index}}" class='btn-modal'>
+		                            <div class='img-wrapper img-md' style='background-image:url("{{protocol.logo}}")'>
+																</div>
+															</a>
+															<span class='color-primary'>{{protocol.name}}</span>											
+														<div class="foundry_modal">
+	                          	{{protocol.description | markdownify}}
+	                      		</div>
+	                        </div>		                      
+										{% endfor %}
+									</div>  
+									</div>
+            	</div>
+						</div>
 
 		        </div>
 

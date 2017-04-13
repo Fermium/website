@@ -67,7 +67,6 @@ content :
               * RTU
               * Binary
 
-
       - logo  : "/products/houston_img/protocols/opc-ua.png"
         name  : "OPC-UA"
         description  : |
