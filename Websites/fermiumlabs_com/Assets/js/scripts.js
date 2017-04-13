@@ -1055,6 +1055,7 @@ function updateNav() {
         if (scrollY > mr_navOuterHeight) {
            if (!mr_navFixed) {
                 mr_nav.addClass('fixed');
+                $('.spotify a').addClass('dark');
                 mr_navFixed = true;
             }
 
@@ -1073,6 +1074,7 @@ function updateNav() {
             if (mr_navFixed) {
                 mr_navFixed = false;
                 mr_nav.removeClass('fixed');
+                $('.spotify a').removeClass('dark');
             }
             if (mr_outOfSight) {
                 mr_outOfSight = false;
