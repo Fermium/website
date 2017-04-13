@@ -12,7 +12,12 @@
   overflow: hidden;
   position: relative;
 }
-
+.dark{
+  color:#292929;
+}
+.dark:hover{
+  color:#000000; 
+}
 .marquee a {
   display: block;
   width: 200%;
@@ -22,8 +27,6 @@
 
   animation: marquee 10s linear infinite;
 }
-
-
 @keyframes marquee {
   0% { left: 300px; }
   100% { left: -700px; }
