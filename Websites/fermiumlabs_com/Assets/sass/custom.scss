@@ -16,6 +16,10 @@ $color-primary: #eb274a;
   background: #3A3E3B;
   color : #fefefe;
 }
+.bullet-list {
+  list-style : circle;
+}
+.opac1 { opacity: 1 !important }
 .opac8 { opacity: .8 }
 .opac6 { opacity: .6 }
 .ztop {

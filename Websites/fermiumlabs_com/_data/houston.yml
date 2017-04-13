@@ -27,6 +27,38 @@ content :
   long-description :
     title : "Python at heart"
     body  : |
-    
+      {:.lead}
       here logo "from java to python"
-      
+
+      {:.bullet-list}
+      {:.lead}
+      * test
+      * test
+      * test
+
+      {:.lead}
+      some more random text to check if classes are working
+  protocols :
+    title : "Our super cool features"
+    body  : "Super cool features to make people think we're actually doing something"
+    blocks :
+      - logo  : "/Assets/img/logos/atom.svg"
+        name  : "fermiumlabs"
+        description  : |
+          To interface with machinery, write your code and test it on-the-fly. Make mistakes and retry as quickly and efficiently as possible.
+      - logo  : "/Assets/img/logos/atom.svg"
+        name  : "fermiumlabs"
+        description  : |
+          Houston's devices can be controlled only from your local network. You don't need to trust us.
+      - logo  : "/Assets/img/logos/atom.svg"
+        name  : "fermiumlabs"
+        description  : |
+          Houston data ingest points are completely redundant and available from the EU, US and Asia.
+      - logo  : "/Assets/img/logos/atom.svg"
+        name  : "fermiumlabs"
+        description  : |
+          Houston's devices can be controlled only from your local network. You don't need to trust us.
+      - logo  : "/Assets/img/logos/atom.svg"
+        name  : "fermiumlabs"
+        description  : |
+          Houston data ingest points are completely redundant and available from the EU, US and Asia.
