@@ -6,8 +6,28 @@
 4. Animations
 **/
 
+.marquee {
+  width: 250px;
+
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee a {
+  display: block;
+  width: 200%;
+
+  position: absolute;
+  overflow: hidden;
+
+  animation: marquee 10s linear infinite;
+}
 
 
+@keyframes marquee {
+  0% { left: 300px; }
+  100% { left: -700px; }
+}
 /** 1. Navigator **/
 $font: "Roboto","Roboto Condensed";
 $color-primary: #eb274a;
@@ -29,7 +49,7 @@ $color-primary: #eb274a;
   height: 200px;
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: center center; 
+  background-position: center center;
 }
 .bullet-list {
   list-style : circle;
