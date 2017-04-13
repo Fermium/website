@@ -61,13 +61,11 @@ content :
             * Modbus over TCP 
             * Modbus over UDP 
             * Modbus over Serial
-            
-              {:.bullet-list}
               * ASCII (for legacy applications)
               * RTU
               * Binary
-              
-
+              {:.bullet-list}
+              {:.padding-fix}
       - logo  : "/products/houston_img/protocols/opc-ua.png"
         name  : "OPC-UA"
         description  : |

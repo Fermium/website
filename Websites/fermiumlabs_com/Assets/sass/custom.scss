@@ -22,7 +22,7 @@ $color-primary: #eb274a;
   color : #fefefe;
 }
 .padding-fix li{
-  padding: 10px !important;
+  padding-left: 5px !important;
 }
 .img-wrapper {
   width: 200px;
@@ -33,6 +33,7 @@ $color-primary: #eb274a;
 }
 .bullet-list {
   list-style : circle;
+  list-style-position: inside ;
 }
 .opac1 { opacity: 1 !important }
 .opac8 { opacity: .8 }
