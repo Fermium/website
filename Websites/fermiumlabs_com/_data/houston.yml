@@ -15,13 +15,9 @@ content :
 
 
   features :
-    title : "Our super cool features"
-    body  : "Super cool features to make people think we're actually doing something"
+    title : "Safe"
+    body  : "Security is fundamental when hardware assets are connected to houston devices"
     blocks :
-      - icon  : "ti-mouse"
-        title : "Trial-and-Error"
-        body  : |
-          To interface with machinery, write your code and test it on-the-fly. Make mistakes and retry as quickly and efficiently as possible.
       - icon  : "ti-mouse"
         title : "Behind your firewall"
         body  : |
