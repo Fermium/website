@@ -1,3 +1,6 @@
+<a href="https://fermiumlabs.com/">
+    <img src="https://fermiumlabs.com/Assets/img/logos/Horizontal-Main_500px.png" alt="Fermium LABS logo" width="200" align="right" />
+</a>
 [![Build Status](https://travis-ci.org/fermiumlabs/website.svg?branch=master)](https://travis-ci.org/fermiumlabs/website) [![Analytics](https://ga-beacon.appspot.com/UA-69533556-3/website/readme/?flat)](https://github.com/igrigorik/ga-beacon)
 
 
