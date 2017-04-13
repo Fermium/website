@@ -16,6 +16,9 @@ $color-primary: #eb274a;
   background: #3A3E3B;
   color : #fefefe;
 }
+.padding-fix li{
+  padding: auto !important;
+}
 .bullet-list {
   list-style : circle;
 }
