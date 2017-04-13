@@ -11,13 +11,25 @@
 /** 1. Navigator **/
 $font: "Roboto","Roboto Condensed";
 $color-primary: #eb274a;
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 .bg-twitter {
   //background: #2B2B29;
   background: #3A3E3B;
   color : #fefefe;
 }
 .padding-fix li{
-  padding: auto !important;
+  padding: 10px !important;
+}
+.img-wrapper {
+  width: 200px;
+  height: 200px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center; 
 }
 .bullet-list {
   list-style : circle;
