@@ -74,12 +74,14 @@ content :
 
           Houston supports the following ModBus variants:
 
+            {:.bullet-list}
+            {:.padding-fix}
             * Modbus over TCP
             * Modbus over UDP
             * Modbus over Serial
-              * ASCII (for legacy applications)
-              * RTU
-              * Binary
+              * {:.bullet-list} ASCII (for legacy applications)
+              * {:.bullet-list} RTU
+              * {:.bullet-list} Binary
 
       - logo  : "/products/houston_img/protocols/opc-ua.png"
         name  : "OPC-UA"
