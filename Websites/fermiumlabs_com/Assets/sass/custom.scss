@@ -15,8 +15,9 @@
 .dark{
   color:#292929;
 }
+
 .dark:hover{
-  color:#000000; 
+  color:#000000;
 }
 .marquee a {
   display: block;
@@ -34,6 +35,14 @@
 /** 1. Navigator **/
 $font: "Roboto","Roboto Condensed";
 $color-primary: #eb274a;
+.primary-link a {
+  color:$color-primary;
+  opacity: 0.8;
+}
+.primary-link a:hover {
+  color:$color-primary;
+  opacity: 1;
+}
 .group:after {
   content: "";
   display: table;

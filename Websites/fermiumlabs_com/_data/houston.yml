@@ -2,16 +2,34 @@ title : "Houston"
 cta : "Industrial Analytics"
 imgs :
   header   : "/Assets/img/projects/houston.jpg"
-  description  : "/Assets/img/logos/Atom-Main_500px.png"
+  description  :
+    - "/Assets/img/logos/Atom-Main_500px.png"
+    - "/Assets/img/logos/Atom-Main_250px.png"
+    - "/Assets/img/logos/Atom-Main_100px.png"
+
   features : "/Assets/img/projects/houston.jpg"
 content :
-  description :
-    title : "Extract data from unwilling machinery"
-    body  : |
-      Houston devices can connect to almost anything digital with wires. Modbus PLCs, networked controllers, RS485 legacy devices.
-      Analog sensors are covered as well through an ADC/DAC expansion.
+  descriptions :
+    - title : "Extract data from unwilling machinery"
+      body  : |
+        Houston devices can connect to almost anything digital with wires. Modbus PLCs, networked controllers, RS485 legacy devices.
+        Analog sensors are covered as well through an ADC/DAC expansion.
 
-      The key to connect quickly to partially-unkown hardware is being able to iterate fast. In Houston, the code you write can be executed istantaneusly, one piece at a time.
+        The key to connect quickly to partially-unkown hardware is being able to iterate fast. In Houston, the code you write can be executed istantaneusly, one piece at a time.
+    - title : "Extract data from unwilling machinery"
+      body  : |
+        Houston devices can connect to almost anything digital with wires. Modbus PLCs, networked controllers, RS485 legacy devices.
+        Analog sensors are covered as well through an ADC/DAC expansion.
+
+        The key to connect quickly to partially-unkown hardware is being able to iterate fast. In Houston, the code you write can be executed istantaneusly, one piece at a time.
+
+    - title : "Extract data from unwilling machinery"
+      body  : |
+        Houston devices can connect to almost anything digital with wires. Modbus PLCs, networked controllers, RS485 legacy devices.
+        Analog sensors are covered as well through an ADC/DAC expansion.
+
+        The key to connect quickly to partially-unkown hardware is being able to iterate fast. In Houston, the code you write can be executed istantaneusly, one piece at a time.
+
 
 
   features :
