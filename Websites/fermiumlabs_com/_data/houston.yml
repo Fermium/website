@@ -1,37 +1,48 @@
 title : "Houston"
-cta : "Industrial Analytics"
+cta : "Datacenter-grade diagnostics and Data Science for Industrial Analytics"
 imgs :
   header   : "/Assets/img/projects/houston.jpg"
   description  :
     - "/Assets/img/logos/Atom-Main_500px.png"
     - "/Assets/img/logos/Atom-Main_250px.png"
-    - "/Assets/img/logos/Atom-Main_100px.png"
+    - "https://www.cloudirec.com/blog/wp-content/uploads/2017/02/The-Ultimate-Battle-R-vs-Python.png"
 
   features : "/Assets/img/projects/houston.jpg"
 content :
   descriptions :
     - title : "Extract data from unwilling machinery"
       body  : |
-        Houston devices can connect to almost anything digital with wires. Modbus PLCs, networked controllers, RS485 legacy devices.
+        Houston devices can connect to almost anything with wires. Modbus PLCs, networked controllers, RS485 legacy devices.
         Analog sensors are covered as well through an ADC/DAC expansion.
 
-        The key to connect quickly to partially-unkown hardware is being able to iterate fast. In Houston, the code you write can be executed istantaneusly, one piece at a time.
-    - title : "Extract data from unwilling machinery"
+        The key to connect quickly to partially-unkown hardware is being able to iterate fast.
+        Write, test, **make mistakes as efficiently as possible**.
+        
+        No asking for quotes from engineering firms, no evaluating complex projects requirements.
+        (No compilations, No Java Virtual Machine)
+        
+    - title : "Search the data, look into the past, see the present"
       body  : |
-        Houston devices can connect to almost anything digital with wires. Modbus PLCs, networked controllers, RS485 legacy devices.
-        Analog sensors are covered as well through an ADC/DAC expansion.
-
-        The key to connect quickly to partially-unkown hardware is being able to iterate fast. In Houston, the code you write can be executed istantaneusly, one piece at a time.
-
-    - title : "Extract data from unwilling machinery"
+      
+        Houston allows you to search through your data in seconds. See your whole production plant across time, and just click your way through untill you find the problem.
+        
+        To achieve this, we've brough the the technologies that powers datacenter's diagnostics to your fingertips.q
+    - title : ""
       body  : |
-        Houston devices can connect to almost anything digital with wires. Modbus PLCs, networked controllers, RS485 legacy devices.
-        Analog sensors are covered as well through an ADC/DAC expansion.
-
-        The key to connect quickly to partially-unkown hardware is being able to iterate fast. In Houston, the code you write can be executed istantaneusly, one piece at a time.
-
-
-
+        With a complete sets of Data Science tools any trained Statistician, Engineer, Matematician or Programmer can extract serious insigts from the behaviour of your plant.
+        
+        Answer questions like :
+          
+          {:.bullet-list}
+          {:.padding-fix}
+          * Which fluctuations in our manufacturing line are causing our products to fail?
+          * How are our employees influencing the manufacturing process?
+          * Can we increase manufacturing tolerances without decreasing quality?
+          
+        Houston supports both the R language and Python for data science, two of the most commonly adopted languages in European and US STEM degrees. 
+        So you can hire fresh and skilled minds, and get them to work straight away.
+              
+      
   features :
     title : "Safe"
     body  : "Security is fundamental when hardware assets are connected to houston devices"
@@ -50,7 +61,7 @@ content :
           The data you send follows a strict chain of custody. It's always redundantly written after it exits your factory.
 
   long-description :
-    title : "Python at heart"
+    title : "Supported protocols"
     body  : |
       {:.lead}
       here logo "from java to python"
@@ -64,7 +75,7 @@ content :
       some more random text to check if classes are working
 
   protocols :
-    title : "Our super cool features"
+    title : "Supported Protocols"
     body  : "Super cool features to make people think we're actually doing something"
     blocks :
       - logo  : "/products/houston_img/protocols/modbus.jpg"
@@ -96,7 +107,9 @@ content :
         name  : "serial"
         description  : |
           Houston devices supports any common serial hardware protocol such as:
-
+            
+            {:.bullet-list}
+            {:.padding-fix}
             * [RS232](https://en.wikipedia.org/wiki/RS-232)
             * [RS485](https://en.wikipedia.org/wiki/RS-485)
             * [RS422](https://en.wikipedia.org/wiki/RS-422)
