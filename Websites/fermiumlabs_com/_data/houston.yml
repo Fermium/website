@@ -9,6 +9,7 @@ imgs :
 
   features : "/Assets/img/projects/houston.jpg"
 content :
+  catchphrase: "Datacenter-grade diagnostics technology for manufacturing"
   descriptions :
     - title : "Extract data from unwilling machinery"
       body  : |
@@ -18,20 +19,19 @@ content :
         The key to connect quickly to partially-unkown hardware is being able to iterate fast.
         Write, test, **make mistakes as efficiently as possible**.
         
-        No asking for quotes from engineering firms, no evaluating complex projects requirements.
-        (No compilations, No Java Virtual Machine)
-        
-    - title : "Search the data, look into the past, see the present"
+    - title : "Search into the past, keep an eye on the present"
       body  : |
-      
-        Houston allows you to search through your data in seconds. See your whole production plant across time, and just click your way through untill you find the problem.
+        Houston allows you to search through your data in seconds. 
+        See your whole production plant across time, and just click your way through untill you isolate the problem.
         
-        To achieve this, we've brough the the technologies that powers datacenter's diagnostics to your fingertips.q
-    - title : ""
+        
+        Houston search tecnology is used in datacenters to filter through thousands of server's historical logs.
+        
+        It will handle a few parallel production lines.
+    - title : "Understand, not suppose."
       body  : |
         With a complete sets of Data Science tools any trained Statistician, Engineer, Matematician or Programmer can extract serious insigts from the behaviour of your plant.
         
-        Answer questions like :
           
           {:.bullet-list}
           {:.padding-fix}
@@ -133,3 +133,8 @@ content :
         description  : |
           [VISA](https://en.wikipedia.org/wiki/Virtual_Instrument_Software_Architecture) is a popular API to interface with measurement instruments such as Multimeters, oscilloscopes and digital test equipments.
           Houston device can be connected to VISA/VXI compatible instruments trought network, USB or USB/GPIB adapters.
+      - logo  : "/products/houston_img/protocols/bacnet.png"
+        name  : "BACnet"
+        description  : |
+          The [BACnet](https://en.wikipedia.org/wiki/BACnet) protocol can be used to monitor environmental parameters such as humidity and temperature. 
+          
