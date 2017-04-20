@@ -4,7 +4,7 @@ imgs :
   header   : "/Assets/img/projects/houston.jpg"
   description  :
     - "/Assets/img/logos/Atom-Main_500px.png"
-    - "/Assets/img/logos/Atom-Main_250px.png"
+    - "/products/houston_img/protocols/IMG_20170420_193524.jpg"
     - "https://www.cloudirec.com/blog/wp-content/uploads/2017/02/The-Ultimate-Battle-R-vs-Python.png"
 
   features : "/Assets/img/projects/houston.jpg"
