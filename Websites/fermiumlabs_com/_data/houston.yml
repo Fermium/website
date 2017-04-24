@@ -3,8 +3,8 @@ cta : "Datacenter-grade diagnostics and Data Science for Industrial Analytics"
 imgs :
   header   : "/Assets/img/projects/houston.jpg"
   description  :
-    - "/Assets/img/logos/Atom-Main_500px.png"
-    - "/Assets/img/logos/Atom-Main_250px.png"
+    - "/products/houston_img/infographics/info1.png"
+    - "/products/houston_img/infographics/info2.png"
     - "https://www.cloudirec.com/blog/wp-content/uploads/2017/02/The-Ultimate-Battle-R-vs-Python.png"
 
   features : "/Assets/img/projects/houston.jpg"
@@ -18,61 +18,47 @@ content :
 
         The key to connect quickly to partially-unkown hardware is being able to iterate fast.
         Write, test, **make mistakes as efficiently as possible**.
-        
+
     - title : "Search into the past, keep an eye on the present"
       body  : |
-        Houston allows you to search through your data in seconds. 
+        Houston allows you to search through your data in seconds.
         See your whole production plant across time, and just click your way through untill you isolate the problem.
-        
-        
+
+
         Houston search tecnology is used in datacenters to filter through thousands of server's historical logs.
-        
+
         It will handle a few parallel production lines.
     - title : "Understand, not suppose."
       body  : |
         With a complete sets of Data Science tools any trained Statistician, Engineer, Matematician or Programmer can extract serious insigts from the behaviour of your plant.
-        
-          
+
+
           {:.bullet-list}
           {:.padding-fix}
           * Which fluctuations in our manufacturing line are causing our products to fail?
           * How are our employees influencing the manufacturing process?
           * Can we increase manufacturing tolerances without decreasing quality?
-          
-        Houston supports both the R language and Python for data science, two of the most commonly adopted languages in European and US STEM degrees. 
+
+        Houston supports both the R language and Python for data science, two of the most commonly adopted languages in European and US STEM degrees.
         So you can hire fresh and skilled minds, and get them to work straight away.
-              
-      
+
+
   features :
     title : "Safe"
     body  : "Security is fundamental when hardware assets are connected to houston devices"
     blocks :
-      - icon  : "ti-mouse"
+      - icon  : "fa fa-ban"
         title : "Behind your firewall"
         body  : |
           Houston's devices can be controlled only from your local network. You don't need to trust us.
-      - icon  : "ti-mouse"
+      - icon  : "fa fa-globe"
         title : "Globally available"
         body  : |
           Houston data ingest points are completely redundant and available from the EU, US and Asia.
-      - icon  : "ti-mouse"
+      - icon  : "fa fa-handshake-o"
         title : "Safe"
         body  : |
           The data you send follows a strict chain of custody. It's always redundantly written after it exits your factory.
-
-  long-description :
-    title : "Supported protocols"
-    body  : |
-      {:.lead}
-      here logo "from java to python"
-
-      {:.bullet-list}
-      {:.lead}
-      * test
-      * test
-      * test
-
-      some more random text to check if classes are working
 
   protocols :
     title : "Supported Protocols"
@@ -103,11 +89,11 @@ content :
           OPC-UA fixes the drawbacks of its long-live predecessor, OPC. It's more secure, cross platform and scalable.
 
           Houston Device include full native support for the OPC-UA protocol, as well as a suite of complimentary software to discover and manage OPC-UA devices.
-      - logo  : ""
+      - logo  : "/products/houston_img/protocols/serial.png"
         name  : "serial"
         description  : |
           Houston devices supports any common serial hardware protocol such as:
-            
+
             {:.bullet-list}
             {:.padding-fix}
             * [RS232](https://en.wikipedia.org/wiki/RS-232)
@@ -123,12 +109,12 @@ content :
 
           Houston supports all APIs implemented through official HTTP standards.
 
-      - logo  : "/Assets/img/logos/atom.svg"
+      - logo  : "/products/houston_img/protocols/camera.png"
         name  : "Cameras"
         description  : |
           Houston supports any [UVC](https://en.wikipedia.org/wiki/USB_video_device_class)-compatible industrial camera, as well as webcams and video acquisition hardware.
           One common example of application is taking a picture of every single manufactured product to analyze production quality.
-      - logo  : ""
+      - logo  : "/products/houston_img/protocols/nivisa.png"
         name  : "NI-VISA"
         description  : |
           [VISA](https://en.wikipedia.org/wiki/Virtual_Instrument_Software_Architecture) is a popular API to interface with measurement instruments such as Multimeters, oscilloscopes and digital test equipments.
@@ -136,5 +122,4 @@ content :
       - logo  : "/products/houston_img/protocols/bacnet.png"
         name  : "BACnet"
         description  : |
-          The [BACnet](https://en.wikipedia.org/wiki/BACnet) protocol can be used to monitor environmental parameters such as humidity and temperature. 
-          
+          The [BACnet](https://en.wikipedia.org/wiki/BACnet) protocol can be used to monitor environmental parameters such as humidity and temperature.
