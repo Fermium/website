@@ -32,7 +32,7 @@ opengraph_image:
                           </div>
 		                        <div class="col-sm-8 ">
 		                            <div class="row">
-																	<h1 class="mb-xs-16 project-link title hvr-underline-from-center"><a href="{{project.project-page}}">{{ project.name }}</a></h1>
+																	<h1 class="mb-xs-16 project-link title hvr-underline-from-center"><a href="#">{{ project.name }}</a></h1>
 																</div>
 																<div class="row">
 																<h3 class="mb-xs-16 project-link subtitle">{{ project.subtitle }}</h3>
@@ -45,30 +45,13 @@ opengraph_image:
 		                            </p>-->
 																<p class="lead mb40 thin">
 																	{{ project.description | markdownify }}
+
 																</p>
-                                <div class="row policies text-left row-centered">
-                                  {% for policy in project.policies %}
-																	{% if forloop.index0==0 %}
-																	<h4 class="text-center">Policies</h4>
-																	{% endif %}
-                                  {% assign loopindex= forloop.index | modulo: 2 %}
-                                  {% if loopindex==1 %}
-																	<div class="row policy-line">
+																<br/>
+																<div class="col-md-4 col-md-offset-4">
+																	<a class="btn btn-frm" href="{{project.project-page}}">Learn More</a>
+																</div>
 
-
-                                  <div class="col-sm-4">
-                                    {{policy.name}}: {{policy.value}}
-                                  </div>
-                                  {% else %}
-                                  <div class="col-sm-4">
-                                    {{policy.name}}: {{policy.value}}
-                                  </div>
-																	</div>
-                                  {% endif %}
-                                  {% endfor %}
-
-                                </div>
-                                <div id="twitter_update_list">
                                 </div>
 		                        </div>
 		                    </div>

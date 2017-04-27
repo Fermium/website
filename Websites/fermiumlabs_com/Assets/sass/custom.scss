@@ -5,6 +5,7 @@
 3. Other stuff
 4. Animations
 **/
+
 .icon {
    font-size: 64px !important;
 }
@@ -40,6 +41,14 @@ $color-primary: #eb274a;
 .primary-link a {
   color:$color-primary;
   opacity: 0.8;
+}
+.btn-frm{
+  color:#ffffff;
+  background:$color-primary;
+}
+.btn-frm:hover{
+  color:#ffffff !important;
+  background:transparent !important;
 }
 .primary-link a:hover {
   color:$color-primary;
