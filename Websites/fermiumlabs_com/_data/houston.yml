@@ -1,5 +1,5 @@
 title : "Houston"
-cta : "Datacenter-grade diagnostics and Data Science for Industrial Analytics"
+cta : ""
 imgs :
   header   : "/Assets/img/projects/houston.jpg"
   description  :
@@ -9,52 +9,51 @@ imgs :
 
   features : "/Assets/img/projects/houston.jpg"
 content :
-  catchphrase: "Datacenter-grade diagnostics technology for manufacturing"
+  catchphrase: "Datacenter-grade technology for manufacturing"
   descriptions :
     - title : "Extract data from unwilling machinery"
       body  : |
-        Houston devices can connect to almost anything with wires. Modbus PLCs, networked controllers, RS485 legacy devices.
-        Analog sensors are covered as well through an ADC/DAC expansion.
-
         The key to connect quickly to partially-unkown hardware is being able to iterate fast.
-        Write, test, **make mistakes as efficiently as possible**.
+        Write, test, **make mistakes as efficiently as possible**. 
+      
+        **Houston** nodes can connect to almost anything with wires. Modbus PLCs, networked controllers, RS485 legacy devices, analog sensors, OPC-UA SCADA interfaces and HMIs.
 
     - title : "Search into the past, keep an eye on the present"
       body  : |
-        Houston allows you to search through your data in seconds.
+        **Houston** allows you to search through your data in seconds.
         See your whole production plant across time, and just click your way through untill you isolate the problem.
 
-
-        Houston search tecnology is used in datacenters to filter through thousands of server's historical logs.
+        **Houston** search tecnology is used in datacenters to filter through **thousands** of server's historical logs.
 
         It will handle a few parallel production lines.
-    - title : "Understand, not suppose."
+    - title : "Understand, don't suppose."
       body  : |
-        With a complete sets of Data Science tools any trained Statistician, Engineer, Matematician or Programmer can extract serious insigts from the behaviour of your plant.
-
+        With a complete sets of Data Science tools any trained Statistician, Engineer, Matematician or clever Programmer can extract serious insigts from the behaviour of your plant.
 
           {:.bullet-list}
           {:.padding-fix}
           * Which fluctuations in our manufacturing line are causing our products to fail?
           * How are our employees influencing the manufacturing process?
           * Can we increase manufacturing tolerances without decreasing quality?
+          * What's causing our machine's downtime?
+          * What's causing our products to fail prematurely after a few months?
 
-        Houston supports both the R language and Python for data science, two of the most commonly adopted languages in European and US STEM degrees.
-        So you can hire fresh and skilled minds, and get them to work straight away.
+        **Houston** supports both the R language and Python for data science, two of the most commonly adopted languages in European and US STEM degrees.
+        You will be able to hire fresh and skilled minds, and get them to work straight away.
 
 
   features :
     title : "Safe"
-    body  : "Security is fundamental when hardware assets are connected to houston devices"
+    body  : "Security is fundamental when hardware assets are connected to **Houston** nodes"
     blocks :
       - icon  : "fa fa-ban"
         title : "Behind your firewall"
         body  : |
-          Houston's devices can be controlled only from your local network. You don't need to trust us.
+          Houston nodes can be controlled exclusively from your local network. You don't need to trust us.
       - icon  : "fa fa-globe"
         title : "Globally available"
         body  : |
-          Houston data ingest points are completely redundant and available from the EU, US and Asia.
+          **Houston** data ingest points are completely redundant and available from the EU, US and Asia.
       - icon  : "fa fa-handshake-o"
         title : "Safe"
         body  : |
@@ -67,9 +66,9 @@ content :
       - logo  : "/products/houston_img/protocols/modbus.jpg"
         name  : "Modbus"
         description  : |
-          Modbus may be the most important industrial comunication protocol, in particular for it's capability to read registers from legacy PLCs that do not support OPC-UA.
+          [Modbus](https://en.wikipedia.org/wiki/Modbus) may be the most important industrial comunication protocol, in particular for it's capability to read registers from legacy PLCs that do not support OPC-UA.
 
-          Houston supports the following ModBus variants:
+          **Houston** supports the following ModBus variants:
 
             {:.bullet-list}
             {:.padding-fix}
@@ -88,11 +87,11 @@ content :
 
           OPC-UA fixes the drawbacks of its long-live predecessor, OPC. It's more secure, cross platform and scalable.
 
-          Houston Device include full native support for the OPC-UA protocol, as well as a suite of complimentary software to discover and manage OPC-UA devices.
+          **Houston** Device include full native support for the OPC-UA protocol, as well as a suite of complimentary software to discover and manage OPC-UA devices.
       - logo  : "/products/houston_img/protocols/serial.png"
         name  : "serial"
         description  : |
-          Houston devices supports any common serial hardware protocol such as:
+          **Houston** nodes supports any common serial hardware protocol such as:
 
             {:.bullet-list}
             {:.padding-fix}
@@ -105,21 +104,38 @@ content :
       - logo  : "/products/houston_img/protocols/http.png"
         name  : "HTTP API"
         description  : |
-          Many modern industrial devices expose themselves through HTTP APIs.
+          Many modern industrial devices expose themselves through HTTP APIs, such the [ADAM-6000](http://www.advantech.com/products/ethernet-i-o-modules-adam-6000-adam-6100-adam-6200-wise-4000-lan/sub_gf-5197) series of IO expanders from Advantech.
 
-          Houston supports all APIs implemented through official HTTP standards.
+          **Houston** supports all APIs implemented through official HTTP standards.
 
       - logo  : "/products/houston_img/protocols/camera.png"
         name  : "Cameras"
         description  : |
-          Houston supports any [UVC](https://en.wikipedia.org/wiki/USB_video_device_class)-compatible industrial camera, as well as webcams and video acquisition hardware.
+          **Houston** supports any [UVC](https://en.wikipedia.org/wiki/USB_video_device_class)-compatible industrial camera, as well as webcams and video acquisition hardware.
           One common example of application is taking a picture of every single manufactured product to analyze production quality.
       - logo  : "/products/houston_img/protocols/nivisa.png"
         name  : "NI-VISA"
         description  : |
           [VISA](https://en.wikipedia.org/wiki/Virtual_Instrument_Software_Architecture) is a popular API to interface with measurement instruments such as Multimeters, oscilloscopes and digital test equipments.
-          Houston device can be connected to VISA/VXI compatible instruments trought network, USB or USB/GPIB adapters.
+          **Houston** device can be connected to VISA/VXI compatible instruments trought network, USB or USB/GPIB adapters.
       - logo  : "/products/houston_img/protocols/bacnet.png"
         name  : "BACnet"
         description  : |
           The [BACnet](https://en.wikipedia.org/wiki/BACnet) protocol can be used to monitor environmental parameters such as humidity and temperature.
+      - logo  : "/products/houston_img/protocols/sql-server-express.png"
+        name  : "SQL"
+        description  : |
+          **Houston** nodes can connect to any common SQL database (such as [Microsoft SQL Server](https://www.microsoft.com/it-it/sql-server/sql-server-2016-comparison), [MySQL](https://www.mysql.it/), [OBD])
+      - logo  : "/products/houston_img/protocols/USB-Logo_generic.svg"
+        name  : "USB"
+        description  : |
+          If it has a USB port (and possibly a Linux driver), **Houston** nodes can connect to it.
+          
+            {:.bullet-list}
+            {:.padding-fix}
+            * Barcode Scanners
+            * USB instruments
+            * USB Dataloggers
+            * USB to serial adapters
+          
+          
