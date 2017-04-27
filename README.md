@@ -33,7 +33,7 @@ You can add the *data-proofer-ignore* tag to elements you want to ignore:
 
 The Git endpoint were the sites are deployed can be set up manually following this [article](http://nicolasgallagher.com/simple-git-deployment-strategy-for-static-sites/).
 
-### CDN 
+### CDN
 
 We use [Cloudflare](cloudflare.com) as a CDN, with end-to-end encryption of both request (Authenticated Origin Pulls) and replies (SSL). Visitors data is thus encrypted both way to our servers.
 
@@ -45,7 +45,7 @@ To replicate our configuration, you need to setup Cloudflare (and enable http pr
 * www
 * staging.
 
-For *staging* set up a page rule to bypass most Cloudflare bells and whistles: 
+For *staging* set up a page rule to bypass most Cloudflare bells and whistles:
 
 * Server Side Excludes **OFF**
 * SSL **Strict**
@@ -90,11 +90,11 @@ var/www:
 
 * *_configs:* Nginx configuration
 * *_scripts:* All scripts to build, deploy and tests as well as the list of servers to deploy to
-* *Websites:* The websites, each in a separate directory like example_com 
+* *Websites:* The websites, each in a separate directory like example_com
   * *_site:* The output directory for Jekyll.
   * *site:* The directory if the site is not built by Travis-CI. If this directory is present *_site* will be ignored.
-              
-              
+
+
 ### Dependencies
 
 This website in order to be built and deployed uses a mix of Ruby and Node.js packages.
@@ -106,9 +106,7 @@ The website is built using Jekyll
 ```bash
 bundle install
 #example for main site
-cd /Website/fermiumlabs_com
-npm install
-
+( cd Websites/fermiumlabs_com && npm install )
 ```
 
 ## Opengraph and social networks compatibility
@@ -128,8 +126,8 @@ You MUST buy it if you're using the graphic layout. It's cheap, and great.
 
 Don't copy our graphics, theme or content, they're copyrighted. Although we probably will not notice, the internet is a big place. Unless you're a competitor of us, then we will.
 
-You can use the technical stuff under the the [MIT](https://opensource.org/licenses/MIT) license.
 
+You can use the technical stuff under the  [MIT](https://opensource.org/licenses/MIT) license.
 
 ---
 

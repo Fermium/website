@@ -199,7 +199,7 @@ hr.short-thick{ max-width: 50px; border-top: 5px solid #ccc; opacity: 1 !importa
 @media all and (max-width: 767px){
 	.text-center-xs{ text-align: center !important; }
 }
-a:focus{
+a:not(.no-color):focus{
 color:@color-primary !important;
 }
 @heading-font: "Roboto";
@@ -313,7 +313,7 @@ ul.lead li{ font-size: 16px; line-height: 40px; }
 .color-body{ color: #666; }
 .color-primary{ color: @color-primary !important; }
 .color-red{ color: @red !important; }
-.color-white{ color: #fff; }
+.color-white{ color: #fff !important; }
 
 
 /*!---------- 5. SECTIONS ----------*/
@@ -598,7 +598,7 @@ nav.nav-centered.outOfSight .logo{ display: none; }
 
 /*!---------- 10. ICONS ----------*/
 
-.icon{ font-size: 64px; display: inline-block; color: @bg-dark ; }
+.icon{ font-size: 64px ; display: inline-block; color: @bg-dark ; }
 .image-bg.bg-light .icon{ color: @bg-dark; }
 .image-bg .icon, .bg-dark .icon{ color: #fff; }
 .icon-lg{ font-size: 80px; }

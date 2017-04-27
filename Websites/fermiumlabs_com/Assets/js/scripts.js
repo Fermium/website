@@ -12,20 +12,31 @@ $(document).ready(function() {
     "use strict";
 
     // Smooth scroll to inner links
+        var innerLinks = $('a.inner-link');
 
-    $('.inner-link').each(function(){
-        var href = $(this).attr('href');
-        if(href.charAt(0) !== "#"){
-            $(this).removeClass('inner-link');
+        if(innerLinks.length){
+            innerLinks.each(function(){
+                var link = $(this);
+                var href = link.attr('href');
+                if(href.charAt(0) !== "#"){
+                    link.removeClass('inner-link');
+                }
+            });
+
+            var offset = 0;
+            if($('body[data-smooth-scroll-offset]').length){
+                offset = $('body').attr('data-smooth-scroll-offset');
+                offset = offset*1;
+            }
+
+            smoothScroll.init({
+                selector: '.inner-link',
+                selectorHeader: null,
+                speed: 750,
+                easing: 'easeInOutCubic',
+                offset: offset
+            });
         }
-    });
-
-	if($('.inner-link').length){
-		$('.inner-link').smoothScroll({
-			offset: -55,
-			speed: 800
-		});
-    }
 
     // Update scroll variable for scrolling functions
 
@@ -120,7 +131,7 @@ $(document).ready(function() {
             $(this).css('margin-left', -(difference));
         }
     });
-	
+
     // Mobile Menu
 
     $('.mobile-toggle').click(function() {
@@ -223,21 +234,32 @@ $(document).ready(function() {
     });
 
     // Twitter Feed
-       jQuery('.tweets-feed').each(function(index) {
+       $('.tweets-feed').each(function(index) {
            jQuery(this).attr('id', 'tweets-' + index);
        }).each(function(index) {
-
+           var element = $('#tweets-' + index);
            var TweetConfig = {
-               "id": jQuery('#tweets-' + index).attr('data-widget-id'),
                "domId": '',
-               "maxTweets": jQuery('#tweets-' + index).attr('data-amount'),
+               "maxTweets": element.attr('data-amount'),
                "enableLinks": true,
                "showUser": true,
                "showTime": true,
-               "dateFunction": '',
+               "dateFunction": handleDate,
                "showRetweet": false,
                "customCallback": handleTweets
            };
+
+           if(typeof element.attr('data-widget-id') !== typeof undefined){
+                TweetConfig.id = element.attr('data-widget-id');
+            }else if(typeof element.attr('data-feed-name') !== typeof undefined && element.attr('data-feed-name') !== "" ){
+                TweetConfig.profile = {"screenName": element.attr('data-feed-name').replace('@', '')};
+            }else{
+                TweetConfig.profile = {"screenName": 'twitter'};
+            }
+            function handleDate(date, dateString) {
+              return moment(dateString).fromNow();
+            }
+
            function handleTweets(tweets) {
                var x = tweets.length;
                var n = 0;
@@ -249,10 +271,17 @@ $(document).ready(function() {
                }
                html += '</ul>';
                element.innerHTML = html;
+
+               if ($('.tweets-slider').length) {
+                    $('.tweets-slider').flexslider({
+                        directionNav: false,
+                        controlNav: false
+                    });
+                }
                return html;
            }
            twitterFetcher.fetch(TweetConfig);
-       });
+      });
 
     // Instagram Feed
 
@@ -991,21 +1020,6 @@ $(window).load(function() {
 
     setTimeout(initializeMasonry, 1000);
 
-    // Initialize twitter feed
-
-    var setUpTweets = setInterval(function() {
-        if ($('.tweets-slider').find('li.flex-active-slide').length) {
-            clearInterval(setUpTweets);
-            return;
-        } else {
-            if ($('.tweets-slider').length) {
-                $('.tweets-slider').flexslider({
-                    directionNav: false,
-                    controlNav: false
-                });
-            }
-        }
-    }, 500);
 
     mr_firstSectionHeight = $('.main-container section:nth-of-type(1)').outerHeight(true);
 
@@ -1039,12 +1053,13 @@ function updateNav() {
         }
     } else {
         if (scrollY > mr_navOuterHeight) {
-            if (!mr_navFixed) {
+           if (!mr_navFixed) {
                 mr_nav.addClass('fixed');
+                $('.spotify a').addClass('dark');
                 mr_navFixed = true;
             }
 
-            if (scrollY > mr_navOuterHeight + 10) {
+            if (scrollY > mr_navOuterHeight +10) {
                 if (!mr_outOfSight) {
                     mr_nav.addClass('outOfSight');
                     mr_outOfSight = true;
@@ -1059,6 +1074,7 @@ function updateNav() {
             if (mr_navFixed) {
                 mr_navFixed = false;
                 mr_nav.removeClass('fixed');
+                $('.spotify a').removeClass('dark');
             }
             if (mr_outOfSight) {
                 mr_outOfSight = false;
@@ -1191,7 +1207,7 @@ window.initializeMaps = function(){
                         map, marker, markerImage,
                         mapOptions = {
                             draggable: isDraggable,
-                            scrollwheel: true,
+                            scrollwheel: false,
                             zoom: zoomLevel,
                             disableDefaultUI: true,
                             styles: mapStyle
@@ -1211,12 +1227,13 @@ window.initializeMaps = function(){
                                 address.forEach(function(address){
                                     var markerGeoCoder;
 
-                                    /*markerImage = {url: window.mr_variant == undefined ? 'img/logos/map-pin.png' : '/Assets/img/logos/map-pin.png', size: new google.maps.Size(50,50), scaledSize: new google.maps.Size(50,50)};*/
+                                    markerImage = {url: window.mr_variant == undefined ? 'img/mapmarker.png' : '../img/mapmarker.png', size: new google.maps.Size(50,50), scaledSize: new google.maps.Size(50,50)};
                                     if(/(\-?\d+(\.\d+)?),\s*(\-?\d+(\.\d+)?)/.test(address) ){
                                         var latlong = address.split(','),
                                         marker = new google.maps.Marker({
                                                         position: { lat: 1*latlong[0], lng: 1*latlong[1] },
                                                         map: map,
+                                                        icon: markerImage,
                                                         title: markerTitle,
                                                         optimised: false
                                                     });
@@ -1227,6 +1244,7 @@ window.initializeMaps = function(){
                                             if (status == google.maps.GeocoderStatus.OK) {
                                                 marker = new google.maps.Marker({
                                                     map: map,
+                                                    icon: markerImage,
                                                     title: markerTitle,
                                                     position: results[0].geometry.location,
                                                     optimised: false
@@ -1247,6 +1265,7 @@ window.initializeMaps = function(){
                         marker              = new google.maps.Marker({
                                                     position: { lat: latitude, lng: longitude },
                                                     map: map,
+                                                    icon: markerImage,
                                                     title: markerTitle
                                                 });
 
