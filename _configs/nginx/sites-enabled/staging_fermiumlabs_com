@@ -29,6 +29,11 @@ server {
 		#Allow access only from our IPs
 		#allow   123.123.123.123; 
 		#deny    all;
+		
+		#Disable browser caching
+		expires 0;
+		add_header Pragma public;
+		add_header Cache-Control "public";
 	}
 	
 	#Error pages, with jekyll pretty-link style urls
