@@ -1,7 +1,8 @@
 title : "Houston"
 cta : ""
 imgs :
-  header   : "/Assets/img/projects/houston.jpg"
+  header       : "/Assets/img/projects/houston.jpg"
+  crm          : "/Assets/img/projects/houston.jpg"
   description  :
     - "/products/houston_img/infographics/info1.png"
     - "/products/houston_img/infographics/info2.png"
@@ -14,8 +15,8 @@ content :
     - title : "Extract data from unwilling machinery"
       body  : |
         The key to connect quickly to partially-unkown hardware is being able to iterate fast.
-        Write, test, **make mistakes as efficiently as possible**. 
-      
+        Write, test, **make mistakes as efficiently as possible**.
+
         **Houston** nodes can connect to almost anything with wires. Modbus PLCs, networked controllers, RS485 legacy devices, analog sensors, OPC-UA SCADA interfaces and HMIs.
 
     - title : "Search into the past, keep an eye on the present"
@@ -130,12 +131,10 @@ content :
         name  : "USB"
         description  : |
           If it has a USB port (and possibly a Linux driver), **Houston** nodes can connect to it.
-          
+
             {:.bullet-list}
             {:.padding-fix}
             * Barcode Scanners
             * USB instruments
             * USB Dataloggers
             * USB to serial adapters
-          
-          
