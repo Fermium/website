@@ -120,8 +120,8 @@ opengraph_image:
 															<a href='#' modal-link="{{loopindex}}" class='btn-modal'>
 		                            <div class='img-wrapper img-md' style='background-image:url("{{protocol.logo}}")'>
 																</div>
+																<span class='color-primary'>{{protocol.name}}</span>
 															</a>
-															<span class='color-primary'>{{protocol.name}}</span>
 														<div class="foundry_modal primary-link">
 	                          	{{protocol.description | markdownify}}
 	                      		</div>
@@ -135,8 +135,17 @@ opengraph_image:
             	</div>
 						</div>
 		    </section>
-
-
-
-
-		</div>
+					<section class="image-bg overlay">
+		            <div class="background-image-holder">
+		                <img alt="image" class="background-image" src="{{imgs.header}}">
+		            </div>
+								<div class="container">
+									<div class='row'>
+										<div class="col-md-8 col-md-offset-2 col-sm-4 align-bottom">
+												<h4 class="uppercase mb80 text-center">Learn More</h4>
+												<script type="text/javascript" src="//crm.fermiumlabs.com/form/generate.js?id=1"></script>
+										</div>
+									</div>
+								</div>
+		        </section>
+</div>
