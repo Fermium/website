@@ -44,10 +44,10 @@ server {
 	error_page 500 /errors/500/index.html;
 	
 	#Error pages location
-	location ^~ /errors/ {
-    internal;
-    root /var/www/html/fermiumlabs_com/develop;
-  }
+		location ^~ /errors/ {
+		internal;
+		root /var/www/html/fermiumlabs_com/develop;
+	}
 
 
 }
@@ -62,5 +62,5 @@ server {
 	ssl_client_certificate /var/www/certificates/origin-pull-ca.pem;
 	ssl_verify_client on;
 	
-  return 301 https://$host$request_uri;
+  	return 301 https://$host$request_uri;
   }
