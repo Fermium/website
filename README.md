@@ -109,6 +109,10 @@ bundle install
 ( cd Websites/fermiumlabs_com && npm install )
 ```
 
+### Config deployment
+
+The configuration is automatically deployed on the master branch when the files are modified. This for some reason does not work when performing a merge
+
 ## Opengraph and social networks compatibility
 
 This website follows the [Opengraph](http://ogp.me/) specifications, including those from:

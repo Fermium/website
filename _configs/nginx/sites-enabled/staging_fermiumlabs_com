@@ -29,6 +29,11 @@ server {
 		#Allow access only from our IPs
 		#allow   123.123.123.123; 
 		#deny    all;
+		
+		#Disable browser caching
+		expires 0;
+		add_header Pragma public;
+		add_header Cache-Control "public";
 	}
 	
 	#Error pages, with jekyll pretty-link style urls
@@ -39,10 +44,10 @@ server {
 	error_page 500 /errors/500/index.html;
 	
 	#Error pages location
-	location ^~ /errors/ {
-    internal;
-    root /var/www/html/fermiumlabs_com/develop;
-  }
+		location ^~ /errors/ {
+		internal;
+		root /var/www/html/fermiumlabs_com/develop;
+	}
 
 
 }
@@ -57,5 +62,5 @@ server {
 	ssl_client_certificate /var/www/certificates/origin-pull-ca.pem;
 	ssl_verify_client on;
 	
-  return 301 https://$host$request_uri;
+  	return 301 https://$host$request_uri;
   }
