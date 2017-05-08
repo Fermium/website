@@ -6,7 +6,7 @@ imgs :
   description  :
     - "/products/houston_img/infographics/info1.png"
     - "/products/houston_img/infographics/info2.png"
-    - "https://www.cloudirec.com/blog/wp-content/uploads/2017/02/The-Ultimate-Battle-R-vs-Python.png"
+    - "/products/houston_img/infographics/info3.png"
 
   features : "/Assets/img/projects/houston.jpg"
 content :
