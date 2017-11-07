@@ -1,0 +1,9 @@
+- tag : 'Industry'
+  products: 
+    - name: 'Houston'
+      link: "/products/houston/"
+
+- tag : 'Science'
+  products: 
+    - name : 'NNG Logger'
+      link: "/products/logger/"

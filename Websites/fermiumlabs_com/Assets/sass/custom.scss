@@ -5,6 +5,22 @@
 3. Other stuff
 4. Animations
 **/
+
+
+.bg-logger{
+  background-color:#087CA7;
+  color: #FFFFFF;
+}
+
+#download .mauticform-button {
+  background-color:rgb(5, 66, 88);
+  border-color: rgb(5, 66, 88);
+}
+#download .mauticform-button:hover {
+  background-color:rgba(5, 66, 88,0.5);
+  border-color: rgb(5, 66, 88);
+}
+
 .mauticform-label{
   color : #FFFFFF;
 }

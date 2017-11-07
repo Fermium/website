@@ -18,7 +18,7 @@
 
 
   date:  23-04-2016
-  tags:  ["tag4","tag5","tag6"]
+  tag:  "industry"
   state: aaa
   donut:
     - label:  "Embedded Hardware"
