@@ -1,0 +1,31 @@
+title : "NNG Logger"
+cta : "Datacenter-grade diagnostics and Data Science for Industrial Analytics"
+imgs :
+  header   : "/Assets/img/projects/logger1.png"
+  section1 : "/Assets/img/projects/logger2.png"
+content :
+  first:
+    title : "Something Else"
+    body : |
+      Some very long text  
+      With newlines too  
+      So cool
+
+  features :
+    blocks :
+      - icon  : "fa fa-code"
+        title : "Built with web tools to be modern"
+        body  : |
+          Houston's devices can be controlled only from your local network. You don't need to trust us.
+      - icon  : "fa fa-line-chart"
+        title : "Real time charts"
+        body  : |
+          Houston data ingest points are completely redundant and available from the EU, US and Asia.
+      - icon  : "fa fa-columns"
+        title : "Simple data collection and export"
+        body  : |
+          The data you send follows a strict chain of custody. It's always redundantly written after it exits your factory.
+      - icon  : "fa fa-superscript"
+        title : "Editable math for each experiment"
+        body  : |
+          The data you send follows a strict chain of custody. It's always redundantly written after it exits your factory.

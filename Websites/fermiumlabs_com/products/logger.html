@@ -1,0 +1,82 @@
+---
+layout: default
+title:  Fermium LABS - Datalogger
+description: Fermium LABS srl is a company dedicated to exploiting young mind views and new technologies for the sake of innovation.
+opengraph_type:
+opengraph_image:
+---
+{% assign logger = site.data.logger %}
+{% assign imgs = logger.imgs %}
+{% assign content = logger.content %}
+		<div class="main-container">
+		<section class="bg-primary pb0">
+		        <div class="container pt80">
+		            <div class="row mb24 mb-xs-0">
+		                <div class="col-sm-10 col-sm-offset-1 text-center">
+		                    <h1 class="large">{{logger.title}}</h1>
+		                    <p class="lead">
+		                        {{logger.cta | markdownify }}
+		                    </p>
+		                </div>
+		            </div>
+		            
+		            
+		            
+		            <div class="row">
+		                <img alt="image" src="{{imgs.header}}">
+		            </div>
+		            
+		        </div>
+		        
+		    </section><section class="image-edge pt120 pb120 pt-xs-40 pb-xs-40">
+		        <div class="col-md-6 col-sm-4 p0 col-md-push-6 col-sm-push-8">
+		            <img alt="Screenshot" class="cast-shadow-strong mb-xs-24" src="{{imgs.section1}}">
+		        </div>
+		        <div class="container">
+		            <div class="col-md-5 col-md-pull-0 col-sm-7 col-sm-pull-4 v-align-transform">
+		                <h3 class="mb40 mb-xs-16">{{content.first.title}}</h3>
+		                <p class="lead mb40">
+		                    {{content.first.body | markdownify }}
+		                </p>
+		                
+		            </div>
+		        </div>
+		        
+		    </section><section class="bg-primary">
+		        <div class="container">
+		            <div class="row mb48 mb-xs-24">
+		                <div class="col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 text-center">
+							<h2>Subscribe to download the software</h2>
+		                </div>
+		            </div>
+		            
+		            <div class="row mb40 mb-xs-24">
+		                <div class="col-sm-6 col-sm-offset-3">
+								<script type="text/javascript" src="//crm.fermiumlabs.com/form/generate.js?id=4"></script>
+		                </div>
+		            </div>		            
+		        </div>
+		        
+		    </section><section>
+		        <div class="container">
+		            <div class="row">
+						{% for feature in content.features.blocks %}
+		                <div class="col-sm-6">
+		                    <div class="feature feature-1 boxed">
+		                        <div class="text-center">
+		                            <i class="{{feature.icon}} icon"></i>
+		                            <h4>{{feature.title}}</h4>
+		                        </div>
+		                        <p>
+										{{feature.body | markdownify}}
+		                        </p>
+		                    </div>
+		                    
+		                </div>
+						{% endfor %}
+						
+		            </div>
+		            
+		        </div>
+		        
+		    </section></div>
