@@ -19,7 +19,7 @@ before_install:
 - sudo add-apt-repository -y ppa:nginx/development
 - sudo apt-get update
 - sudo apt-get -qq -y install nginx zip  --force-yes  
-- select nodejs version
+# select nodejs version
 - nvm install 6
 - nvm use 6
 - source ~/.bashrc
