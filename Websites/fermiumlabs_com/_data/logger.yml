@@ -7,25 +7,31 @@ content :
   first:
     title : "Something Else"
     body : |
-      Some very long text  
-      With newlines too  
-      So cool
+      NNG Logger è un software di datalogging ed immagazzinamento dati sviluppato per interfacciarsi con qualsiasi apparato USB basato su [data-chan](https://github.com/fermiumlabs/data-chan){:.dclink}. L'interfaccia semplice ed intuitiva è sviluppata utilizzando moderne tecnologie web in modo da essere sempre moderna e facilmente configurabile per nuove apparecchiature.  
+      Ogni equazione presente nell'interfaccia è inoltre renderizzata in LaTeX in modo da semplificare la lettura.
 
   features :
     blocks :
-      - icon  : "fa fa-code"
-        title : "Built with web tools to be modern"
+      - icon  : "fa fa-book"
+        title : "Included manual for every experiment"
         body  : |
-          Houston's devices can be controlled only from your local network. You don't need to trust us.
-      - icon  : "fa fa-line-chart"
-        title : "Real time charts"
-        body  : |
-          Houston data ingest points are completely redundant and available from the EU, US and Asia.
-      - icon  : "fa fa-columns"
-        title : "Simple data collection and export"
-        body  : |
-          The data you send follows a strict chain of custody. It's always redundantly written after it exits your factory.
+          Ogni apparato utliizzabile con NNG Logger include un manuale in formato PDF contentente l'intera documentazione scientifica relativa all'apparecchio e facilmente accessibile dal software. 
+                
       - icon  : "fa fa-superscript"
         title : "Editable math for each experiment"
         body  : |
-          The data you send follows a strict chain of custody. It's always redundantly written after it exits your factory.
+          Il software implementa la possibilità di modificare le equazioni che definiscono la matematica dell'esperimento permettendo una semplice personalizzazione. 
+          
+
+      - icon  : "fa fa-line-chart"
+        title : "Real time charts"
+        body  : |
+          Sulla base della matematica definita ogni cella dell'interfaccia presenta la possibilità di visualizzare un grafico in tempo reale delle misure man mano che questi vengono letti.
+
+
+      - icon  : "fa fa-columns"
+        title : "Simple data collection and export"
+        body  : |
+          Il software permette un esportazione semplice e veloce dei dati raccolti nei formati più comuni. è inoltre prevista l'integrazione col software SciDAVis per l'elaborazione dei dati con la possibilità di esportare ed elaborare file temporanei
+
+          
