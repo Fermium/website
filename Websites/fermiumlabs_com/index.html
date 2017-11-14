@@ -5,63 +5,11 @@ description: Fermium LABS srl is a company dedicated to exploiting young mind vi
 opengraph_type:
 opengraph_image:
 ---
-
 		<div class="main-container ">
 		<section class="cover fullscreen image-slider slider-all-controls controls-inside parallax">
-		        <ul class="slides flex">
-				{% for project in site.data.projects %}
-		            <li class="overlay image-bg ">
-		                <div class="background-image-holder">
-		                    <img alt="image" class="background-image blur " src="{{project.image}}">
-		                </div>
-		                <div class="container v-align-transform">
-		                    <div class="row text-center ">
-                          <div class="col-sm-4">
-                            <div id="{{project.slide}}" class="morris-chart prettyprint linenums">
-                     						<script>
-																new Morris.Donut({
-																	element: '{{project.slide}}',
-																	backgroundColor: 'transparent',
-																	resize: true,
-																	data: {{project.donut|jsonify}},
-																	formatter: function(value,data) {return value+" %"}
-																});
-																$('.morris-chart svg text').attr("style", "font-family: Roboto").attr("font-weight", "bold");
-																	</script>
-                            </div>
-                          </div>
-		                        <div class="col-sm-8 ">
-		                            <div class="row">
-																	<h1 class="mb-xs-16 project-link title hvr-underline-from-center"><a href="#">{{ project.name }}</a></h1>
-																</div>
-																<div class="row">
-																<h3 class="mb-xs-16 project-link subtitle">{{ project.subtitle }}</h3>
-															</div>
-																<!--<p class="lead mb40">
-		                                {% for tags in project.tags %}
-
-		                                <small class="thin">{{tags}}</small>
-                                  {% endfor %}
-		                            </p>-->
-																<p class="lead mb40 thin">
-																	{{ project.description | markdownify }}
-
-																</p>
-																<br/>
-																<div class="col-md-4 col-md-offset-4">
-																	<a class="btn btn-frm" href="{{project.project-page}}">Learn More</a>
-																</div>
-
-                                </div>
-		                        </div>
-		                    </div>
-
-		                </div>
-
-
-		            </li>
-
-					{% endfor %}
-		        </ul>
+			<div class="background-image-holder">
+					<img alt="image" class="background-image blur " src="/Assets/img/projects/houston.jpg">
+			</div>
+					
 		    </section>
 </div>
