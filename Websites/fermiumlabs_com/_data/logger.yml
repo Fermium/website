@@ -1,37 +1,43 @@
 title : "NNG Logger"
-cta : "The Datalogger physicists deserve "
+cta : "The Datalogger physicists deserve"
 imgs :
-  header   : "/Assets/img/projects/logger1.png"
-  section1 : "/Assets/img/projects/logger2.png"
+  header   : "../logger_img/logger1.png"
+  section1 : "../logger_img/logger2.png"
 content :
   first:
     title : "Something Else"
     body : |
-      NNG Logger è un software di datalogging ed immagazzinamento dati sviluppato per interfacciarsi con qualsiasi apparato USB basato su [data-chan](https://github.com/fermiumlabs/data-chan){:.dclink}. L'interfaccia semplice ed intuitiva è sviluppata utilizzando moderne tecnologie web in modo da essere sempre moderna e facilmente configurabile per nuove apparecchiature.  
-      Ogni equazione presente nell'interfaccia è inoltre renderizzata in LaTeX in modo da semplificare la lettura.
+      NNG Logger (Next Next Generation logger) is a datalogging software that can interface with any USB device based on the open source [data-chan](https://github.com/fermiumlabs/data-chan){:.dclink} framework. 
+      The User interface is simple to use and intuitive, based on modern web technologies. It scales across a broad range of devices: Desktop PCs, Windows tablets, Projectors, small laptops... 
+      
+      Companies that wish to do so, can quickly develop and extend the interface to connect with their hardware.
 
   features :
     blocks :
-      - icon  : "fa fa-book"
-        title : "Included manual for every experiment"
+      
+      - icon  : "fa fa-columns"
+        title : "Simple data collection and export"
         body  : |
-          Ogni apparato utliizzabile con NNG Logger include un manuale in formato PDF contentente l'intera documentazione scientifica relativa all'apparecchio e facilmente accessibile dal software. 
+          The data you collected can quickly be exported in standard formats such as CSV (command separated values). 
+          
+          You will also be able to open [SciDAVis](http://scidavis.sourceforge.net/){:.dclink} (a popular data analysis software) with just one click. 
+
                 
       - icon  : "fa fa-superscript"
         title : "Editable math for each experiment"
         body  : |
-          Il software implementa la possibilità di modificare le equazioni che definiscono la matematica dell'esperimento permettendo una semplice personalizzazione. 
+          **NNG Logger** allows you to edit in real time the equations that define the behaviour of the apparatus and edit the flow of measures. 
           
+          The math is rendered in human-friendly notation and the software natively supports units of measurement, matrix computations and statistical operations.
 
       - icon  : "fa fa-line-chart"
         title : "Real time charts"
         body  : |
-          Sulla base della matematica definita ogni cella dell'interfaccia presenta la possibilità di visualizzare un grafico in tempo reale delle misure man mano che questi vengono letti.
+          **NNG Logger** can display a real time plot of each cell, allowing you to quickly adjust your experimental parameter and keep an eye on the progress of the experiment. 
 
 
-      - icon  : "fa fa-columns"
-        title : "Simple data collection and export"
+      - icon  : "fa fa-book"
+        title : "Included manual with every experiment"
         body  : |
-          Il software permette un esportazione semplice e veloce dei dati raccolti nei formati più comuni. è inoltre prevista l'integrazione col software SciDAVis per l'elaborazione dei dati con la possibilità di esportare ed elaborare file temporanei
-
+          Each scientific instrument compatible with **NNG Logger** includes the PDF handbook with experimental procedures and a user manual. Every student can access it with one click.
           

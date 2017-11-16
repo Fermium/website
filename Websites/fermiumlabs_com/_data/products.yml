@@ -6,4 +6,4 @@
 - tag : 'Science'
   products: 
     - name : 'NNG Logger'
-      link: "/products/logger/"
+      link: "/products/nng-logger/"
