@@ -37,7 +37,7 @@ opengraph_image:
 														<span class="input__label-content input__label-content--kaede"> <i class="fa fa-download" aria-hidden="true"></i> Download</span>
 													</label>
 												</div>
-												<!--<input id="mauticform_input_nngdownload_os" name="mauticform[os]" value={navigator.platform} class="mauticform-hidden" type="hidden" />-->
+												<input id="mauticform_input_nngdownload_os" name="mauticform[os]" class="mauticform-hidden" type="hidden" />
 												
 													<span class="mauticform-errormsg" style="display: none;"></span>
 	
@@ -68,7 +68,7 @@ opengraph_image:
 		        </div>
 		        <div class="container">
 		            <div class="col-md-5 col-md-pull-0 col-sm-7 col-sm-pull-4 v-align-transform">
-		                <h3 class="mb40 mb-xs-16">{{content.first.title}}</h3>
+		                <h2 class="mb40 mb-xs-16">{{content.first.title}}</h2>
 		                <p class="lead mb40">
 		                    {{content.first.body | markdownify }}
 		                </p>
@@ -86,7 +86,7 @@ opengraph_image:
 		                    <div class="feature feature-1 boxed">
 		                        <div class="text-center">
 		                            <i class="{{feature.icon}} icon"></i>
-		                            <h4>{{feature.title}}</h4>
+		                            <h3>{{feature.title}}</h3>
 		                        </div>
 		                        <p>
 										{{feature.body | markdownify}}
@@ -103,6 +103,14 @@ opengraph_image:
 			</section></div>
 			<script type="text/javascript">
 				/** This section is only needed once per page if manually copying **/
+				$(document).ready(()=>{
+					$('#mauticform_input_nngdownload_os').val(navigator.platform);
+				});
+				$('.input__field--kaede').focusout(()=>{
+					if(isEmail($('.input__field--kaede').val())){
+						$('#mauticform_nngdownload').submit();
+					}
+				});
 				if (typeof MauticSDKLoaded == 'undefined') {
 					var MauticSDKLoaded = true;
 					var head            = document.getElementsByTagName('head')[0];
@@ -130,6 +138,9 @@ opengraph_image:
 						}
 					};
 				}
-
+				function isEmail(email) {
+				var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+				return regex.test(email);
+				}
 			</script>
 			
