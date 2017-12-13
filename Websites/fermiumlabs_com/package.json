@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/fermiumlabs/website#readme",
   "dependencies": {
+    "yarn": "^1.3.2"
   },
   "devDependencies": {
     "autoprefixer": "^7.0.1",

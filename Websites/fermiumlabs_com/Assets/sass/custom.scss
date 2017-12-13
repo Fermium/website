@@ -5,10 +5,10 @@
 3. Other stuff
 4. Animations
 **/
-.bg-logger{ 
-  background-color:#087CA7; 
-  color: #FFFFFF; 
-} 
+.bg-logger{
+  background-color:#087CA7;
+  color: #FFFFFF;
+}
 .input {
 	position: relative;
 	z-index: 1;
@@ -58,7 +58,7 @@
 .input__label-content {
 	position: relative;
 	display: block;
-	padding: 1.6em 0;
+	padding: 1em 0;
 	width: 100%;
 }
 
@@ -125,7 +125,7 @@
 }
 
 .input__label-content--kaede {
-	padding: 1.5em 0;
+  font-size: 1.5em;
 }
 
 .input__field--kaede:focus,
@@ -141,7 +141,7 @@
 	-webkit-transform: translate3d(60%, 0, 0);
   transform: translate3d(60%, 0, 0);
   text-align:left;
-  
+
 	pointer-events: none;
 }
 
@@ -157,7 +157,7 @@
 
 /*
 * And with max cross-browser enabled.
-* Nobody should ever write this by hand. 
+* Nobody should ever write this by hand.
 * Use a preprocesser with autoprefixing.
 */
 .row.is-flex {
